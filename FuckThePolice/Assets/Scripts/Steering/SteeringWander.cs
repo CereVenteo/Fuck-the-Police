@@ -1,14 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SteeringWander : MonoBehaviour {
+public class SteeringWander : SteeringAbstract
+{
 
 	public Vector3 offset = Vector3.zero;
 	public float radius = 1.0f;
 	public float min_update = 0.5f;
 	public float max_update = 3.0f;
-
-	SteeringSeek seek;
+    
+    SteeringSeek seek;
 	Vector3 random_point;
 
 	// Use this for initialization
