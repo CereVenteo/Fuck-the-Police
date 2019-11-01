@@ -75,7 +75,6 @@ public class Move : MonoBehaviour {
         if (GetComponent<NavMeshAgent>().destination.x != target.GetComponent<Transform>().position.x)
         {
             GetComponent<NavMeshAgent>().SetDestination(target.GetComponent<Transform>().position);
-            GetComponent<SteeringFollowPath>().nextPath();
         }
         for (int i = movement_velocity.Length-1; i >= 0; i--)
         {

@@ -4,7 +4,7 @@ using System.Collections;
 public class SteeringArrive : SteeringAbstract
 {
 
-	public float min_distance = 0.1f;
+	public float min_distance = 2.0f;
 	public float slow_distance = 5.0f;
 	public float time_to_target = 0.1f;
 
