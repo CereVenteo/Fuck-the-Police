@@ -11,7 +11,6 @@ public class SteeringFollowPath : SteeringAbstract
     SteeringSeek seek;
     SteeringArrive arrive;
     Vector3 closest_point;
-    int i = 0;
 
     //public float ratio_increment = 0.1f;
     public float min_distance = 0.5f;
@@ -27,14 +26,12 @@ public class SteeringFollowPath : SteeringAbstract
 
         // TODO 1: Calculate the closest point from the tank to the curve
         //float distance;
-        closest_point = GetComponent<NavMeshAgent>().path.corners[1];
         //current_ratio = distance / man.path.Curve.Points.Length;
     }
 
     // Update is called once per frame
     void Update()
-    {
-       
+    { 
         closest_point = GetComponent<NavMeshAgent>().path.corners[1];
         if (GetComponent<NavMeshAgent>().path.corners.Length > 2)
             seek.Steer(closest_point);
