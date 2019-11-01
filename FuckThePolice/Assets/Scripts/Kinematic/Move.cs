@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using UnityEngine.AI;
+using BansheeGz.BGSpline.Components;
+using BansheeGz.BGSpline.Curve;
 
 public class Move : MonoBehaviour {
 
@@ -12,7 +15,11 @@ public class Move : MonoBehaviour {
 	public float max_rot_speed = 10.0f; // in degrees / second
 	public float max_rot_acceleration = 0.1f; // in degrees
 
-	[Header("-------- Read Only --------")]
+    public GameObject curveManager;
+
+    public BGCurve curve;
+
+    [Header("-------- Read Only --------")]
 	public Vector3 current_velocity = Vector3.zero;
     
     public float current_rotation_speed = 0.0f; // degrees
@@ -22,6 +29,9 @@ public class Move : MonoBehaviour {
 
     private void Start()
     {
+        curve = gameObject.AddComponent<BGCurve>();
+        curveManager = GameObject.Find("CurveManager");
+
         movement_velocity = new Vector3[SteeringConf.num_priorities];
         rotation_velocity = new float[SteeringConf.num_priorities];
     }
@@ -55,23 +65,27 @@ public class Move : MonoBehaviour {
         {
             rotation_velocity[priority] += rotation_acceleration;
         }
-        else
         rotation_velocity[priority-1] += rotation_acceleration;
 	}
 
     // Update is called once per frame
     void Update()
     {
+        
+        if (GetComponent<NavMeshAgent>().destination.x != target.GetComponent<Transform>().position.x)
+        {
+            GetComponent<NavMeshAgent>().SetDestination(target.GetComponent<Transform>().position);
+            GetComponent<SteeringFollowPath>().nextPath();
+        }
         for (int i = movement_velocity.Length-1; i >= 0; i--)
         {
             if (movement_velocity[i] != Vector3.zero)
             {
-
                     current_velocity += movement_velocity[i];
                     break;
             }
             
-    }
+        }
         //for (int i = rotation_velocity.Length-1; i < 0; i--)
         //{
         //    if (rotation_velocity[i] != 0)
@@ -102,4 +116,17 @@ public class Move : MonoBehaviour {
             rotation_velocity[i] = 0;
         }
     }
+    //void CreateCurve()
+    //{
+    //    for (int i = 0; i < curve.Points.Length; i++)
+    //    {
+    //        curve.Delete(curve.Points[i]);
+    //    }
+    //    curve.AddPoint(new BGCurvePoint(curve, transform.position, BGCurvePoint.ControlTypeEnum.Absent, true));
+    //    for (int i = 0; i < GetComponent<NavMeshAgent>().path.corners.Length; i++)
+    //    {
+    //        curve.AddPoint(new BGCurvePoint(curve, GetComponent<NavMeshAgent>().path.corners[i], BGCurvePoint.ControlTypeEnum.Absent, true));
+    //    }
+    //    curveManager.GetComponent<PathManager>().CreateManagerCurve(this.gameObject, curve);
+    //}
 }
