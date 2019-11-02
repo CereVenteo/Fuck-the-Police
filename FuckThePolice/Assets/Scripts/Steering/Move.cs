@@ -64,30 +64,30 @@ public class Move : MonoBehaviour {
 
     public Vector3 GetPriorityVelocity()
     {
-        current_velocity = Vector3.zero;
+        Vector3 aux_current_velocity = Vector3.zero;
 
         for (int i = SteeringConf.num_priorities; i >= 0; --i)
         {
             if (priorities_velocity[i] != Vector3.zero)
             {
-                current_velocity = priorities_velocity[i];
-                return current_velocity;
+                aux_current_velocity = priorities_velocity[i];
+                break;
             }
         }
 
-        return current_velocity;
+        return aux_current_velocity;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-        if (GetComponent<NavMeshAgent>().destination.x != target.GetComponent<Transform>().position.x)
-        {
-            GetComponent<NavMeshAgent>().SetDestination(target.GetComponent<Transform>().position);
-        }
 
-        current_velocity = GetPriorityVelocity();
+        //if (GetComponent<NavMeshAgent>().destination.x != target.GetComponent<Transform>().position.x)
+        //{
+        //    GetComponent<NavMeshAgent>().SetDestination(target.GetComponent<Transform>().position);
+        //}
+
+        current_velocity += GetPriorityVelocity();
 
         // cap velocity
         if (current_velocity.magnitude > max_mov_speed)
@@ -104,7 +104,7 @@ public class Move : MonoBehaviour {
 
         transform.position += current_velocity * Time.deltaTime;
 
-        for (int i = 0; i < SteeringConf.num_priorities; ++i)
+        for (int i = 0; i <= SteeringConf.num_priorities; ++i)
         {
             priorities_velocity[i] = Vector3.zero;
         }

@@ -8,7 +8,7 @@ public class my_ray
     public Vector3 direction = Vector3.forward;
 }
 
-// TO NOT COLLISION WITH OBSTACLES
+// TO NOT COLLISION WITH OBJECTS
 public class SteeringObstacleAvoidance : SteeringAbstract
 {
 

@@ -13,9 +13,9 @@ public class SteeringFollowPath : SteeringAbstract
     SteeringArrive arrive;
     Vector3 closest_point;
 
-    //public float ratio_increment = 0.1f;
+    public float ratio_increment = 0.1f;
     public float min_distance = 0.5f;
-    //float current_ratio = 0.0f;
+    float current_ratio = 0.0f;
 
     // Use this for initialization
     void Start()
