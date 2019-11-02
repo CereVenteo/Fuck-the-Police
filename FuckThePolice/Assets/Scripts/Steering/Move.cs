@@ -82,10 +82,10 @@ public class Move : MonoBehaviour {
     void Update()
     {
 
-        //if (GetComponent<NavMeshAgent>().destination.x != target.GetComponent<Transform>().position.x)
-        //{
-        //    GetComponent<NavMeshAgent>().SetDestination(target.GetComponent<Transform>().position);
-        //}
+        if (GetComponent<NavMeshAgent>().destination.x != target.GetComponent<Transform>().position.x)
+        {
+            GetComponent<NavMeshAgent>().SetDestination(target.GetComponent<Transform>().position);
+        }
 
         current_velocity += GetPriorityVelocity();
 
