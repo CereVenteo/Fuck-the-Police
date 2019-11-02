@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+// TO SLOW ARRIVE
 public class SteeringArrive : SteeringAbstract
 {
 
@@ -32,7 +33,7 @@ public class SteeringArrive : SteeringAbstract
 
 		if(diff.magnitude < min_distance)
         {
-            move.SetMovementVelocity(Vector3.zero);
+            move.SetMovementVelocity(Vector3.zero, priority);
             return;
         }
 

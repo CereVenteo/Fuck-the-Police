@@ -12,8 +12,8 @@ public class Move : MonoBehaviour {
 	public Slider arrow;
 	public float max_mov_speed = 5.0f;
 	public float max_mov_acceleration = 0.1f;
-	public float max_rot_speed = 10.0f; // in degrees / second
-	public float max_rot_acceleration = 0.1f; // in degrees
+	public float max_rot_speed = 300.0f; // in degrees / second
+	public float max_rot_acceleration = 100.0f; // in degrees
 
     public GameObject curveManager;
 
@@ -24,7 +24,7 @@ public class Move : MonoBehaviour {
     
     public float current_rotation_speed = 0.0f; // degrees
 
-    public Vector3[] movement_velocity;
+    public Vector3[] priorities_velocity;
     public float[] rotation_velocity;
 
     private void Start()
@@ -32,25 +32,24 @@ public class Move : MonoBehaviour {
         curve = gameObject.AddComponent<BGCurve>();
         curveManager = GameObject.Find("CurveManager");
 
-        movement_velocity = new Vector3[SteeringConf.num_priorities];
+        priorities_velocity = new Vector3[SteeringConf.num_priorities + 1];
+        for (int i = 0; i < SteeringConf.num_priorities; i++)
+        {
+            priorities_velocity[i] = Vector3.zero;
+        }
+
         rotation_velocity = new float[SteeringConf.num_priorities];
     }
 
     // Methods for behaviours to set / add velocities
-    public void SetMovementVelocity (Vector3 velocity) 
+    public void SetMovementVelocity (Vector3 velocity, int priority) 
 	{
-        current_velocity = velocity;
+        priorities_velocity[priority] = velocity;
 	}
 
 	public void AccelerateMovement (Vector3 acceleration, int priority) 
 	{
-        //current_velocity += acceleration;
-        if (priority == 0)
-        {
-            movement_velocity[priority] += acceleration;
-        }
-        else
-            movement_velocity[priority - 1] += acceleration;
+        priorities_velocity[priority] += acceleration;
     }
 
 	public void SetRotationVelocity (float rotation_speed) 
@@ -58,15 +57,26 @@ public class Move : MonoBehaviour {
         current_rotation_speed = rotation_speed;
 	}
 
-	public void AccelerateRotation (float rotation_acceleration, int priority) 
-	{
-        //current_rotation_speed += rotation_acceleration;
-        if (priority == 0)
+    public void AccelerateRotation(float rotation_acceleration, int priority)
+    {
+        current_rotation_speed += rotation_acceleration;
+    }
+
+    public Vector3 GetPriorityVelocity()
+    {
+        current_velocity = Vector3.zero;
+
+        for (int i = SteeringConf.num_priorities; i >= 0; --i)
         {
-            rotation_velocity[priority] += rotation_acceleration;
+            if (priorities_velocity[i] != Vector3.zero)
+            {
+                current_velocity = priorities_velocity[i];
+                return current_velocity;
+            }
         }
-        rotation_velocity[priority-1] += rotation_acceleration;
-	}
+
+        return current_velocity;
+    }
 
     // Update is called once per frame
     void Update()
@@ -76,44 +86,31 @@ public class Move : MonoBehaviour {
         {
             GetComponent<NavMeshAgent>().SetDestination(target.GetComponent<Transform>().position);
         }
-        for (int i = movement_velocity.Length-1; i >= 0; i--)
-        {
-            if (movement_velocity[i] != Vector3.zero)
-            {
-                    current_velocity += movement_velocity[i];
-                    break;
-            }
-            
-        }
-        //for (int i = rotation_velocity.Length-1; i < 0; i--)
-        //{
-        //    if (rotation_velocity[i] != 0)
-        //    {
-        //        if (current_velocity.magnitude > max_mov_speed)
-        //        {
-        //            // cap rotation
-        //            current_rotation_speed = Mathf.Clamp(current_rotation_speed, -max_rot_speed, max_rot_speed);
 
-        //            // rotate the arrow
-        //            float angle = Mathf.Atan2(current_velocity.x, current_velocity.z);
-        //            aim.transform.rotation = Quaternion.AngleAxis(Mathf.Rad2Deg * angle, Vector3.up);
-        //            transform.rotation *= Quaternion.AngleAxis(current_rotation_speed * Time.deltaTime, Vector3.up);
-        //            break;
-        //        }
-        //    }
+        current_velocity = GetPriorityVelocity();
 
-        //}
+        // cap velocity
         if (current_velocity.magnitude > max_mov_speed)
-        {
             current_velocity = current_velocity.normalized * max_mov_speed;
-        }
+
+        // cap rotation
+        current_rotation_speed = Mathf.Clamp(current_rotation_speed, -max_rot_speed, max_rot_speed);
+
+        float angle = Mathf.Atan2(current_velocity.x, current_velocity.z);
+        aim.transform.rotation = Quaternion.AngleAxis(Mathf.Rad2Deg * angle, Vector3.up);
+        transform.rotation *= Quaternion.AngleAxis(current_rotation_speed * Time.deltaTime, Vector3.up);
+
         arrow.value = current_velocity.magnitude * 4;
+
         transform.position += current_velocity * Time.deltaTime;
-        for (int i = 0; i < SteeringConf.num_priorities; i++)
+
+        for (int i = 0; i < SteeringConf.num_priorities; ++i)
         {
-            movement_velocity[i] = Vector3.zero;
-            rotation_velocity[i] = 0;
+            priorities_velocity[i] = Vector3.zero;
         }
+
+        
+        
     }
     //void CreateCurve()
     //{

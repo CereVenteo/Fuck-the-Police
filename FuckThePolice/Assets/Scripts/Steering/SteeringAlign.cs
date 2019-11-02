@@ -1,12 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+// TO ROTATIONS
 public class SteeringAlign : SteeringAbstract
 {
 
-	public float min_angle = 0.01f;
-	public float slow_angle = 0.1f;
-	public float time_to_accel = 0.1f;
+	public float min_angle = 5.0f;
+	public float slow_angle = 10.0f;
+	public float time_to_accel = 2.0f;
     
 	Move move;
 
@@ -19,7 +20,7 @@ public class SteeringAlign : SteeringAbstract
 	void Update () 
 	{
 		// Orientation we are trying to match
-        float delta_angle = Vector3.SignedAngle(transform.forward, move.target.transform.forward, new Vector3(0.0f, 1.0f, 0.0f));
+        float delta_angle = Vector3.SignedAngle(transform.forward, move.GetPriorityVelocity(), new Vector3(0.0f, 1.0f, 0.0f));
 
 
         float diff_absolute = Mathf.Abs(delta_angle);

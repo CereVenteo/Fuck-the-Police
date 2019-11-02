@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+// TO NOT COLLISION WITH OTHER AGENTS
 public class SteeringCollisionAvoidance : SteeringAbstract
 {
 

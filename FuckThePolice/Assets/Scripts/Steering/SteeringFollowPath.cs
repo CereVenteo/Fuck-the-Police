@@ -4,6 +4,7 @@ using BansheeGz.BGSpline.Components;
 using BansheeGz.BGSpline.Curve;
 using UnityEngine.AI;
 
+// TO FOLLOW PATH
 public class SteeringFollowPath : SteeringAbstract
 {
     Move move;

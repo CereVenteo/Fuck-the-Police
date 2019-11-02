@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+// TO MOVE THE OPPOSITE OF TARGET
 public class SteeringFlee : SteeringAbstract
 {
 

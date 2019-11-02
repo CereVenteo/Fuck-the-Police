@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+// TO MOVE WITHOUT PROGRESSION STOP
 public class SteeringSeek : SteeringAbstract
 {
 
