@@ -18,7 +18,7 @@ public class SteeringPursue : SteeringAbstract
 	// Update is called once per frame
 	void Update () 
 	{
-		Steer(move.target.transform.position, move.target.GetComponent<Move>().current_velocity);
+		Steer(move.target.transform.position, move.target.GetComponent<Move>().current_velocity*0.85f);
 	}
 
 	public void Steer(Vector3 target, Vector3 velocity)
@@ -35,6 +35,6 @@ public class SteeringPursue : SteeringAbstract
 		else
 			prediction = distance / current_speed;
 
-		arrive.Steer(target + (velocity * prediction));
+		arrive.Steer(target /*+ (velocity /* prediction)*/);
 	}
 }
