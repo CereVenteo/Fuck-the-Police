@@ -36,6 +36,11 @@ public class SteeringFollowPath : SteeringAbstract
                 current_ratio = 0;
             closest_point = path.CalcPositionByDistanceRatio(current_ratio);
         }
+        //}else
+        //{
+        //    float distance;
+        //    closest_point = path.CalcPositionByClosestPoint(transform.position, out distance);
+        //}
 
         seek.Steer(closest_point);
         // TODO 2: Check if the tank is close enough to the desired point

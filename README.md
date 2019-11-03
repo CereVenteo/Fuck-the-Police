@@ -12,15 +12,16 @@ Supervising all our officers, detectives and field agents will maintain control 
 - Interrogation Room
 	
 ### Structures:
-- Cars
 - Trash can
 - Desktop
+- Toilet
 - Bench to sit
 	
 ### Characters:
 - Policeman
 - Citizens
 - Secretary
+- Criminal
 	
 ### Behavioral Changes
 - Interrogation with all the characters
