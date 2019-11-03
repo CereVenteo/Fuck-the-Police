@@ -5354,13 +5354,12 @@ GameObject:
   - component: {fileID: 908228285}
   - component: {fileID: 1848780062}
   - component: {fileID: 917702022}
-  - component: {fileID: 917702021}
   - component: {fileID: 917702018}
+  - component: {fileID: 917702020}
   - component: {fileID: 917702019}
   - component: {fileID: 917702016}
   - component: {fileID: 917702014}
   - component: {fileID: 917702017}
-  - component: {fileID: 917702020}
   m_Layer: 8
   m_Name: SimplePeople_Police_White3
   m_TagString: Untagged
@@ -5511,22 +5510,6 @@ MonoBehaviour:
   current_rotation_speed: 0
   priorities_velocity: []
   priorities_rotation: []
---- !u!114 &917702021
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 917702013}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b53bab01fe94f943923fdf486462845, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  priority: 1
-  path: {fileID: 0}
-  ratio_increment: 0.1
-  min_distance: 1
 --- !u!114 &917702022
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7973,13 +7956,12 @@ GameObject:
   - component: {fileID: 1403955428}
   - component: {fileID: 452681912}
   - component: {fileID: 1396693811}
-  - component: {fileID: 1396693809}
   - component: {fileID: 1396693803}
+  - component: {fileID: 1396693807}
   - component: {fileID: 1396693805}
   - component: {fileID: 1396693799}
   - component: {fileID: 1396693797}
   - component: {fileID: 1396693801}
-  - component: {fileID: 1396693807}
   m_Layer: 8
   m_Name: SimplePeople_Police_White4
   m_TagString: Untagged
@@ -8210,22 +8192,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1396693809
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1396693796}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b53bab01fe94f943923fdf486462845, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  priority: 1
-  path: {fileID: 0}
-  ratio_increment: 0.1
-  min_distance: 1
 --- !u!1 &1396693810
 GameObject:
   m_ObjectHideFlags: 0
@@ -10777,13 +10743,12 @@ GameObject:
   - component: {fileID: 1471934617}
   - component: {fileID: 258887288}
   - component: {fileID: 1462403940}
-  - component: {fileID: 1462403939}
   - component: {fileID: 1462403936}
+  - component: {fileID: 1462403938}
   - component: {fileID: 1462403937}
   - component: {fileID: 1462403932}
   - component: {fileID: 1462403930}
   - component: {fileID: 1462403934}
-  - component: {fileID: 1462403938}
   m_Layer: 8
   m_Name: SimplePeople_Police_White2
   m_TagString: Untagged
@@ -10966,22 +10931,6 @@ MonoBehaviour:
   current_rotation_speed: 0
   priorities_velocity: []
   priorities_rotation: []
---- !u!114 &1462403939
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1462403929}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b53bab01fe94f943923fdf486462845, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  priority: 1
-  path: {fileID: 0}
-  ratio_increment: 0.1
-  min_distance: 1
 --- !u!114 &1462403940
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16336,13 +16285,12 @@ GameObject:
   - component: {fileID: 8637100246777300337}
   - component: {fileID: 8637100246777300336}
   - component: {fileID: 8637100246777300335}
-  - component: {fileID: 8637100246777300334}
   - component: {fileID: 8637100246777300331}
+  - component: {fileID: 8637100246777300333}
   - component: {fileID: 8637100246777300332}
   - component: {fileID: 8637100246777300329}
   - component: {fileID: 8637100246777300328}
   - component: {fileID: 8637100246777300330}
-  - component: {fileID: 8637100246777300333}
   m_Layer: 8
   m_Name: SimplePeople_Police_Withe1
   m_TagString: Untagged
@@ -16477,22 +16425,6 @@ MonoBehaviour:
   current_rotation_speed: 0
   priorities_velocity: []
   priorities_rotation: []
---- !u!114 &8637100246777300334
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8637100246777300327}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b53bab01fe94f943923fdf486462845, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  priority: 1
-  path: {fileID: 0}
-  ratio_increment: 0.1
-  min_distance: 1
 --- !u!114 &8637100246777300335
 MonoBehaviour:
   m_ObjectHideFlags: 0
