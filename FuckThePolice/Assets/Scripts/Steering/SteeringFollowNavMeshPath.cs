@@ -14,7 +14,7 @@ public class SteeringFollowNavMeshPath : SteeringAbstract
     public NavMeshPath path;
 
     public float min_distance;
-    int current_point = 1;
+    public int current_point = 1;
     bool once = false;
 
     // Use this for initialization
@@ -35,8 +35,6 @@ public class SteeringFollowNavMeshPath : SteeringAbstract
     {
         if (path.status == NavMeshPathStatus.PathComplete)
         {
-            //align.Steer(path.corners[current_point]);
-
             if (current_point != path.corners.Length - 1)
             {
                 seek.Steer(path.corners[current_point]);
@@ -49,7 +47,6 @@ public class SteeringFollowNavMeshPath : SteeringAbstract
                 {
                     if (!once)
                     {
-                        //OnReachEnd();
                         once = true;
                     }
 
@@ -68,7 +65,7 @@ public class SteeringFollowNavMeshPath : SteeringAbstract
     }
     //void OnDrawGizmosSelected()
     //{
-    //    for (int i = 0; i < path.corners.Length-1; i++)
+    //    for (int i = 0; i < path.corners.Length - 1; i++)
     //    {
     //        // Display the explosion radius when selected
     //        Gizmos.color = Color.green;
