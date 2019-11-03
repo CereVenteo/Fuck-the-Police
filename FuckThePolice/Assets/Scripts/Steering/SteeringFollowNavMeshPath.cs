@@ -8,48 +8,78 @@ using UnityEngine.AI;
 public class SteeringFollowNavMeshPath : SteeringAbstract
 {
     Move move;
-    public PathManager man;
-    SteeringSeek seek;
     SteeringArrive arrive;
-    Vector3 closest_point;
+    SteeringSeek seek;
+    SteeringAlign align;
+    public NavMeshPath path;
 
-    public float ratio_increment = 0.1f;
-    public float min_distance = 0.5f;
-    float current_ratio = 0.0f;
+    public float min_distance;
+    int current_point = 1;
+    bool once = false;
+
+
+    public delegate void ReachAction();
+    public event ReachAction OnReachEnd;
+
 
     // Use this for initialization
     void Start()
     {
-        //man = GameObject.Find("CurveManager").GetComponent<PathManager>();
-        move = GetComponent<Move>();
-        seek = GetComponent<SteeringSeek>();
-        arrive = GetComponent<SteeringArrive>();
 
-        // TODO 1: Calculate the closest point from the tank to the curve
-        //float distance;
-        //current_ratio = distance / man.path.Curve.Points.Length;
+        move = GetComponent<Move>();
+        arrive = GetComponent<SteeringArrive>();
+        seek = GetComponent<SteeringSeek>();
+        align = GetComponent<SteeringAlign>();
+        Vector3 x = Vector3.zero;
+        path = new NavMeshPath();
+        NavMesh.CalculatePath(transform.position,move.target.transform.position, (1 << NavMesh.GetAreaFromName("Walkable")), path);
+
     }
 
     // Update is called once per frame
     void Update()
-    { 
-        closest_point = GetComponent<NavMeshAgent>().path.corners[1];
-        if (GetComponent<NavMeshAgent>().path.corners.Length > 2)
-            seek.Steer(closest_point);
-        else
-            arrive.Steer(closest_point);
+    {
+        if (path.status == NavMeshPathStatus.PathComplete)
+        {
+            //align.Steer(path.corners[current_point]);
+
+            if (current_point != path.corners.Length - 1)
+            {
+                seek.Steer(path.corners[current_point]);
+                if (Vector3.Distance(transform.position, path.corners[current_point]) < min_distance)
+                    current_point++;
+            }
+            else
+            {
+                if (arrive.Steer(path.corners[current_point]))
+                {
+                    if (!once)
+                    {
+                        //OnReachEnd();
+                        once = true;
+                    }
+
+                }
+                else
+                    once = false;
+            }
+        }
     }
 
+    public void CreatePath(Vector3 pos)
+    {
+        current_point = 1;
+        path.ClearCorners();
+        NavMesh.CalculatePath(transform.position, pos, (1 << NavMesh.GetAreaFromName("Walkable")), path);
+    }
     void OnDrawGizmosSelected()
     {
-
-        if (isActiveAndEnabled)
+        for (int i = 0; i < path.corners.Length; i++)
         {
             // Display the explosion radius when selected
             Gizmos.color = Color.green;
-            Gizmos.DrawWireSphere(closest_point, 5);
+            Gizmos.DrawWireSphere(path.corners[i], 5);
             // Useful if you draw a sphere were on the closest point to the path
         }
-
     }
 }

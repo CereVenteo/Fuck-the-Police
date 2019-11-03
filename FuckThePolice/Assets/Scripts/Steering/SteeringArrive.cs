@@ -5,7 +5,7 @@ using System.Collections;
 public class SteeringArrive : SteeringAbstract
 {
 
-	public float min_distance = 0.0f;
+	public float min_distance = 2f;
 	public float slow_distance = 5.0f;
 	public float time_to_target = 0.1f;
 
@@ -22,7 +22,7 @@ public class SteeringArrive : SteeringAbstract
 		Steer(move.target.transform.position);
 	}
 
-	public void Steer(Vector3 target)
+	public bool Steer(Vector3 target)
 	{
 		if(!move)
 			move = GetComponent<Move>();
@@ -34,7 +34,7 @@ public class SteeringArrive : SteeringAbstract
 		if(diff.magnitude < min_distance)
         {
             move.SetMovementVelocity(Vector3.zero, priority);
-            return;
+            return true;
         }
 
         // Decide which would be our ideal velocity
@@ -57,6 +57,7 @@ public class SteeringArrive : SteeringAbstract
 		}
 
 		move.AccelerateMovement(acceleration, priority);
+        return false;
 	}
 
 	void OnDrawGizmosSelected() 

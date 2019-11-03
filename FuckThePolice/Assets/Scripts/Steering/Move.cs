@@ -14,6 +14,7 @@ public class Move : MonoBehaviour {
 	public float max_mov_acceleration = 0.1f;
 	public float max_rot_speed = 300.0f; // in degrees / second
 	public float max_rot_acceleration = 100.0f; // in degrees
+    public Animator anim;
 
     public GameObject curveManager;
 
@@ -29,6 +30,7 @@ public class Move : MonoBehaviour {
 
     private void Start()
     {
+        anim = GetComponent<Animator>();
         curve = gameObject.AddComponent<BGCurve>();
         curveManager = GameObject.Find("CurveManager");
 
@@ -44,7 +46,7 @@ public class Move : MonoBehaviour {
     // Methods for behaviours to set / add velocities
     public void SetMovementVelocity (Vector3 velocity, int priority) 
 	{
-        priorities_velocity[priority] = velocity;
+        current_velocity = velocity;
 	}
 
 	public void AccelerateMovement (Vector3 acceleration, int priority) 
@@ -81,12 +83,6 @@ public class Move : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-
-        if (GetComponent<NavMeshAgent>().destination.x != target.GetComponent<Transform>().position.x)
-        {
-            GetComponent<NavMeshAgent>().SetDestination(target.GetComponent<Transform>().position);
-        }
-
         current_velocity += GetPriorityVelocity();
 
         // cap velocity
@@ -101,8 +97,13 @@ public class Move : MonoBehaviour {
         transform.rotation *= Quaternion.AngleAxis(current_rotation_speed * Time.deltaTime, Vector3.up);
 
         arrow.value = current_velocity.magnitude * 4;
-
-        transform.position += current_velocity * Time.deltaTime;
+        if (current_velocity.magnitude < 0.1)
+        {
+            current_velocity = Vector3.zero;
+        }
+            //Debug.Log(current_velocity.magnitude);
+            anim.SetFloat("Speed_f", current_velocity.magnitude);
+            transform.position += current_velocity * Time.deltaTime;
 
         for (int i = 0; i <= SteeringConf.num_priorities; ++i)
         {

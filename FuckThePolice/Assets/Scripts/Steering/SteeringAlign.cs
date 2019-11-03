@@ -19,29 +19,33 @@ public class SteeringAlign : SteeringAbstract
 	// Update is called once per frame
 	void Update () 
 	{
-		// Orientation we are trying to match
+        Steer(move.target.transform.position);
+	}
+    public void Steer(Vector3 target)
+    {
+
         float delta_angle = Vector3.SignedAngle(transform.forward, move.GetPriorityVelocity(), new Vector3(0.0f, 1.0f, 0.0f));
 
 
         float diff_absolute = Mathf.Abs(delta_angle);
 
-		if(diff_absolute < min_angle)
-		{
-			move.SetRotationVelocity(0.0f);
-			return;
-		}
+        if (diff_absolute < min_angle)
+        {
+            move.SetRotationVelocity(0.0f);
+            return;
+        }
 
         float ideal_rotation_speed = move.max_rot_speed;
 
         if (diff_absolute < slow_angle)
             ideal_rotation_speed *= (diff_absolute / slow_angle);
 
-		float angular_acceleration = ideal_rotation_speed / time_to_accel;
+        float angular_acceleration = ideal_rotation_speed / time_to_accel;
 
         //Invert rotation direction if the angle is negative
-		if(delta_angle < 0)
-			angular_acceleration = -angular_acceleration;
+        if (delta_angle < 0)
+            angular_acceleration = -angular_acceleration;
 
-		move.AccelerateRotation(Mathf.Clamp(angular_acceleration, -move.max_rot_acceleration, move.max_rot_acceleration),priority);
-	}
+        move.AccelerateRotation(Mathf.Clamp(angular_acceleration, -move.max_rot_acceleration, move.max_rot_acceleration), priority);
+    }
 }
