@@ -38,7 +38,7 @@ public class SteeringSeparation : SteeringAbstract
         }
 
         float final_strength = final.magnitude;
-        if (final_strength > 0.0f)
+        if (final_strength > 0.01f)
         {
             if (final_strength > move.max_mov_acceleration)
                 final = final.normalized * move.max_mov_acceleration;
