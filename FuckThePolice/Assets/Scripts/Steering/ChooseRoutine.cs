@@ -10,7 +10,7 @@ public class ChooseRoutine : MonoBehaviour
     SteeringFollowPath pathnav;
     public GameObject target1;
     public GameObject target2;
-    bool i = true;
+    bool x = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,37 +22,44 @@ public class ChooseRoutine : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(i)
-        StartCoroutine(Change());
-    }
-    IEnumerator Change()
-    {
-        i = false;
-        yield return new WaitForSeconds(20);
-        if (nav.enabled && target2 != false)
+        if (x)
         {
-            if (move.target == target1)
+            if (nav.enabled && target2 != false)
             {
-                move.target = target2;
-                nav.CreatePath(move.target.transform.position);
+                if (move.target == target1)
+                {
+                    move.target = target2;
+                    nav.CreatePath(move.target.transform.position);
+                }
+                else
+                {
+                    move.target = target1;
+                    nav.CreatePath(move.target.transform.position);
+                }
+            }
+            else if (pathnav.enabled == true)
+            {
+                nav.enabled = true;
+                move.target = target1;
+                pathnav.enabled = false;
             }
             else
             {
-                move.target = target1;
-                nav.CreatePath(move.target.transform.position);
+                pathnav.enabled = true;
+                nav.enabled = false;
             }
         }
-        else if (pathnav.enabled == true)
+        if (x)
         {
-            nav.enabled = true;
-            move.target = target1;
-            pathnav.enabled = false;
+            StartCoroutine(Change());
+
         }
-        else
-        {
-            pathnav.enabled = true;
-            nav.enabled = false;
-        }
-        i = true;
+    }
+    IEnumerator Change()
+    {
+        x = false;
+        yield return new WaitForSeconds(20);
+        x = true;
+
     }
 }

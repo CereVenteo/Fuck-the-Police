@@ -16,10 +16,6 @@ public class Move : MonoBehaviour {
 	public float max_rot_acceleration = 100.0f; // in degrees
     public Animator anim;
 
-    public GameObject curveManager;
-
-    public BGCurve curve;
-
     [Header("-------- Read Only --------")]
 	public Vector3 current_velocity = Vector3.zero;
     
@@ -31,8 +27,6 @@ public class Move : MonoBehaviour {
     private void Start()
     {
         anim = GetComponent<Animator>();
-        curve = gameObject.AddComponent<BGCurve>();
-        curveManager = GameObject.Find("CurveManager");
 
         priorities_velocity = new Vector3[SteeringConf.num_priorities + 1];
         for (int i = 0; i < SteeringConf.num_priorities; i++)
@@ -118,10 +112,10 @@ public class Move : MonoBehaviour {
         transform.rotation *= Quaternion.AngleAxis(current_rotation_speed * Time.deltaTime, Vector3.up);
 
         arrow.value = current_velocity.magnitude * 4;
-        if (current_velocity.magnitude < 0.1)
-        {
-            current_velocity = Vector3.zero;
-        }
+        //if (current_velocity.magnitude < 0.1)
+        //{
+        //    current_velocity = Vector3.zero;
+        //}
             //Debug.Log(current_velocity.magnitude);
             anim.SetFloat("Speed_f", current_velocity.magnitude);
             transform.position += current_velocity * Time.deltaTime;
