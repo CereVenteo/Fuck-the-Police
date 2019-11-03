@@ -216,7 +216,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b53bab01fe94f943923fdf486462845, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 1
+  priority: 3
   path: {fileID: 0}
   ratio_increment: 0.1
   min_distance: 1
@@ -258,7 +258,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fdb74c0d43ad45458532f1a1ff22e32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 1
+  priority: 3
   min_distance: 4
 --- !u!114 &9418380
 MonoBehaviour:
@@ -330,7 +330,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b13ae3cbc54e44631ae987b5486c59f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 1
+  priority: 2
   min_distance: 2
   slow_distance: 3
   time_to_target: 0.1
@@ -5356,10 +5356,10 @@ GameObject:
   - component: {fileID: 917702022}
   - component: {fileID: 917702021}
   - component: {fileID: 917702018}
-  - component: {fileID: 917702017}
+  - component: {fileID: 917702019}
   - component: {fileID: 917702016}
   - component: {fileID: 917702014}
-  - component: {fileID: 917702019}
+  - component: {fileID: 917702017}
   - component: {fileID: 917702020}
   m_Layer: 8
   m_Name: SimplePeople_Police_White3
@@ -5409,7 +5409,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b13ae3cbc54e44631ae987b5486c59f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 1
+  priority: 2
   min_distance: 2
   slow_distance: 3
   time_to_target: 0.1
@@ -5483,7 +5483,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fdb74c0d43ad45458532f1a1ff22e32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 1
+  priority: 3
   min_distance: 4
 --- !u!114 &917702020
 MonoBehaviour:
@@ -7975,10 +7975,10 @@ GameObject:
   - component: {fileID: 1396693811}
   - component: {fileID: 1396693809}
   - component: {fileID: 1396693803}
-  - component: {fileID: 1396693801}
+  - component: {fileID: 1396693805}
   - component: {fileID: 1396693799}
   - component: {fileID: 1396693797}
-  - component: {fileID: 1396693805}
+  - component: {fileID: 1396693801}
   - component: {fileID: 1396693807}
   m_Layer: 8
   m_Name: SimplePeople_Police_White4
@@ -8028,7 +8028,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b13ae3cbc54e44631ae987b5486c59f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 1
+  priority: 2
   min_distance: 2
   slow_distance: 3
   time_to_target: 0.1
@@ -8150,7 +8150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fdb74c0d43ad45458532f1a1ff22e32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 1
+  priority: 3
   min_distance: 4
 --- !u!1 &1396693806
 GameObject:
@@ -10779,10 +10779,10 @@ GameObject:
   - component: {fileID: 1462403940}
   - component: {fileID: 1462403939}
   - component: {fileID: 1462403936}
-  - component: {fileID: 1462403934}
+  - component: {fileID: 1462403937}
   - component: {fileID: 1462403932}
   - component: {fileID: 1462403930}
-  - component: {fileID: 1462403937}
+  - component: {fileID: 1462403934}
   - component: {fileID: 1462403938}
   m_Layer: 8
   m_Name: SimplePeople_Police_White2
@@ -10832,7 +10832,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b13ae3cbc54e44631ae987b5486c59f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 1
+  priority: 2
   min_distance: 2
   slow_distance: 3
   time_to_target: 0.1
@@ -10938,7 +10938,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fdb74c0d43ad45458532f1a1ff22e32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 1
+  priority: 3
   min_distance: 4
 --- !u!114 &1462403938
 MonoBehaviour:
@@ -14343,7 +14343,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b13ae3cbc54e44631ae987b5486c59f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 1
+  priority: 2
   min_distance: 2
   slow_distance: 3
   time_to_target: 0.1
@@ -14457,7 +14457,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b53bab01fe94f943923fdf486462845, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 1
+  priority: 3
   path: {fileID: 486650377}
   ratio_increment: 0.1
   min_distance: 4
@@ -16338,10 +16338,10 @@ GameObject:
   - component: {fileID: 8637100246777300335}
   - component: {fileID: 8637100246777300334}
   - component: {fileID: 8637100246777300331}
-  - component: {fileID: 8637100246777300330}
+  - component: {fileID: 8637100246777300332}
   - component: {fileID: 8637100246777300329}
   - component: {fileID: 8637100246777300328}
-  - component: {fileID: 8637100246777300332}
+  - component: {fileID: 8637100246777300330}
   - component: {fileID: 8637100246777300333}
   m_Layer: 8
   m_Name: SimplePeople_Police_Withe1
@@ -16375,7 +16375,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b13ae3cbc54e44631ae987b5486c59f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 1
+  priority: 2
   min_distance: 2
   slow_distance: 3
   time_to_target: 0.1
@@ -16449,7 +16449,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fdb74c0d43ad45458532f1a1ff22e32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 1
+  priority: 3
   min_distance: 4
 --- !u!114 &8637100246777300333
 MonoBehaviour:
