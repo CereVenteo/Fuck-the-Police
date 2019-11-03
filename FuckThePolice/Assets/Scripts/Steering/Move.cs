@@ -111,7 +111,7 @@ public class Move : MonoBehaviour {
         aim.transform.rotation = Quaternion.AngleAxis(Mathf.Rad2Deg * angle, Vector3.up);
         transform.rotation *= Quaternion.AngleAxis(current_rotation_speed * Time.deltaTime, Vector3.up);
 
-        arrow.value = current_velocity.magnitude * 4;
+        //arrow.value = current_velocity.magnitude * 4;
         //if (current_velocity.magnitude < 0.1)
         //{
         //    current_velocity = Vector3.zero;

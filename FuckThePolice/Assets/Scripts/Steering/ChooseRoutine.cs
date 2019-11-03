@@ -11,18 +11,28 @@ public class ChooseRoutine : MonoBehaviour
     public GameObject target1;
     public GameObject target2;
     bool x = true;
+    bool i = false;
     // Start is called before the first frame update
     void Start()
     {
         move = GetComponent<Move>();
         nav = GetComponent<SteeringFollowNavMeshPath>();
         pathnav = GetComponent<SteeringFollowPath>();
-    }
 
+        if (nav.enabled && target2 != false && this.gameObject.name != "SimpleCitizens_Grandma_White")
+        {
+            nav.enabled = false;
+        }
+        if (!nav.enabled && target2 != false)
+        {
+            nav.enabled = true;
+        }
+
+    }
     // Update is called once per frame
     void Update()
     {
-        if (x)
+        if (i)
         {
             if (nav.enabled && target2 != false)
             {
@@ -58,8 +68,10 @@ public class ChooseRoutine : MonoBehaviour
     IEnumerator Change()
     {
         x = false;
-        yield return new WaitForSeconds(20);
+        i = false;
+        yield return new WaitForSeconds(60);
         x = true;
+        i = true;
 
     }
 }
