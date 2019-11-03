@@ -5041,8 +5041,8 @@ GameObject:
   - component: {fileID: 917702017}
   - component: {fileID: 917702016}
   - component: {fileID: 917702014}
-  - component: {fileID: 917702019}
   - component: {fileID: 917702023}
+  - component: {fileID: 917702019}
   m_Layer: 8
   m_Name: SimplePeople_Police_White (2)
   m_TagString: Untagged
@@ -7444,8 +7444,8 @@ GameObject:
   - component: {fileID: 1396693801}
   - component: {fileID: 1396693799}
   - component: {fileID: 1396693797}
-  - component: {fileID: 1396693805}
   - component: {fileID: 1396693813}
+  - component: {fileID: 1396693805}
   m_Layer: 8
   m_Name: SimplePeople_Police_White (3)
   m_TagString: Untagged
@@ -10264,8 +10264,8 @@ GameObject:
   - component: {fileID: 1462403934}
   - component: {fileID: 1462403932}
   - component: {fileID: 1462403930}
-  - component: {fileID: 1462403937}
   - component: {fileID: 1462403941}
+  - component: {fileID: 1462403937}
   m_Layer: 8
   m_Name: SimplePeople_Police_White (1)
   m_TagString: Untagged
@@ -13306,7 +13306,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2052867672}
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 33.61, y: 19.11316, z: 55.16}
+  m_LocalPosition: {x: 33.61, y: 19.11316, z: 56.3}
   m_LocalScale: {x: 2.8000002, y: 2.8, z: 2.8000002}
   m_Children:
   - {fileID: 1122388346}
@@ -13495,7 +13495,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2116015443}
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -3.66, y: 19.11316, z: -42.72}
+  m_LocalPosition: {x: -3.66, y: 19.11316, z: -38.1}
   m_LocalScale: {x: 2.8000002, y: 2.8, z: 2.8000002}
   m_Children:
   - {fileID: 478224493}
@@ -16193,8 +16193,8 @@ GameObject:
   - component: {fileID: 8637100246777300330}
   - component: {fileID: 8637100246777300329}
   - component: {fileID: 8637100246777300328}
-  - component: {fileID: 8637100246777300332}
   - component: {fileID: 8637100246777300338}
+  - component: {fileID: 8637100246777300332}
   m_Layer: 8
   m_Name: SimplePeople_Police_Withe
   m_TagString: Untagged
