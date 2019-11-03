@@ -19,7 +19,7 @@ public class SteeringFollowNavMeshPath : SteeringAbstract
 
 
     public delegate void ReachAction();
-    public event ReachAction OnReachEnd;
+    //public event ReachAction OnReachEnd;
 
 
     // Use this for initialization
@@ -39,6 +39,15 @@ public class SteeringFollowNavMeshPath : SteeringAbstract
     // Update is called once per frame
     void Update()
     {
+        if (!move)
+            move = GetComponent<Move>();
+        if (!arrive)
+            arrive = GetComponent<SteeringArrive>();
+        if (!seek)
+            seek = GetComponent<SteeringSeek>();
+        if (!align)
+            align = GetComponent<SteeringAlign>();
+
         if (path.status == NavMeshPathStatus.PathComplete)
         {
             //align.Steer(path.corners[current_point]);
