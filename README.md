@@ -4,26 +4,26 @@ In this game we will be in charge of running a police station.
 
 Supervising all our officers, detectives and field agents will maintain control over all the crime in our city.
 
-Rooms:
-	- Reception
-	- Waiting Room
-	- Office Space
-	- Toilet
-	- Interrogation Room
+### Rooms:
+- Reception
+- Waiting Room
+- Office Space
+- Toilet
+- Interrogation Room
 	
-Structures:
-	- Cars
-	- Trash can
-	- Desktop
-	- Bench to sit
+### Structures:
+- Cars
+- Trash can
+- Desktop
+- Bench to sit
 	
-Characters:
-	- Policeman
-	- Citizens
-	- Secretary
+### Characters:
+- Policeman
+- Citizens
+- Secretary
 	
-Behavioral Changes
-	- Interrogation with all the characters
+### Behavioral Changes
+- Interrogation with all the characters
 	
 	
 	
