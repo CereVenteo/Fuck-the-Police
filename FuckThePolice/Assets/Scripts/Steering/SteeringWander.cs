@@ -20,7 +20,7 @@ public class SteeringWander : SteeringAbstract
 
     private void Update()
     {
-        seek.Steer(random_point, priority);
+        seek.Steer(random_point);
     }
 
     // Update is called once per frame

@@ -15,10 +15,10 @@ public class SteeringSeek : SteeringAbstract
 	// Update is called once per frame
 	void Update () 
 	{
-		Steer(move.target.transform.position, priority);
+		Steer(move.target.transform.position);
 	}
 
-	public void Steer(Vector3 target, int _priority)
+	public void Steer(Vector3 target)
 	{
 		if(!move)
 			move = GetComponent<Move>();
@@ -27,6 +27,6 @@ public class SteeringSeek : SteeringAbstract
 		diff.Normalize ();
 		diff *= move.max_mov_acceleration;
 
-		move.AccelerateMovement(diff, _priority);
+		move.AccelerateMovement(diff,priority);
 	}
 }
