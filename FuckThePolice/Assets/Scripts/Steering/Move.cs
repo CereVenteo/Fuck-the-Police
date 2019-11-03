@@ -26,7 +26,7 @@ public class Move : MonoBehaviour {
     public float current_rotation_speed = 0.0f; // degrees
 
     public Vector3[] priorities_velocity;
-    public float[] rotation_velocity;
+    public float[] priorities_rotation;
 
     private void Start()
     {
@@ -40,11 +40,15 @@ public class Move : MonoBehaviour {
             priorities_velocity[i] = Vector3.zero;
         }
 
-        rotation_velocity = new float[SteeringConf.num_priorities];
+        priorities_rotation = new float[SteeringConf.num_priorities + 1];
+        for (int i = 0; i < SteeringConf.num_priorities; i++)
+        {
+            priorities_rotation[i] = 0.0f;
+        }
     }
 
     // Methods for behaviours to set / add velocities
-    public void SetMovementVelocity (Vector3 velocity, int priority) 
+    public void SetMovementVelocity (Vector3 velocity) 
 	{
         current_velocity = velocity;
 	}
@@ -61,7 +65,7 @@ public class Move : MonoBehaviour {
 
     public void AccelerateRotation(float rotation_acceleration, int priority)
     {
-        current_rotation_speed += rotation_acceleration;
+        priorities_rotation[priority] += rotation_acceleration;
     }
 
     public Vector3 GetPriorityVelocity()
@@ -80,6 +84,22 @@ public class Move : MonoBehaviour {
         return aux_current_velocity;
     }
 
+    public float GetPriorityRotation()
+    {
+        float aux_current_rotation = 0.0f;
+
+        for (int i = SteeringConf.num_priorities; i >= 0; --i)
+        {
+            if (priorities_rotation[i] != 0.0f)
+            {
+                aux_current_rotation = priorities_rotation[i];
+                break;
+            }
+        }
+
+        return aux_current_rotation;
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -90,6 +110,7 @@ public class Move : MonoBehaviour {
             current_velocity = current_velocity.normalized * max_mov_speed;
 
         // cap rotation
+        current_rotation_speed = GetPriorityRotation();
         current_rotation_speed = Mathf.Clamp(current_rotation_speed, -max_rot_speed, max_rot_speed);
 
         float angle = Mathf.Atan2(current_velocity.x, current_velocity.z);
@@ -108,9 +129,8 @@ public class Move : MonoBehaviour {
         for (int i = 0; i <= SteeringConf.num_priorities; ++i)
         {
             priorities_velocity[i] = Vector3.zero;
+            priorities_rotation[i] = 0.0f;
         }
-
-        
         
     }
     //void CreateCurve()
