@@ -33,26 +33,31 @@ public class SteeringFollowNavMeshPath : SteeringAbstract
     // Update is called once per frame
     void Update()
     {
-        if (path.status == NavMeshPathStatus.PathComplete)
+        if(!move)
+            move = GetComponent<Move>();
+        else
         {
-            if (current_point != path.corners.Length - 1)
+            if (path.status == NavMeshPathStatus.PathComplete)
             {
-                seek.Steer(path.corners[current_point]);
-                if (Vector3.Distance(transform.position, path.corners[current_point]) < min_distance)
-                    current_point++;
-            }
-            else
-            {
-                if (arrive.Steer(path.corners[current_point]))
+                if (current_point != path.corners.Length - 1)
                 {
-                    if (!once)
-                    {
-                        once = true;
-                    }
-
+                    seek.Steer(path.corners[current_point]);
+                    if (Vector3.Distance(transform.position, path.corners[current_point]) < min_distance)
+                        current_point++;
                 }
                 else
-                    once = false;
+                {
+                    if (arrive.Steer(path.corners[current_point]))
+                    {
+                        if (!once)
+                        {
+                            once = true;
+                        }
+
+                    }
+                    else
+                        once = false;
+                }
             }
         }
     }

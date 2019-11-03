@@ -26,37 +26,40 @@ public class SteeringArrive : SteeringAbstract
 	{
 		if(!move)
 			move = GetComponent<Move>();
-
-		// Velocity we are trying to match
-		float ideal_speed = 0.0f;
-		Vector3 diff = target - transform.position;
-
-		if(diff.magnitude < min_distance)
+        else
         {
-            move.SetMovementVelocity(Vector3.zero);
-            return true;
+            // Velocity we are trying to match
+            float ideal_speed = 0.0f;
+            Vector3 diff = target - transform.position;
+
+            if (diff.magnitude < min_distance)
+            {
+                move.SetMovementVelocity(Vector3.zero);
+                return true;
+            }
+
+            // Decide which would be our ideal velocity
+            if (diff.magnitude > slow_distance)
+                ideal_speed = move.max_mov_speed;
+            else
+                ideal_speed = move.max_mov_speed * (diff.magnitude / slow_distance);
+
+            // Create a vector that describes the ideal velocity
+            Vector3 ideal_movement = diff.normalized * ideal_speed;
+
+            // Calculate acceleration needed to match that velocity
+            Vector3 acceleration = ideal_movement - move.current_velocity;
+            acceleration /= time_to_target;
+
+            // Cap acceleration
+            if (acceleration.magnitude > move.max_mov_acceleration)
+            {
+                acceleration = acceleration.normalized * move.max_mov_acceleration;
+            }
+
+            move.AccelerateMovement(acceleration, priority);
         }
-
-        // Decide which would be our ideal velocity
-        if (diff.magnitude > slow_distance)
-			ideal_speed = move.max_mov_speed;
-		else
-            ideal_speed = move.max_mov_speed * (diff.magnitude / slow_distance);
-
-		// Create a vector that describes the ideal velocity
-		Vector3 ideal_movement = diff.normalized * ideal_speed;
-
-		// Calculate acceleration needed to match that velocity
-		Vector3 acceleration = ideal_movement - move.current_velocity;
-		acceleration /= time_to_target;
-
-		// Cap acceleration
-		if(acceleration.magnitude > move.max_mov_acceleration)
-		{
-			acceleration = acceleration.normalized * move.max_mov_acceleration;
-		}
-
-		move.AccelerateMovement(acceleration, priority);
+		
         return false;
 	}
 
