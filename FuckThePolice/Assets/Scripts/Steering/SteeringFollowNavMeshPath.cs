@@ -39,7 +39,7 @@ public class SteeringFollowNavMeshPath : SteeringAbstract
 
             if (current_point != path.corners.Length - 1)
             {
-                seek.Steer(path.corners[current_point]);
+                seek.Steer(path.corners[current_point], priority);
                 if (Vector3.Distance(transform.position, path.corners[current_point]) < min_distance)
                     current_point++;
             }
