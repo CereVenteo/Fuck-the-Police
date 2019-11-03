@@ -33,7 +33,7 @@ public class SteeringArrive : SteeringAbstract
 
 		if(diff.magnitude < min_distance)
         {
-            move.SetMovementVelocity(Vector3.zero, priority);
+            move.SetMovementVelocity(Vector3.zero);
             return true;
         }
 

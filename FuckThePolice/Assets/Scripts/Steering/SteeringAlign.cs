@@ -19,10 +19,12 @@ public class SteeringAlign : SteeringAbstract
 	// Update is called once per frame
 	void Update () 
 	{
-        Steer(move.target.transform.position);
+        this.Steer(move.target.transform.position);
 	}
     public void Steer(Vector3 target)
     {
+        if (!move)
+            move = GetComponent<Move>();
 
         float delta_angle = Vector3.SignedAngle(transform.forward, move.GetPriorityVelocity(), new Vector3(0.0f, 1.0f, 0.0f));
 
