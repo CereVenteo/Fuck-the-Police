@@ -16,19 +16,19 @@ public class CameraControl : MonoBehaviour
 
         if (Input.mousePosition.x > Screen.width - edgeSize)
         {
-            cameraFollowPosition.x += moveAmount * Time.deltaTime;
+            cameraFollowPosition.z -= moveAmount * Time.deltaTime;
         }
         if (Input.mousePosition.x < edgeSize)
         {
-            cameraFollowPosition.x -= moveAmount * Time.deltaTime;
+            cameraFollowPosition.z += moveAmount * Time.deltaTime;
         }
         if (Input.mousePosition.y > Screen.height - edgeSize)
         {
-            cameraFollowPosition.y += moveAmount * Time.deltaTime;
+            cameraFollowPosition.x += moveAmount * Time.deltaTime;
         }
         if (Input.mousePosition.y <  edgeSize)
         {
-            cameraFollowPosition.y -= moveAmount * Time.deltaTime;
+            cameraFollowPosition.x -= moveAmount * Time.deltaTime;
         }
 
         transform.position = cameraFollowPosition;
