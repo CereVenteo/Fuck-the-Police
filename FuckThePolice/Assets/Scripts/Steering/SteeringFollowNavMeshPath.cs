@@ -17,15 +17,9 @@ public class SteeringFollowNavMeshPath : SteeringAbstract
     int current_point = 1;
     bool once = false;
 
-
-    public delegate void ReachAction();
-    //public event ReachAction OnReachEnd;
-
-
     // Use this for initialization
     void Start()
     {
-
         move = GetComponent<Move>();
         arrive = GetComponent<SteeringArrive>();
         seek = GetComponent<SteeringSeek>();
@@ -39,15 +33,6 @@ public class SteeringFollowNavMeshPath : SteeringAbstract
     // Update is called once per frame
     void Update()
     {
-        if (!move)
-            move = GetComponent<Move>();
-        if (!arrive)
-            arrive = GetComponent<SteeringArrive>();
-        if (!seek)
-            seek = GetComponent<SteeringSeek>();
-        if (!align)
-            align = GetComponent<SteeringAlign>();
-
         if (path.status == NavMeshPathStatus.PathComplete)
         {
             //align.Steer(path.corners[current_point]);
@@ -81,14 +66,14 @@ public class SteeringFollowNavMeshPath : SteeringAbstract
         path.ClearCorners();
         NavMesh.CalculatePath(transform.position, pos, (1 << NavMesh.GetAreaFromName("Walkable")), path);
     }
-    void OnDrawGizmosSelected()
-    {
-        for (int i = 0; i < path.corners.Length-1; i++)
-        {
-            // Display the explosion radius when selected
-            Gizmos.color = Color.green;
-            Gizmos.DrawWireSphere(path.corners[i], 5);
-            // Useful if you draw a sphere were on the closest point to the path
-        }
-    }
+    //void OnDrawGizmosSelected()
+    //{
+    //    for (int i = 0; i < path.corners.Length-1; i++)
+    //    {
+    //        // Display the explosion radius when selected
+    //        Gizmos.color = Color.green;
+    //        Gizmos.DrawWireSphere(path.corners[i], 5);
+    //        // Useful if you draw a sphere were on the closest point to the path
+    //    }
+    //}
 }
