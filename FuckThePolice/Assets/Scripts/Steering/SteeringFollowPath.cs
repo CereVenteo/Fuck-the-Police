@@ -19,8 +19,7 @@ public class SteeringFollowPath : SteeringAbstract
     {
         move = GetComponent<Move>();
         seek = GetComponent<SteeringSeek>();
-
-        // TODO 1: Calculate the closest point from the tank to the curve
+        
         float distance;
         closest_point = path.CalcPositionByClosestPoint(transform.position, out distance);
         current_ratio = distance / path.Curve.Points.Length;
@@ -29,17 +28,21 @@ public class SteeringFollowPath : SteeringAbstract
     // Update is called once per frame
     void Update()
     {
-        if (Vector3.Distance(transform.position, closest_point) <= min_distance)
+        if(!move)
+            move = GetComponent<Move>();
+        else
         {
-            current_ratio += ratio_increment;
-            if (current_ratio > 1)
-                current_ratio = 0;
-            closest_point = path.CalcPositionByDistanceRatio(current_ratio);
-        }
+            if (Vector3.Distance(transform.position, closest_point) <= min_distance)
+            {
+                current_ratio += ratio_increment;
+                if (current_ratio > 1)
+                    current_ratio = 0;
+                closest_point = path.CalcPositionByDistanceRatio(current_ratio);
+            }
 
-        seek.Steer(closest_point);
-        // TODO 2: Check if the tank is close enough to the desired point
-        // If so, create a new point further ahead in the path
+            seek.Steer(closest_point);
+        }
+       
     }
 
     void OnDrawGizmosSelected()

@@ -28,16 +28,23 @@ public class SteeringObstacleAvoidance : SteeringAbstract
     // Update is called once per frame
     void Update () 
     {
-        float angle = Mathf.Atan2(move.current_velocity.x, move.current_velocity.z);
-        Quaternion q = Quaternion.AngleAxis(Mathf.Rad2Deg * angle, Vector3.up);
-
-        foreach(my_ray ray in rays)
+        if(!move)
+            move = GetComponent<Move>();
+        else
         {
-            RaycastHit hit;
 
-            if(Physics.Raycast(new Vector3(transform.position.x, 1.0f, transform.position.z), q * ray.direction.normalized, out hit, ray.length, mask) == true)
-                seek.Steer(new Vector3(hit.point.x, transform.position.y, hit.point.z) + hit.normal * avoid_distance);
+            float angle = Mathf.Atan2(move.GetPriorityVelocity().x, move.GetPriorityVelocity().z);
+            Quaternion q = Quaternion.AngleAxis(Mathf.Rad2Deg * angle, Vector3.up);
+
+            foreach (my_ray ray in rays)
+            {
+                RaycastHit hit;
+
+                if (Physics.Raycast(new Vector3(transform.position.x, 1.0f, transform.position.z), q * ray.direction.normalized, out hit, ray.length, mask) == true)
+                    seek.Steer(new Vector3(hit.point.x, transform.position.y, hit.point.z) + hit.normal * avoid_distance);
+            }
         }
+        
     }
 
     void OnDrawGizmosSelected() 
