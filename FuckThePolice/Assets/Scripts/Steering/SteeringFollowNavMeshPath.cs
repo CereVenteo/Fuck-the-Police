@@ -74,7 +74,7 @@ public class SteeringFollowNavMeshPath : SteeringAbstract
     }
     void OnDrawGizmosSelected()
     {
-        for (int i = 0; i < path.corners.Length; i++)
+        for (int i = 0; i < path.corners.Length-1; i++)
         {
             // Display the explosion radius when selected
             Gizmos.color = Color.green;
