@@ -39,6 +39,7 @@ public class SteeringFollowNavMeshPath : SteeringAbstract
         {
             if (path.status == NavMeshPathStatus.PathComplete)
             {
+                align.Steer(path.corners[current_point]);
                 if (current_point != path.corners.Length - 1)
                 {
                     seek.Steer(path.corners[current_point]);
