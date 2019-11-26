@@ -69,7 +69,7 @@ public class SteeringFollowNavMeshPath : SteeringAbstract
         current_point = 1;
         if(path != null)
         path.ClearCorners();
-        if(!created_path)
+        //if(!created_path)
         NavMesh.CalculatePath(transform.position, pos, (1 << NavMesh.GetAreaFromName("Walkable")), path);
     }
     //void OnDrawGizmosSelected()
