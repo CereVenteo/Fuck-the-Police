@@ -16,6 +16,7 @@ public class SteeringFollowNavMeshPath : SteeringAbstract
     public float min_distance;
     public int current_point = 1;
     bool once = false;
+    public bool created_path = false;
 
     // Use this for initialization
     void Start()
@@ -26,7 +27,7 @@ public class SteeringFollowNavMeshPath : SteeringAbstract
         align = GetComponent<SteeringAlign>();
         Vector3 x = Vector3.zero;
         path = new NavMeshPath();
-        NavMesh.CalculatePath(transform.position,move.target.transform.position, (1 << NavMesh.GetAreaFromName("Walkable")), path);
+        //NavMesh.CalculatePath(transform.position,move.target.transform.position, (1 << NavMesh.GetAreaFromName("Walkable")), path);
 
     }
 
@@ -66,7 +67,9 @@ public class SteeringFollowNavMeshPath : SteeringAbstract
     public void CreatePath(Vector3 pos)
     {
         current_point = 1;
+        if(path != null)
         path.ClearCorners();
+        if(!created_path)
         NavMesh.CalculatePath(transform.position, pos, (1 << NavMesh.GetAreaFromName("Walkable")), path);
     }
     //void OnDrawGizmosSelected()

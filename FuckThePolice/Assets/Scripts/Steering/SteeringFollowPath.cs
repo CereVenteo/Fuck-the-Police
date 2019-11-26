@@ -44,8 +44,6 @@ public class SteeringFollowPath : SteeringAbstract
         }
 
         seek.Steer(closest_point);
-        // TODO 2: Check if the tank is close enough to the desired point
-        // If so, create a new point further ahead in the path
 
     }
 

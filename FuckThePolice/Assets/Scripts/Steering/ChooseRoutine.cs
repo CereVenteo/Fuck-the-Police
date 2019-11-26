@@ -39,12 +39,12 @@ public class ChooseRoutine : MonoBehaviour
                 if (move.target == target1)
                 {
                     move.target = target2;
-                    nav.CreatePath(move.target.transform.position);
+                    //nav.CreatePath(move.target.transform.position);
                 }
                 else
                 {
                     move.target = target1;
-                    nav.CreatePath(move.target.transform.position);
+                    //nav.CreatePath(move.target.transform.position);
                 }
             }
             else if (pathnav.enabled == true)
