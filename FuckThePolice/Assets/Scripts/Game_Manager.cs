@@ -9,8 +9,9 @@ public class Game_Manager : MonoBehaviour
 {
     public bool secretary_free;
     public int civilian_identity = 0;
-    public List<GameObject> agents_pos;
+    public List<GameObject> civil_agents_pos;
     public List<GameObject> civilians;
+    public List<GameObject> agents;
     int active_civilians = 0;
     // Start is called before the first frame update
     void Start()
@@ -24,16 +25,39 @@ public class Game_Manager : MonoBehaviour
     {
         
     }
-
-    public void Call_Civilian(int identity)
+    public int Request_identity()
+    {
+        for (int i = 0; i < civilians.Count; i++)
+        {
+            if (civilians[i].GetComponent<Civilian_Variables>().agent_call != true)
+            {
+                return civilians[i].GetComponent<Civilian_Variables>().identity;
+            }
+        }
+        return 0;
+    }
+    public void Call_Civilian(int identity , int id)
     {
         for (int i = 0; i < civilians.Count; i++)
         {
             if(civilians[i].GetComponent<Civilian_Variables>().identity == identity)
             {
+                civilians[i].GetComponent<Civilian_Variables>().go_agent_position = civil_agents_pos[id].transform.position;
                 civilians[i].GetComponent<Civilian_Variables>().agent_call = true;
             }
         }
+    }
+
+    public int Request_Civilian(int identity)
+    {
+        for (int i = 0; i < civilians.Count; i++)
+        {
+            if (civilians[i].GetComponent<Civilian_Variables>().identity == identity)
+            {
+                return i;
+            }
+        }
+        return -1;
     }
 
     //public IEnumerator Enable_Civilian()

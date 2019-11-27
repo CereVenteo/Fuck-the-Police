@@ -19,6 +19,7 @@ public class SteeringAlign : SteeringAbstract
 	// Update is called once per frame
 	void Update () 
 	{
+        if(move.target != null)
         Steer(move.target.transform.position);
 	}
     public void Steer(Vector3 target)

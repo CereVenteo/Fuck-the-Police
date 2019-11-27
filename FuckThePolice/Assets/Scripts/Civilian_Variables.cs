@@ -15,6 +15,7 @@ public class Civilian_Variables : MonoBehaviour
     public GameObject go_away;
     public int identity;
     public bool agent_call;
+    public Vector3 go_agent_position;
     public GameObject target;
     public GameObject target2;
     public bool go_back = true;
@@ -68,7 +69,7 @@ public class Civilian_Variables : MonoBehaviour
 
     public void Go_Agent()
     {
-        nav.CreatePath(Game_Manager.agents_pos[identity].transform.position);
+        nav.CreatePath(go_agent_position);
     }
 
     public IEnumerator Talk()
@@ -78,7 +79,7 @@ public class Civilian_Variables : MonoBehaviour
         identity = Game_Manager.civilian_identity + 1;
         Game_Manager.civilian_identity = identity;
         Game_Manager.secretary_free = true;
-        Game_Manager.Call_Civilian(1);
+       // Game_Manager.Call_Civilian(identity);
     }
 
     public IEnumerator AgentTalk()
