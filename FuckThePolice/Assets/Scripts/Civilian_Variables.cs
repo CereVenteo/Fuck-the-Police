@@ -7,17 +7,20 @@ public class Civilian_Variables : MonoBehaviour
     public Game_Manager Game_Manager;
     SteeringFollowNavMeshPath nav;
     public bool secretary_free;
-    public List<bool> agents_free;
     public Vector3 civil_target;
-    public List<Vector3> wait_positions;
+    public List<GameObject> wait_positions;
     public Vector3 wait_position;
     public bool waiting = false;
     public Vector3 secretary_position;
-    public Vector3 go_away;
+    public GameObject go_away;
+    public int identity;
+    public bool agent_call;
     public GameObject target;
     public GameObject target2;
-    public bool talking;
-    public bool created_path = false;
+    public bool go_back = true;
+    //public bool active_civilian = false;
+    //public bool talking;
+    //public bool created_path = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -40,14 +43,60 @@ public class Civilian_Variables : MonoBehaviour
         {
             waiting = false;
         }
+        if(!go_back)
+        {
+            Vector3 diff = nav.path.corners[nav.path.corners.Length -1] - transform.position;
 
+            if (diff.magnitude < 2)
+            {
+                go_back = true;
+            }
+        }
 
     }
+
+    public void Wait()
+    {
+        int size = wait_positions.Count;
+        if (nav.path.corners.Length < 1)
+            nav.CreatePath(wait_positions[Random.Range(0, size)].transform.position);
+        if (waiting)
+        {
+            nav.CreatePath(wait_positions[Random.Range(0, size)].transform.position);
+        }
+    }
+
+    public void Go_Agent()
+    {
+        nav.CreatePath(Game_Manager.agents_pos[identity].transform.position);
+    }
+
     public IEnumerator Talk()
     {
         Game_Manager.secretary_free = false;
         yield return new WaitForSeconds(15);
+        identity = Game_Manager.civilian_identity + 1;
+        Game_Manager.civilian_identity = identity;
         Game_Manager.secretary_free = true;
+        Game_Manager.Call_Civilian(1);
+    }
+
+    public IEnumerator AgentTalk()
+    {
+        agent_call = false;
+        yield return new WaitForSeconds(15);
+        Game_Manager.civilian_identity = Game_Manager.civilian_identity - 1;
+    }
+
+    public void Go_Away()
+    {
+        nav.CreatePath(go_away.transform.position);
+        go_back = false;
+    }
+
+    public void end_round()
+    {
+       this.gameObject.SetActive(false);
     }
     //public void hola()
     //{
