@@ -12,7 +12,7 @@ public class Game_Manager : MonoBehaviour
     public List<GameObject> civil_agents_pos;
     public List<GameObject> civilians;
     public List<GameObject> agents;
-    int active_civilians = 0;
+    //int active_civilians = 0;
     // Start is called before the first frame update
     void Start()
     {

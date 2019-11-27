@@ -38,11 +38,12 @@ public class Civilian_Variables : MonoBehaviour
         if(nav.path.corners.Length >1)
         if (nav.current_point == nav.path.corners.Length - 1)
         {
-            waiting = true;
-        }
-        else
-        {
-            waiting = false;
+                Vector3 diff = nav.path.corners[nav.path.corners.Length - 1] - transform.position;
+
+                if (diff.magnitude < 2)
+                    waiting = true;
+                else
+                    waiting = false;
         }
         if(!go_back)
         {

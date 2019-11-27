@@ -2863,7 +2863,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 820747288}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 41c2806a5dd523a4899d877e2419960d, type: 3}
   m_Name: 
@@ -15105,8 +15105,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2116015443}
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -1806.4, y: 1140, z: 294.7}
-  m_LocalScale: {x: 2.8, y: 2.8, z: 2.8}
+  m_LocalPosition: {x: -1778.1, y: 1139.54, z: 336.18}
+  m_LocalScale: {x: 2.7999997, y: 2.8000002, z: 2.7999997}
   m_Children:
   - {fileID: 478224493}
   m_Father: {fileID: 1575424292}
@@ -18601,7 +18601,7 @@ PrefabInstance:
     - target: {fileID: 4298245924343526581, guid: 67c734a14f354e842b20534b835ddfe0,
         type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 1391422311128678176, guid: 67c734a14f354e842b20534b835ddfe0,
         type: 3}
@@ -21546,7 +21546,7 @@ PrefabInstance:
     - target: {fileID: 7629096602385151189, guid: 67c734a14f354e842b20534b835ddfe0,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 4
+      value: 7.5464
       objectReference: {fileID: 0}
     - target: {fileID: 7629096602385151189, guid: 67c734a14f354e842b20534b835ddfe0,
         type: 3}
@@ -21556,7 +21556,7 @@ PrefabInstance:
     - target: {fileID: 7629096602385151189, guid: 67c734a14f354e842b20534b835ddfe0,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.81
+      value: -4.42
       objectReference: {fileID: 0}
     - target: {fileID: 7629096600907510715, guid: 67c734a14f354e842b20534b835ddfe0,
         type: 3}
@@ -22997,16 +22997,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Game_Manager: {fileID: 0}
-  id: 1
+  id: 0
   work_target: {fileID: 1068446172}
   work_position: {x: 0, y: 0, z: 0}
   criminal_cell: {x: 0, y: 0, z: 0}
   interrogator_position: {fileID: 1494389400}
   interrogator_supervisor: {fileID: 394674072}
+  criminal_target: {fileID: 2116015443}
   request_for_interrogation: 0
   request_civilian: 0
   waiting: 0
   civil_waiting: 0
+  civile_talk: 0
   go_back: 0
 --- !u!114 &8637100246777300336
 MonoBehaviour:
@@ -23076,7 +23078,10 @@ MonoBehaviour:
     mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"civil_waiting":{"_propertyPath":"Agent_Variables.civil_waiting","_name":"civil_waiting","_id":"b8f5ec5e-9e3f-47f3-a0d3-e54d8f0b6c17","$type":"NodeCanvas.Framework.Variable`1[[System.Boolean,
     mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"request_for_interrogation":{"_propertyPath":"Agent_Variables.request_for_interrogation","_name":"request_for_interrogation","_id":"723ee361-9d87-4649-8d91-fe49a1714297","$type":"NodeCanvas.Framework.Variable`1[[System.Boolean,
     mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"waiting":{"_propertyPath":"Agent_Variables.waiting","_name":"waiting","_id":"87da3315-8d6b-449c-b9d1-e060940daadf","$type":"NodeCanvas.Framework.Variable`1[[System.Boolean,
-    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}}}'
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"civile_talk":{"_propertyPath":"Agent_Variables.civile_talk","_name":"civile_talk","_id":"4af5716b-4b96-42e4-9c2a-b206495f129f","$type":"NodeCanvas.Framework.Variable`1[[System.Boolean,
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"interrogator_position":{"_propertyPath":"Agent_Variables.interrogator_position","_name":"interrogator_position","_id":"727c139d-21bb-4662-ad23-517c435d87a3","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"criminal_cell":{"_propertyPath":"Agent_Variables.criminal_cell","_name":"criminal_cell","_id":"a98bbe65-a03f-4fa8-ae6a-31089ad1924d","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Vector3,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}}}'
   _objectReferences: []
 --- !u!114 &8637100246777300340
 MonoBehaviour:
