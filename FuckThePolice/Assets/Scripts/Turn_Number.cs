@@ -5,7 +5,7 @@ using UnityEngine;
 public class Turn_Number : MonoBehaviour
 {
     public GameObject turn_number_ui;
-    public TextMesh text;
+    TextMesh text;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,16 +17,13 @@ public class Turn_Number : MonoBehaviour
     {
         if(turn_number_ui)
         {
-            ShowTurn();
+            turn_number_ui.transform.position = new Vector3(this.gameObject.transform.position.x, this.gameObject.transform.position.y + 4, this.gameObject.transform.position.z);
         }
     }
-
-    public void ShowTurn()
-    {
-        turn_number_ui.transform.position = new Vector3(this.gameObject.transform.position.x, this.gameObject.transform.position.y + 4, this.gameObject.transform.position.z);
-    }
+    
     public void SetNumber(uint number)
     {
-        //turn_number_ui.GetComponent<TextMesh>
+        text = turn_number_ui.GetComponent<TextMesh>();
+        text.text = number.ToString();
     }
 }

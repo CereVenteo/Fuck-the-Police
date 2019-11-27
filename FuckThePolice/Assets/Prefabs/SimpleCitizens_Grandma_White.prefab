@@ -895,6 +895,7 @@ GameObject:
   - component: {fileID: 1631955918865299678}
   - component: {fileID: 1631955918865299677}
   - component: {fileID: 1631955918865299676}
+  - component: {fileID: 556762989299414878}
   m_Layer: 8
   m_Name: SimpleCitizens_Grandma_White
   m_TagString: Untagged
@@ -911,7 +912,7 @@ Transform:
   m_GameObject: {fileID: 1631955920228715879}
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
   m_LocalPosition: {x: -45.6, y: 19.113174, z: 14.2907715}
-  m_LocalScale: {x: 2.8000004, y: 2.8, z: 2.8000004}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1631955920228684101}
   - {fileID: 1631955920228684099}
@@ -1033,12 +1034,10 @@ MonoBehaviour:
   max_rot_speed: 300
   max_rot_acceleration: 100
   anim: {fileID: 0}
-  curveManager: {fileID: 0}
-  curve: {fileID: 0}
   current_velocity: {x: 0, y: 0, z: 0}
   current_rotation_speed: 0
   priorities_velocity: []
-  rotation_velocity: []
+  priorities_rotation: []
 --- !u!114 &1631955918865299672
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1052,9 +1051,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   priority: 1
-  man: {fileID: 0}
-  ratio_increment: 0.1
   min_distance: 1
+  current_point: 1
+  created_path: 0
 --- !u!114 &1631955918865299679
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1142,6 +1141,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   priority: 0
+--- !u!114 &556762989299414878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1631955920228715879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44d3818d82245ec4d92c1614d838cafc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  turn_number_ui: {fileID: 8851631533160806304, guid: 34c82118352375144bc7f9c2d3d95987,
+    type: 3}
 --- !u!1 &1631955920228715881
 GameObject:
   m_ObjectHideFlags: 0

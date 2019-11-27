@@ -33,7 +33,6 @@ public class Canvas : MonoBehaviour
         star_points = 1000;
         points_valor = 0;
         stars = 0;
-        star1.sprite = Resources.Load<Sprite>("Sprites/star_black");
     }
 
     // Update is called once per frame
@@ -91,6 +90,18 @@ public class Canvas : MonoBehaviour
         {
             case 1:
                 star1.sprite = Resources.Load<Sprite>("Sprites/star");
+                break;
+            case 2:
+                star2.sprite = Resources.Load<Sprite>("Sprites/star");
+                break;
+            case 3:
+                star3.sprite = Resources.Load<Sprite>("Sprites/star");
+                break;
+            case 4:
+                star4.sprite = Resources.Load<Sprite>("Sprites/star");
+                break;
+            case 5:
+                star5.sprite = Resources.Load<Sprite>("Sprites/star");
                 break;
             default:
                 break;
