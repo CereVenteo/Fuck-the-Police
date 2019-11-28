@@ -1595,80 +1595,6 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!1001 &363358072
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 5937251181906514921, guid: 98104eb523bcabb4db71cbd52fc1c075,
-        type: 3}
-      propertyPath: m_Name
-      value: Box_Car_Menu
-      objectReference: {fileID: 0}
-    - target: {fileID: 5937251181906514921, guid: 98104eb523bcabb4db71cbd52fc1c075,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1353814328448823065, guid: 98104eb523bcabb4db71cbd52fc1c075,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 3.7151814
-      objectReference: {fileID: 0}
-    - target: {fileID: 1353814328448823065, guid: 98104eb523bcabb4db71cbd52fc1c075,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 11.088909
-      objectReference: {fileID: 0}
-    - target: {fileID: 1353814328448823065, guid: 98104eb523bcabb4db71cbd52fc1c075,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 24.647291
-      objectReference: {fileID: 0}
-    - target: {fileID: 1353814328448823065, guid: 98104eb523bcabb4db71cbd52fc1c075,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.27059805
-      objectReference: {fileID: 0}
-    - target: {fileID: 1353814328448823065, guid: 98104eb523bcabb4db71cbd52fc1c075,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.6532815
-      objectReference: {fileID: 0}
-    - target: {fileID: 1353814328448823065, guid: 98104eb523bcabb4db71cbd52fc1c075,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0.27059805
-      objectReference: {fileID: 0}
-    - target: {fileID: 1353814328448823065, guid: 98104eb523bcabb4db71cbd52fc1c075,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.6532815
-      objectReference: {fileID: 0}
-    - target: {fileID: 1353814328448823065, guid: 98104eb523bcabb4db71cbd52fc1c075,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 1353814328448823065, guid: 98104eb523bcabb4db71cbd52fc1c075,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 45
-      objectReference: {fileID: 0}
-    - target: {fileID: 1353814328448823065, guid: 98104eb523bcabb4db71cbd52fc1c075,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 1353814328448823065, guid: 98104eb523bcabb4db71cbd52fc1c075,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 98104eb523bcabb4db71cbd52fc1c075, type: 3}
 --- !u!1 &394674072
 GameObject:
   m_ObjectHideFlags: 0
@@ -16113,6 +16039,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1816112851533160762}
     m_Modifications:
+    - target: {fileID: 190214, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
+      propertyPath: m_Name
+      value: Box_desktop_5
+      objectReference: {fileID: 0}
+    - target: {fileID: 190214, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 190214, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 478962, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 7.4828796
@@ -16168,18 +16106,6 @@ PrefabInstance:
     - target: {fileID: 478962, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
       propertyPath: m_LocalScale.z
       value: 1.4198002
-      objectReference: {fileID: 0}
-    - target: {fileID: 190214, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
-      propertyPath: m_Name
-      value: Box_desktop_5
-      objectReference: {fileID: 0}
-    - target: {fileID: 190214, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 190214, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
-      propertyPath: m_NavMeshLayer
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
@@ -16243,6 +16169,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1816112851533160762}
     m_Modifications:
+    - target: {fileID: 190214, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
+      propertyPath: m_Name
+      value: Box_car_3
+      objectReference: {fileID: 0}
+    - target: {fileID: 190214, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 190214, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 478962, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -15.089507
@@ -16298,18 +16236,6 @@ PrefabInstance:
     - target: {fileID: 478962, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
       propertyPath: m_LocalScale.z
       value: 1.4197998
-      objectReference: {fileID: 0}
-    - target: {fileID: 190214, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
-      propertyPath: m_Name
-      value: Box_car_3
-      objectReference: {fileID: 0}
-    - target: {fileID: 190214, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 190214, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
-      propertyPath: m_NavMeshLayer
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
@@ -16946,6 +16872,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1816112851533160762}
     m_Modifications:
+    - target: {fileID: 190214, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
+      propertyPath: m_Name
+      value: Box_cell_4
+      objectReference: {fileID: 0}
+    - target: {fileID: 190214, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 190214, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 478962, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 16.41124
@@ -17001,18 +16939,6 @@ PrefabInstance:
     - target: {fileID: 478962, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
       propertyPath: m_LocalScale.z
       value: 1.4198002
-      objectReference: {fileID: 0}
-    - target: {fileID: 190214, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
-      propertyPath: m_Name
-      value: Box_cell_4
-      objectReference: {fileID: 0}
-    - target: {fileID: 190214, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 190214, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
-      propertyPath: m_NavMeshLayer
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
@@ -17146,6 +17072,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1816112851533160762}
     m_Modifications:
+    - target: {fileID: 190214, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
+      propertyPath: m_Name
+      value: Box_car_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 190214, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 190214, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 478962, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -15.089507
@@ -17201,18 +17139,6 @@ PrefabInstance:
     - target: {fileID: 478962, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
       propertyPath: m_LocalScale.z
       value: 1.4197998
-      objectReference: {fileID: 0}
-    - target: {fileID: 190214, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
-      propertyPath: m_Name
-      value: Box_car_2
-      objectReference: {fileID: 0}
-    - target: {fileID: 190214, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 190214, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
-      propertyPath: m_NavMeshLayer
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
@@ -17306,6 +17232,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1816112851533160762}
     m_Modifications:
+    - target: {fileID: 190214, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
+      propertyPath: m_Name
+      value: Box_cell_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 190214, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 190214, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 478962, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 16.41124
@@ -17361,18 +17299,6 @@ PrefabInstance:
     - target: {fileID: 478962, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
       propertyPath: m_LocalScale.z
       value: 1.4198002
-      objectReference: {fileID: 0}
-    - target: {fileID: 190214, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
-      propertyPath: m_Name
-      value: Box_cell_2
-      objectReference: {fileID: 0}
-    - target: {fileID: 190214, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 190214, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
-      propertyPath: m_NavMeshLayer
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
@@ -17552,6 +17478,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1816112851533160762}
     m_Modifications:
+    - target: {fileID: 190214, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
+      propertyPath: m_Name
+      value: Box_interrogatory_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 190214, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 190214, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 478962, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 12.25
@@ -17607,18 +17545,6 @@ PrefabInstance:
     - target: {fileID: 478962, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
       propertyPath: m_LocalScale.z
       value: 1.4198002
-      objectReference: {fileID: 0}
-    - target: {fileID: 190214, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
-      propertyPath: m_Name
-      value: Box_interrogatory_2
-      objectReference: {fileID: 0}
-    - target: {fileID: 190214, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 190214, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
-      propertyPath: m_NavMeshLayer
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
@@ -18301,6 +18227,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1816112851533160762}
     m_Modifications:
+    - target: {fileID: 190214, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
+      propertyPath: m_Name
+      value: Box_desktop_4
+      objectReference: {fileID: 0}
+    - target: {fileID: 190214, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 190214, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 478962, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 7.4828796
@@ -18356,18 +18294,6 @@ PrefabInstance:
     - target: {fileID: 478962, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
       propertyPath: m_LocalScale.z
       value: 1.4198002
-      objectReference: {fileID: 0}
-    - target: {fileID: 190214, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
-      propertyPath: m_Name
-      value: Box_desktop_4
-      objectReference: {fileID: 0}
-    - target: {fileID: 190214, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 190214, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
-      propertyPath: m_NavMeshLayer
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
@@ -19185,6 +19111,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1816112851533160762}
     m_Modifications:
+    - target: {fileID: 190214, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
+      propertyPath: m_Name
+      value: Box_desktop_6
+      objectReference: {fileID: 0}
+    - target: {fileID: 190214, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 190214, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 478962, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 13.770462
@@ -19240,18 +19178,6 @@ PrefabInstance:
     - target: {fileID: 478962, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
       propertyPath: m_LocalScale.z
       value: 1.4198002
-      objectReference: {fileID: 0}
-    - target: {fileID: 190214, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
-      propertyPath: m_Name
-      value: Box_desktop_6
-      objectReference: {fileID: 0}
-    - target: {fileID: 190214, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 190214, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
-      propertyPath: m_NavMeshLayer
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
@@ -19314,6 +19240,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1816112851533160762}
     m_Modifications:
+    - target: {fileID: 190214, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
+      propertyPath: m_Name
+      value: Box_cell_3
+      objectReference: {fileID: 0}
+    - target: {fileID: 190214, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 190214, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 478962, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 16.41124
@@ -19369,18 +19307,6 @@ PrefabInstance:
     - target: {fileID: 478962, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
       propertyPath: m_LocalScale.z
       value: 1.4198002
-      objectReference: {fileID: 0}
-    - target: {fileID: 190214, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
-      propertyPath: m_Name
-      value: Box_cell_3
-      objectReference: {fileID: 0}
-    - target: {fileID: 190214, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 190214, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
-      propertyPath: m_NavMeshLayer
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
@@ -19740,6 +19666,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1816112851533160762}
     m_Modifications:
+    - target: {fileID: 190214, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
+      propertyPath: m_Name
+      value: Box_desktop_3
+      objectReference: {fileID: 0}
+    - target: {fileID: 190214, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 190214, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 478962, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.8240662
@@ -19795,18 +19733,6 @@ PrefabInstance:
     - target: {fileID: 478962, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
       propertyPath: m_LocalScale.z
       value: 1.4198002
-      objectReference: {fileID: 0}
-    - target: {fileID: 190214, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
-      propertyPath: m_Name
-      value: Box_desktop_3
-      objectReference: {fileID: 0}
-    - target: {fileID: 190214, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 190214, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
-      propertyPath: m_NavMeshLayer
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
@@ -21177,6 +21103,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1816112851533160762}
     m_Modifications:
+    - target: {fileID: 190214, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
+      propertyPath: m_Name
+      value: Box_car_4
+      objectReference: {fileID: 0}
+    - target: {fileID: 190214, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 190214, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 478962, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -15.089507
@@ -21232,18 +21170,6 @@ PrefabInstance:
     - target: {fileID: 478962, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
       propertyPath: m_LocalScale.z
       value: 1.4197998
-      objectReference: {fileID: 0}
-    - target: {fileID: 190214, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
-      propertyPath: m_Name
-      value: Box_car_4
-      objectReference: {fileID: 0}
-    - target: {fileID: 190214, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 190214, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
-      propertyPath: m_NavMeshLayer
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
