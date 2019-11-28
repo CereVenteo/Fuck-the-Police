@@ -18,7 +18,7 @@ public class Criminal_Variables : MonoBehaviour
     public bool police_waiting;
     public bool interrogation_time;
     public bool waiting;
-
+    public GameObject go_away;
     // Start is called before the first frame update
     void Start()
     {
@@ -65,6 +65,10 @@ public class Criminal_Variables : MonoBehaviour
     {
         follower_target.SetActive(false);
     }
+    public void On_Follower()
+    {
+        follower_target.SetActive(true);
+    }
     public void teleport_cell()
     {
         this.transform.position = cell.transform.position;
@@ -81,5 +85,18 @@ public class Criminal_Variables : MonoBehaviour
     {
         yield return new WaitForSeconds(30);
         interrogation_time = false;
+    }
+    public IEnumerator Wait_time(int time)
+    {
+        yield return new WaitForSeconds(time);
+    }
+    public void Go_Away()
+    {
+        nav.CreatePath(go_away.transform.position);
+    }
+    public void criminal_off()
+    {
+        Off_Follower();
+        this.gameObject.SetActive(false);
     }
 }
