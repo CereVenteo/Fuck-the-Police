@@ -15,6 +15,7 @@ public class Game_Manager : MonoBehaviour
     public List<GameObject> cells;
     public List<GameObject> criminals;
     public List<bool> free_cells;
+    public List<GameObject> police;
     //int active_civilians = 0;
     // Start is called before the first frame update
     void Start()

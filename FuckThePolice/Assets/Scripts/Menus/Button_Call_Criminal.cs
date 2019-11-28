@@ -15,6 +15,12 @@ public class Button_Call_Criminal : MonoBehaviour
 
     void CallCriminal()
     {
-
+        Game_Manager manager = GameObject.Find("Game_Manager").GetComponent<Game_Manager>();
+        for (int i = 0; i < manager.police.Count; i++)
+        {
+            Agent_Variables agent = manager.police[i].gameObject.GetComponent<Agent_Variables>();
+            if (agent.talking == false)
+                agent.request_for_interrogation = true;
+        }
     }
 }
