@@ -32,7 +32,21 @@ public class CameraControl : MonoBehaviour
             cameraFollowPosition.x -= moveAmount * Time.deltaTime;
         }
 
-        cameraFollowPosition.y -= Input.mouseScrollDelta.y;
+        if (cameraFollowPosition.y >= limit && cameraFollowPosition.y <= limit * 2 && cameraFollowPosition.x >= -limit && cameraFollowPosition.x <= limit)
+        {
+            cameraFollowPosition.y -= Input.mouseScrollDelta.y;
+            cameraFollowPosition.x += Input.mouseScrollDelta.y;
+        }
+            
+        if (cameraFollowPosition.y < limit)
+            cameraFollowPosition.y = limit;
+        else if (cameraFollowPosition.y > limit * 2)
+            cameraFollowPosition.y = limit * 2;
+        if (cameraFollowPosition.x < -limit)
+            cameraFollowPosition.x = -limit;
+        else if (cameraFollowPosition.x > limit)
+            cameraFollowPosition.x = limit;
+
 
         transform.position = cameraFollowPosition;
     }
