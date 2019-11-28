@@ -26991,6 +26991,9 @@ MonoBehaviour:
   interrogator_supervisor: {fileID: 394674072}
   criminal_target: {x: 0, y: 0, z: 0}
   request_for_interrogation: 0
+  room: 1
+  interrogator: 0
+  supervisor: 0
   request_civilian: 0
   waiting: 0
   talking: 0
@@ -27070,6 +27073,10 @@ MonoBehaviour:
     UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"talking":{"_propertyPath":"Agent_Variables.talking","_name":"talking","_id":"db02deaa-9753-4423-b7b9-c5cebc2bb9be","$type":"NodeCanvas.Framework.Variable`1[[System.Boolean,
     mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"criminal_target":{"_propertyPath":"Agent_Variables.criminal_target","_name":"criminal_target","_id":"59524c68-0b20-4dea-b12f-4145b30cb8c0","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Vector3,
     UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"criminal_cell":{"_name":"criminal_cell","_id":"31c2852e-33d7-4c5a-991f-0798af299066","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Vector3,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"interrogator":{"_propertyPath":"Agent_Variables.interrogator","_name":"interrogator","_id":"d2a9fabd-8592-4a35-bc55-f34a475b3a76","$type":"NodeCanvas.Framework.Variable`1[[System.Boolean,
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"supervisor":{"_propertyPath":"Agent_Variables.supervisor","_name":"supervisor","_id":"64ae71f7-3f62-49ea-b4e5-ceea2030c65d","$type":"NodeCanvas.Framework.Variable`1[[System.Boolean,
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"room":{"_propertyPath":"Agent_Variables.room","_name":"room","_id":"7d7f13d9-7d14-4bdc-b77c-0782dc5cd1e8","$type":"NodeCanvas.Framework.Variable`1[[System.Boolean,
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"interrogator_supervisor":{"_propertyPath":"Agent_Variables.interrogator_supervisor","_name":"interrogator_supervisor","_id":"4ec885bd-d249-4753-bef4-18016935944c","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
     UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}}}'
   _objectReferences: []
 --- !u!114 &8637100246777300340
