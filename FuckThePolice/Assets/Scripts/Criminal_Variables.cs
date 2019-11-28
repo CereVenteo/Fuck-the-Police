@@ -13,8 +13,6 @@ public class Criminal_Variables : MonoBehaviour
     public GameObject cell;
     public GameObject follower_target;
     public GameObject interrogation_target;
-    public GameObject interrogation_target_2;
-    public bool room = true;
     public bool police_waiting;
     public bool interrogation_time;
     public bool waiting;
