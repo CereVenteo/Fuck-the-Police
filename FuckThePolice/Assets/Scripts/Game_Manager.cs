@@ -42,8 +42,11 @@ public class Game_Manager : MonoBehaviour
         {
             if(civilians[i].GetComponent<Civilian_Variables>().identity == identity)
             {
-                civilians[i].GetComponent<Civilian_Variables>().go_agent_position = civil_agents_pos[id].transform.position;
-                civilians[i].GetComponent<Civilian_Variables>().agent_call = true;
+                if (identity != 0)
+                {
+                    civilians[i].GetComponent<Civilian_Variables>().go_agent_position = civil_agents_pos[id].transform.position;
+                    civilians[i].GetComponent<Civilian_Variables>().agent_call = true;
+                }
             }
         }
     }
@@ -54,7 +57,10 @@ public class Game_Manager : MonoBehaviour
         {
             if (civilians[i].GetComponent<Civilian_Variables>().identity == identity)
             {
-                return i;
+                if (identity != 0)
+                {
+                    return i;
+                }
             }
         }
         return -1;

@@ -16,6 +16,7 @@ public class Agent_Variables : MonoBehaviour
     public bool request_for_interrogation;
     public bool request_civilian;
     public bool waiting = false;
+    public bool talking = false;
     public bool civil_waiting;
     public bool civile_talk = false;
     public bool go_back = true;
@@ -37,6 +38,7 @@ public class Agent_Variables : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.C))
         {
             request_civilian = true;
+            talking = true;
         }
         if (Input.GetKeyDown(KeyCode.F))
         {
@@ -70,9 +72,12 @@ public class Agent_Variables : MonoBehaviour
 
     public void Call_Civil()
     {
+        if (civil == 0)
+        {
             civil = Game_Manager.Request_identity();
             civil_id = Game_Manager.Request_Civilian(civil);
-            Game_Manager.Call_Civilian(civil, id);   
+            Game_Manager.Call_Civilian(civil, id);
+        }
     }
 
     public IEnumerator AgentTalk()
@@ -80,11 +85,14 @@ public class Agent_Variables : MonoBehaviour
         yield return new WaitForSeconds(15);
         request_civilian = false;
         civile_talk = false;
+        civil = 0;
+        talking = false;
     }
 
     public IEnumerator AgentInterrogtion()
     {
         yield return new WaitForSeconds(30);
+        request_for_interrogation = false;
     }
 
     public void Interrogation()
