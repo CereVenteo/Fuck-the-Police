@@ -64,6 +64,7 @@ public class Civilian_Variables : MonoBehaviour
             nav.CreatePath(wait_positions[Random.Range(0, size)].transform.position);
         if (waiting)
         {
+            this.GetComponent<Move>().max_mov_speed = 2;
             nav.CreatePath(wait_positions[Random.Range(0, size)].transform.position);
         }
     }

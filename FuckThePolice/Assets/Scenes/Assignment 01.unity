@@ -445,6 +445,7 @@ MonoBehaviour:
     UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"waiting":{"_propertyPath":"Civilian_Variables.waiting","_name":"waiting","_id":"6f73acb4-aae0-4bbd-9002-5987ed5688a3","$type":"NodeCanvas.Framework.Variable`1[[System.Boolean,
     mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"agent_call":{"_propertyPath":"Civilian_Variables.agent_call","_name":"agent_call","_id":"e46c1290-effb-4080-b3a1-12a1a19697c0","$type":"NodeCanvas.Framework.Variable`1[[System.Boolean,
     mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"go_back":{"_propertyPath":"Civilian_Variables.go_back","_name":"go_back","_id":"fe176c3a-b23e-4855-a0a3-8a4ba7b07606","$type":"NodeCanvas.Framework.Variable`1[[System.Boolean,
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"max_mov_speed":{"_propertyPath":"Move.max_mov_speed","_name":"max_mov_speed","_id":"fe14ce14-914e-4ee4-9da4-97adb6557754","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
     mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}}}'
   _objectReferences: []
 --- !u!114 &9418387
@@ -10445,6 +10446,7 @@ MonoBehaviour:
     UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"waiting":{"_propertyPath":"Civilian_Variables.waiting","_name":"waiting","_id":"6f73acb4-aae0-4bbd-9002-5987ed5688a3","$type":"NodeCanvas.Framework.Variable`1[[System.Boolean,
     mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"agent_call":{"_propertyPath":"Civilian_Variables.agent_call","_name":"agent_call","_id":"e46c1290-effb-4080-b3a1-12a1a19697c0","$type":"NodeCanvas.Framework.Variable`1[[System.Boolean,
     mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"go_back":{"_propertyPath":"Civilian_Variables.go_back","_name":"go_back","_id":"fe176c3a-b23e-4855-a0a3-8a4ba7b07606","$type":"NodeCanvas.Framework.Variable`1[[System.Boolean,
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"max_mov_speed":{"_propertyPath":"Move.max_mov_speed","_name":"max_mov_speed","_id":"8759cbb7-d02f-4738-bf27-d36292c74b6a","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
     mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}}}'
   _objectReferences: []
 --- !u!114 &1240009895
