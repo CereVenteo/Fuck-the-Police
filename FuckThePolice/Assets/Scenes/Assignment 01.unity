@@ -2929,6 +2929,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 750489840}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &773352484 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6313442801708908482, guid: a106d247f6dbfed4f8648322387789d3,
+    type: 3}
+  m_PrefabInstance: {fileID: 169492176}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &778524886
 GameObject:
   m_ObjectHideFlags: 0
@@ -11523,6 +11529,38 @@ SkinnedMeshRenderer:
     m_Center: {x: -1.0850971, y: 0.000000029802322, z: 0.08290869}
     m_Extent: {x: 0.9229143, y: 0.37826833, z: 0.5957791}
   m_DirtyAABB: 0
+--- !u!1 &1411434907 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 189452628458417847, guid: a106d247f6dbfed4f8648322387789d3,
+    type: 3}
+  m_PrefabInstance: {fileID: 169492176}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1411434910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1411434907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85686820948a5a041a28e328a03a7054, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menu: {fileID: 773352484}
+--- !u!65 &1411434911
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1411434907}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.4000015, y: 3.2000005, z: 0.20000042}
+  m_Center: {x: 0.0000009536743, y: 0.0000009536743, z: 0}
 --- !u!1 &1416754421
 GameObject:
   m_ObjectHideFlags: 0
@@ -23156,6 +23194,7 @@ GameObject:
   - component: {fileID: 8637100246777300340}
   - component: {fileID: 8637100246777300339}
   - component: {fileID: 8637100246777300335}
+  - component: {fileID: 8637100246777300341}
   m_Layer: 8
   m_Name: SimplePeople_Police_Withe
   m_TagString: Untagged
@@ -23421,6 +23460,19 @@ MonoBehaviour:
   disableAction: 0
   _graph: {fileID: 11400000, guid: 61c037aaaec77c04ba81679c52a1f9eb, type: 2}
   _blackboard: {fileID: 8637100246777300339}
+--- !u!114 &8637100246777300341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8637100246777300327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85638ab020bc9b348a23786ebd3ba5ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menu: {fileID: 773352484}
 --- !u!4 &8637100246777600327
 Transform:
   m_ObjectHideFlags: 0
