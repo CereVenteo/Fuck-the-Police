@@ -12,6 +12,8 @@ public class Agent_Variables : MonoBehaviour
     //public Vector3 criminal_cell;
     public GameObject interrogator_position;
     public GameObject interrogator_supervisor;
+    public GameObject interrogator_position_2;
+    public GameObject interrogator_supervisor_2;
     public Vector3 criminal_target;
     public bool request_for_interrogation;
     public bool room = true;
