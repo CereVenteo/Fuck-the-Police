@@ -4,18 +4,15 @@ using UnityEngine;
 
 public class Open_Box : MonoBehaviour
 {
-    GameObject menu;
-    bool active;
+    public GameObject menu;
     void Start()
     {
-        menu = GameObject.Find("Box_Car_Menu");
         menu.SetActive(false);
-        active = false;
     }
 
     private void OnMouseUpAsButton()
     {
-        if(active)
+        if(menu.activeSelf)
         {
             menu.SetActive(false);
         }
