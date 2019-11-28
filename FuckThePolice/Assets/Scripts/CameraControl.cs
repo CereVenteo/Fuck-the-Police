@@ -32,6 +32,8 @@ public class CameraControl : MonoBehaviour
             cameraFollowPosition.x -= moveAmount * Time.deltaTime;
         }
 
+        cameraFollowPosition.y -= Input.mouseScrollDelta.y;
+
         transform.position = cameraFollowPosition;
     }
 }
