@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85638ab020bc9b348a23786ebd3ba5ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  menu: {fileID: 0}
 --- !u!1001 &4690243136858499327
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -79,11 +80,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8708412731676524548, guid: a106d247f6dbfed4f8648322387789d3,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 217836035924257565, guid: a106d247f6dbfed4f8648322387789d3,
         type: 3}
       propertyPath: m_Text
@@ -92,6 +88,16 @@ PrefabInstance:
         the interrogation
 
         room.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8994893077548061994, guid: a106d247f6dbfed4f8648322387789d3,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8708412731676524548, guid: a106d247f6dbfed4f8648322387789d3,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a106d247f6dbfed4f8648322387789d3, type: 3}

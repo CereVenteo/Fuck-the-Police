@@ -13,8 +13,8 @@ public class Canvas : MonoBehaviour
 
     public Text points;
     public Text next_star;
-    uint star_points;
-    uint points_valor;
+    int star_points;
+    int points_valor;
 
     public Image star1;
     public Image star2;
@@ -42,8 +42,18 @@ public class Canvas : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Points())
-            Stars();
+        Points();
+    }
+
+    public uint GetStars()
+    {
+        return stars;
+    }
+
+    public void SetStars(uint _stars)
+    {
+        stars = _stars;
+        Stars();
     }
 
     void CivilianHelped()
@@ -53,7 +63,7 @@ public class Canvas : MonoBehaviour
         SetPoints(50);
     }
 
-    void SetPoints(uint _points)
+    void SetPoints(int _points)
     {
         points_valor += _points;
     }
@@ -87,36 +97,42 @@ public class Canvas : MonoBehaviour
         time.text += time_valor.ToString();
     }
 
-    bool Points()
+    void Points()
     {
-        bool ret = false;
 
-        if (star_points - points_valor == 0)
-            return true;
-
+        if (star_points - points_valor < 0)
+        {
+            SetStars(stars + 1);
+            star_points += star_points / 2;
+        }
+            
         next_star.text = (star_points - points_valor).ToString();
-
-        return ret;
+        points.text = points_valor.ToString();
     }
 
     void Stars()
     {
-        stars++;
-        star_points += star_points;
 
         switch (stars)
         {
+            case 0:
+                star1.sprite = Resources.Load<Sprite>("Sprites/star_black");
+                break;
             case 1:
                 star1.sprite = Resources.Load<Sprite>("Sprites/star");
+                star2.sprite = Resources.Load<Sprite>("Sprites/star_black");
                 break;
             case 2:
                 star2.sprite = Resources.Load<Sprite>("Sprites/star");
+                star3.sprite = Resources.Load<Sprite>("Sprites/star_black");
                 break;
             case 3:
                 star3.sprite = Resources.Load<Sprite>("Sprites/star");
+                star4.sprite = Resources.Load<Sprite>("Sprites/star_black");
                 break;
             case 4:
                 star4.sprite = Resources.Load<Sprite>("Sprites/star");
+                star5.sprite = Resources.Load<Sprite>("Sprites/star_black");
                 break;
             case 5:
                 star5.sprite = Resources.Load<Sprite>("Sprites/star");
