@@ -23,16 +23,20 @@ public class Canvas : MonoBehaviour
     public Image star5;
     uint stars;
 
+    public Text civilians;
+    uint civilians_count;
+
     // Start is called before the first frame update
     void Start()
     {
         time_valor = 00;
         hour = 00;
         day_valor = 1;
-        InvokeRepeating("IncrementTime", 0.0f, 0.2f);
+        InvokeRepeating("IncrementTime", 0.0f, 0.1f);
         star_points = 1000;
         points_valor = 0;
         stars = 0;
+        civilians_count = 0;
     }
 
     // Update is called once per frame
@@ -40,6 +44,18 @@ public class Canvas : MonoBehaviour
     {
         if (Points())
             Stars();
+    }
+
+    void CivilianHelped()
+    {
+        civilians_count++;
+        civilians.text = civilians_count.ToString();
+        SetPoints(50);
+    }
+
+    void SetPoints(uint _points)
+    {
+        points_valor += _points;
     }
 
     void IncrementTime()
@@ -62,6 +78,8 @@ public class Canvas : MonoBehaviour
 
         if (hour < 10)
             time.text = "0";
+        else
+            time.text = "";
         time.text += hour.ToString() + ":";
 
         if (time_valor < 10)
@@ -106,7 +124,5 @@ public class Canvas : MonoBehaviour
             default:
                 break;
         }
-            
-
     }
 }
