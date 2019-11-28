@@ -12,6 +12,9 @@ public class Game_Manager : MonoBehaviour
     public List<GameObject> civil_agents_pos;
     public List<GameObject> civilians;
     public List<GameObject> agents;
+    public List<GameObject> cells;
+    public List<GameObject> criminals;
+    public List<bool> free_cells;
     //int active_civilians = 0;
     // Start is called before the first frame update
     void Start()
@@ -64,6 +67,16 @@ public class Game_Manager : MonoBehaviour
             }
         }
         return -1;
+    }
+    public void Check_Cells()
+    {
+        for (int i = 0; i < cells.Count; i++)
+        {
+            if (cells[i].activeInHierarchy == true)
+            {
+                free_cells[i] = true;
+            }
+        }
     }
 
     //public IEnumerator Enable_Civilian()
