@@ -15,6 +15,15 @@ public class Menu : MonoBehaviour
         manager = GameObject.Find("Game_Manager").GetComponent<Game_Manager>();
     }
 
+    private void Update()
+    {
+        if (menu.activeSelf && 
+            (this.GetComponent<Agent_Variables>().request_for_interrogation || manager.civilians_waiting == 0))
+        {
+            menu.SetActive(false);
+        }
+    }
+
     private void OnMouseUpAsButton()
     {
         if (menu.activeSelf)

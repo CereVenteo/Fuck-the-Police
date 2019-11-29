@@ -20,9 +20,6 @@ public class Civilian_Variables : MonoBehaviour
     public GameObject target;
     public GameObject target2;
     public bool go_back = true;
-    //public bool active_civilian = false;
-    //public bool talking;
-    //public bool created_path = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -55,7 +52,6 @@ public class Civilian_Variables : MonoBehaviour
                 go_back = true;
             }
         }
-
     }
 
     public void Wait()
@@ -73,6 +69,7 @@ public class Civilian_Variables : MonoBehaviour
     public void Go_Agent()
     {
         agent_talk = true;
+        Game_Manager.civilians_waiting--;
         nav.CreatePath(go_agent_position);
     }
 
@@ -83,13 +80,11 @@ public class Civilian_Variables : MonoBehaviour
         identity = ++Game_Manager.civilian_identity;
         Game_Manager.civilians_waiting++;
         Game_Manager.secretary_free = true;
-       // Game_Manager.Call_Civilian(identity);
     }
 
     public IEnumerator AgentTalk()
     {
         agent_call = false;
-        Game_Manager.civilians_waiting--;
         yield return new WaitForSeconds(15);
         agent_talk = false;
         GameObject.Find("Game_Manager").GetComponent<Canvas>().CivilianHelped();
