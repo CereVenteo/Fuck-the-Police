@@ -21,19 +21,12 @@ public class Menu : MonoBehaviour
         }
         else
         {
-            menu.SetActive(true);
+            if(menu.name == "Police_Menu" && this.GetComponent<Agent_Variables>().waiting)
+                menu.SetActive(true);
+            else if(menu.name == "Criminal_Menu" && this.GetComponent<Criminal_Variables>().waiting)
+                menu.SetActive(true);
             menu.transform.rotation = rotation;
             menu.transform.position = new Vector3(this.gameObject.transform.position.x, this.gameObject.transform.position.y + 8, this.gameObject.transform.position.z);
         }
-    }
-
-    void OnMouseDown()
-    {
-        CallNextCitizen();
-    }
-
-    void CallNextCitizen()
-    {
-
     }
 }

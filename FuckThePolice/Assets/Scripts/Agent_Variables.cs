@@ -56,7 +56,7 @@ public class Agent_Variables : MonoBehaviour
         {
             Vector3 diff = nav.path.corners[nav.path.corners.Length - 1] - transform.position;
 
-            if (diff.magnitude < 2)
+            if (diff.magnitude < 1)
                 waiting = true;
             else
                 waiting = false;
@@ -95,13 +95,13 @@ public class Agent_Variables : MonoBehaviour
     {
         talking = true;
         yield return new WaitForSeconds(15);
-        canvas.SetPoints(50);
+        
         request_civilian = false;
         civile_talk = false;
         civil = 0;
         civil_id = -1;
         talking = false;
-        
+        canvas.SetPoints(50);
     }
 
     public IEnumerator AgentInterrogtion()
