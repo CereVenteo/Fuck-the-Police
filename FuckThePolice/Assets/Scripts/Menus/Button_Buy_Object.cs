@@ -24,7 +24,8 @@ public class Button_Buy_Object : MonoBehaviour
     {
         canvas.SetStars(canvas.GetStars() - 1);
         object_buy.SetActive(true);
-        police.SetActive(true);
         box.SetActive(false);
+        if(police)
+            police.SetActive(true);
     }
 }
