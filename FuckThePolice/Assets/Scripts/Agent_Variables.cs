@@ -83,9 +83,12 @@ public class Agent_Variables : MonoBehaviour
 
     public void Call_Civil()
     {
+        if (civil_id == -1)
+        {
             civil = Game_Manager.Request_identity();
             civil_id = Game_Manager.Request_Civilian(civil);
             Game_Manager.Call_Civilian(civil, id);
+        }
     }
 
     public IEnumerator AgentTalk()
@@ -96,6 +99,7 @@ public class Agent_Variables : MonoBehaviour
         request_civilian = false;
         civile_talk = false;
         civil = 0;
+        civil_id = -1;
         talking = false;
         
     }

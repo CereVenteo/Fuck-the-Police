@@ -52,6 +52,7 @@ public class Game_Manager : MonoBehaviour
                 {
                     civilians[i].GetComponent<Civilian_Variables>().go_agent_position = civil_agents_pos[id].transform.position;
                     civilians[i].GetComponent<Civilian_Variables>().agent_call = true;
+                    break;
                 }
             }
         }
