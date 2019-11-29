@@ -86,13 +86,7 @@ public class Game_Manager : MonoBehaviour
 
     public void AddCivilian()
     {
-        int count = 0;
-        for (int i = 0; i < civilians.Count; i++)
-        {
-            if (civilians[i].GetComponent<Civilian_Variables>().waiting)
-                count++;
-        }
-        if(count < 2)
+        if(civilians_waiting < 1)
         {
             for (int i = 0; i < civilians.Count; i++)
             {
@@ -105,6 +99,16 @@ public class Game_Manager : MonoBehaviour
         }
     }
     
+    public void NightCivilian()
+    {
+        for (int i = 0; i < civilians.Count; i++)
+        {
+            if (civilians[i].activeSelf)
+            {
+                civilians[i].GetComponent<Civilian_Variables>().Go_Away();
+            }
+        }
+    }
 
     //public IEnumerator Enable_Civilian()
     //{

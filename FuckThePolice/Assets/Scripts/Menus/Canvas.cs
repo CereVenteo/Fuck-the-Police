@@ -35,7 +35,7 @@ public class Canvas : MonoBehaviour
         day_valor = 1;
         InvokeRepeating("IncrementTime", 0.0f, 0.15f);
         star_points = 1000;
-        points_valor = 0;
+        points_valor = 4000;
         stars = 0;
         time_to_add_civilian = 6;
         civilians_helped = 0;
@@ -45,7 +45,7 @@ public class Canvas : MonoBehaviour
     void Update()
     {
         Points();
-        if(hour <= 20 && hour >= 6)
+        if(hour < 20 && hour >= 6)
         {
             if (time_to_add_civilian + 1 == hour)
             {
@@ -53,8 +53,9 @@ public class Canvas : MonoBehaviour
                 time_to_add_civilian = hour;
             }
         }
-        else
+        else if(hour == 20)
         {
+            this.gameObject.GetComponent<Game_Manager>().NightCivilian();
             time_to_add_civilian = 6;
         }
     }
