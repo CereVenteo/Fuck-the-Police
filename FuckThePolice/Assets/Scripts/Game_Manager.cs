@@ -36,6 +36,7 @@ public class Game_Manager : MonoBehaviour
         {
             if (civilians[i].GetComponent<Civilian_Variables>().agent_call != true)
             {
+                if(civilians[i].GetComponent<Civilian_Variables>().identity != 0 && !civilians[i].GetComponent<Civilian_Variables>().agent_talk)
                 return civilians[i].GetComponent<Civilian_Variables>().identity;
             }
         }

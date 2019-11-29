@@ -18,6 +18,6 @@ public class Button_Call_Police : MonoBehaviour
     {
         Agent_Variables agent = police.GetComponent<Agent_Variables>();
         agent.request_civilian = true;
-        agent.talking = true;
+        //agent.talking = true;
     }
 }
