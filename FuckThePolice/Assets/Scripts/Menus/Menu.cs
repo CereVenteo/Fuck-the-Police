@@ -6,11 +6,13 @@ public class Menu : MonoBehaviour
 {
     public GameObject menu;
     Quaternion rotation;
+    Game_Manager manager;
     // Start is called before the first frame update
     void Start()
     {
         menu.SetActive(false);
         rotation = Quaternion.Euler(45, 90, 0);
+        manager = GameObject.Find("Game_Manager").GetComponent<Game_Manager>();
     }
 
     private void OnMouseUpAsButton()
@@ -21,7 +23,7 @@ public class Menu : MonoBehaviour
         }
         else
         {
-            if(menu.name == "Police_Menu" && this.GetComponent<Agent_Variables>().waiting)
+            if(menu.name == "Police_Menu" && this.GetComponent<Agent_Variables>().waiting && manager.civilians_waiting > 0)
                 menu.SetActive(true);
             else if(menu.name == "Criminal_Menu" && this.GetComponent<Criminal_Variables>().waiting)
                 menu.SetActive(true);

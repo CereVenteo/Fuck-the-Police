@@ -20,9 +20,7 @@ public class Button_Call_Criminal : MonoBehaviour
         int agent_pos_array = -1;
         for (int i = 0; i < manager.police.Count; i++)
         {
-            Agent_Variables agent = manager.police[i].gameObject.GetComponent<Agent_Variables>();
-
-            if (agent.request_for_interrogation == true)
+            if (manager.police[i].gameObject.GetComponent<Agent_Variables>().request_for_interrogation == true)
                 count++;
         }
 

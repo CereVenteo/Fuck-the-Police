@@ -9,6 +9,7 @@ public class Game_Manager : MonoBehaviour
 {
     public bool secretary_free;
     public int civilian_identity = 0;
+    public int civilians_waiting = 0;
     public List<GameObject> civil_agents_pos;
     public List<GameObject> civilians;
     public List<GameObject> agents;
@@ -79,6 +80,27 @@ public class Game_Manager : MonoBehaviour
             if (cells[i].activeInHierarchy == true)
             {
                 free_cells[i] = true;
+            }
+        }
+    }
+
+    public void AddCivilian()
+    {
+        int count = 0;
+        for (int i = 0; i < civilians.Count; i++)
+        {
+            if (civilians[i].activeSelf)
+                count++;
+        }
+        if(count < 4)
+        {
+            for (int i = 0; i < civilians.Count; i++)
+            {
+                if (!civilians[i].activeSelf)
+                {
+                    civilians[i].SetActive(true);
+                    break;
+                }
             }
         }
     }

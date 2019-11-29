@@ -6,6 +6,7 @@ public class Button_Buy_Object : MonoBehaviour
 {
     public GameObject menu;
     public GameObject object_buy;
+    public GameObject police;
     public GameObject box;
     Canvas canvas;
 
@@ -23,6 +24,7 @@ public class Button_Buy_Object : MonoBehaviour
     {
         canvas.SetStars(canvas.GetStars() - 1);
         object_buy.SetActive(true);
+        police.SetActive(true);
         box.SetActive(false);
     }
 }

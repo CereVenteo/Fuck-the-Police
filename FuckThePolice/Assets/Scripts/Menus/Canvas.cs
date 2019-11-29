@@ -24,25 +24,37 @@ public class Canvas : MonoBehaviour
     uint stars;
 
     public Text civilians;
-    uint civilians_count;
+    uint time_to_add_civilian;
 
     // Start is called before the first frame update
     void Start()
     {
         time_valor = 00;
-        hour = 00;
+        hour = 06;
         day_valor = 1;
-        InvokeRepeating("IncrementTime", 0.0f, 0.1f);
+        InvokeRepeating("IncrementTime", 0.0f, 0.15f);
         star_points = 1000;
         points_valor = 0;
         stars = 0;
-        civilians_count = 0;
+        time_to_add_civilian = 6;
     }
 
     // Update is called once per frame
     void Update()
     {
         Points();
+        if(hour <= 20 && hour >= 6)
+        {
+            if (time_to_add_civilian + 1 == hour)
+            {
+                this.gameObject.GetComponent<Game_Manager>().AddCivilian();
+                time_to_add_civilian = hour;
+            }
+        }
+        else
+        {
+            time_to_add_civilian = 6;
+        }
     }
 
     public uint GetStars()
@@ -56,10 +68,9 @@ public class Canvas : MonoBehaviour
         Stars();
     }
 
-    void CivilianHelped()
+    public void CivilianHelped()
     {
-        civilians_count++;
-        civilians.text = civilians_count.ToString();
+        civilians.text = this.gameObject.GetComponent<Game_Manager>().civilian_identity.ToString() ;
         SetPoints(50);
     }
 

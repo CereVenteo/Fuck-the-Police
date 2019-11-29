@@ -79,9 +79,9 @@ public class Civilian_Variables : MonoBehaviour
     public IEnumerator Talk()
     {
         Game_Manager.secretary_free = false;
-        yield return new WaitForSeconds(15);
-        identity = Game_Manager.civilian_identity + 1;
-        Game_Manager.civilian_identity = identity;
+        yield return new WaitForSeconds(10);
+        identity = ++Game_Manager.civilian_identity;
+        Game_Manager.civilians_waiting++;
         Game_Manager.secretary_free = true;
        // Game_Manager.Call_Civilian(identity);
     }
@@ -89,8 +89,8 @@ public class Civilian_Variables : MonoBehaviour
     public IEnumerator AgentTalk()
     {
         agent_call = false;
+        Game_Manager.civilians_waiting--;
         yield return new WaitForSeconds(15);
-        Game_Manager.civilian_identity = Game_Manager.civilian_identity - 1;
         agent_talk = false;
     }
 

@@ -101,7 +101,7 @@ public class Agent_Variables : MonoBehaviour
         civil = 0;
         civil_id = -1;
         talking = false;
-        canvas.SetPoints(50);
+        canvas.CivilianHelped();
     }
 
     public IEnumerator AgentInterrogtion()
