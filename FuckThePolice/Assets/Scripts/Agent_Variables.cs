@@ -42,15 +42,15 @@ public class Agent_Variables : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.C))
-        {
-            request_civilian = true;
-            //talking = true;
-        }
-        if (Input.GetKeyDown(KeyCode.G))
-        {
-            request_for_interrogation = true;
-        }
+        //if (Input.GetKeyDown(KeyCode.C))
+        //{
+        //    request_civilian = true;
+        //    //talking = true;
+        //}
+        //if (Input.GetKeyDown(KeyCode.G))
+        //{
+        //    request_for_interrogation = true;
+        //}
         if (nav.path.corners.Length > 1)
         if (nav.current_point == nav.path.corners.Length - 1)
         {
