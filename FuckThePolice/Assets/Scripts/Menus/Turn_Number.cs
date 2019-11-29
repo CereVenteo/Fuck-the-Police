@@ -25,6 +25,11 @@ public class Turn_Number : MonoBehaviour
             SetNumber(this.GetComponent<Civilian_Variables>().identity);
             pass = false;
         }
+        else if(this.GetComponent<Civilian_Variables>().identity == 0 && !pass)
+        {
+            turn_number_ui.SetActive(false);
+            pass = true;
+        }
 
         if (turn_number_ui)
         {

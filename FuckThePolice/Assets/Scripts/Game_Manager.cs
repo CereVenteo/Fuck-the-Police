@@ -89,10 +89,10 @@ public class Game_Manager : MonoBehaviour
         int count = 0;
         for (int i = 0; i < civilians.Count; i++)
         {
-            if (civilians[i].activeSelf)
+            if (civilians[i].GetComponent<Civilian_Variables>().waiting)
                 count++;
         }
-        if(count < 4)
+        if(count < 2)
         {
             for (int i = 0; i < civilians.Count; i++)
             {
@@ -104,6 +104,7 @@ public class Game_Manager : MonoBehaviour
             }
         }
     }
+    
 
     //public IEnumerator Enable_Civilian()
     //{

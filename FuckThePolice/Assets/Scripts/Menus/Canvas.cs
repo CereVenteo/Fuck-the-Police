@@ -25,6 +25,7 @@ public class Canvas : MonoBehaviour
 
     public Text civilians;
     uint time_to_add_civilian;
+    uint civilians_helped;
 
     // Start is called before the first frame update
     void Start()
@@ -37,6 +38,7 @@ public class Canvas : MonoBehaviour
         points_valor = 0;
         stars = 0;
         time_to_add_civilian = 6;
+        civilians_helped = 0;
     }
 
     // Update is called once per frame
@@ -70,7 +72,8 @@ public class Canvas : MonoBehaviour
 
     public void CivilianHelped()
     {
-        civilians.text = this.gameObject.GetComponent<Game_Manager>().civilian_identity.ToString() ;
+        civilians_helped++;
+        civilians.text = civilians_helped.ToString() ;
         SetPoints(50);
     }
 

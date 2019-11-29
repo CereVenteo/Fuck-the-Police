@@ -23,12 +23,15 @@ public class Menu : MonoBehaviour
         }
         else
         {
-            if(menu.name == "Police_Menu" && this.GetComponent<Agent_Variables>().waiting && manager.civilians_waiting > 0)
+            if(menu.name == "Police_Menu" && this.GetComponent<Agent_Variables>().waiting 
+                && !this.GetComponent<Agent_Variables>().talking && !this.GetComponent<Agent_Variables>().request_for_interrogation
+                && manager.civilians_waiting > 0)
                 menu.SetActive(true);
             else if(menu.name == "Criminal_Menu" && this.GetComponent<Criminal_Variables>().waiting)
                 menu.SetActive(true);
+
             menu.transform.rotation = rotation;
-            menu.transform.position = new Vector3(this.gameObject.transform.position.x, this.gameObject.transform.position.y + 8, this.gameObject.transform.position.z);
+            menu.transform.position = new Vector3(this.gameObject.transform.position.x, this.gameObject.transform.position.y + 4, this.gameObject.transform.position.z);
         }
     }
 }

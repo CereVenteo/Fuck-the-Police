@@ -53,6 +53,7 @@ public class Civilian_Variables : MonoBehaviour
             if (diff.magnitude < 2)
             {
                 go_back = true;
+                end_round();
             }
         }
 
@@ -92,6 +93,8 @@ public class Civilian_Variables : MonoBehaviour
         Game_Manager.civilians_waiting--;
         yield return new WaitForSeconds(15);
         agent_talk = false;
+        identity = 0;
+        GameObject.Find("Game_Manager").GetComponent<Canvas>().CivilianHelped();
     }
 
     public void Go_Away()
