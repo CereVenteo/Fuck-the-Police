@@ -49,6 +49,7 @@ public class Button_Call_Criminal : MonoBehaviour
                         agent.room = true;
                     else
                         agent.room = false;
+                    break;
                 }
             }
         }

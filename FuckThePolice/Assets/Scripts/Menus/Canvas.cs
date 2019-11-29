@@ -63,7 +63,7 @@ public class Canvas : MonoBehaviour
         SetPoints(50);
     }
 
-    void SetPoints(int _points)
+    public void SetPoints(int _points)
     {
         points_valor += _points;
     }

@@ -5,6 +5,7 @@ using UnityEngine;
 public class Agent_Variables : MonoBehaviour
 {
     public Game_Manager Game_Manager;
+    Canvas canvas;
     SteeringFollowNavMeshPath nav;
     public int id;
     public GameObject work_target;
@@ -32,6 +33,7 @@ public class Agent_Variables : MonoBehaviour
     {
         nav = this.GetComponent<SteeringFollowNavMeshPath>();
         Game_Manager = GameObject.Find("Game_Manager").GetComponent<Game_Manager>();
+        canvas = GameObject.Find("Game_Manager").GetComponent<Canvas>();
         work_position = work_target.transform.position;
         //temporal
         //criminal_cell = criminal_target.transform.position;
@@ -92,16 +94,19 @@ public class Agent_Variables : MonoBehaviour
     public IEnumerator AgentTalk()
     {
         yield return new WaitForSeconds(15);
+        canvas.SetPoints(50);
         request_civilian = false;
         civile_talk = false;
         civil = 0;
         talking = false;
+        
     }
 
     public IEnumerator AgentInterrogtion()
     {
         yield return new WaitForSeconds(30);
         request_for_interrogation = false;
+        canvas.SetPoints(200);
     }
 
     //public void Interrogation()

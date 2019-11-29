@@ -5,6 +5,7 @@ using UnityEngine;
 public class Button_Call_Police : MonoBehaviour
 {
     public GameObject menu;
+    public GameObject police;
 
     private void OnMouseUpAsButton()
     {
@@ -15,6 +16,8 @@ public class Button_Call_Police : MonoBehaviour
 
     void CallNextCitizen()
     {
-
+        Agent_Variables agent = police.GetComponent<Agent_Variables>();
+        agent.request_civilian = true;
+        agent.talking = true;
     }
 }
