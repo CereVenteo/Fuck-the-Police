@@ -106,6 +106,7 @@ public class Game_Manager : MonoBehaviour
             if (civilians[i].activeSelf)
             {
                 civilians[i].GetComponent<Civilian_Variables>().Go_Away();
+                civilians_waiting = 0;
             }
         }
     }
