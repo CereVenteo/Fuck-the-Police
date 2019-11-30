@@ -35,6 +35,8 @@ public class Button_Call_Criminal : MonoBehaviour
                 else if (agent.waiting == true && agent.talking == false)
                 {
                     agent.request_for_interrogation = true;
+                    agent.criminal_target = this.GetComponentInParent<Criminal_Variables>().target_cell;
+                    agent.criminal_id = this.GetComponentInParent<Criminal_Variables>().id;
                     agent.interrogator = true;
                     if (count < 2)
                         agent.room = true;
@@ -43,6 +45,7 @@ public class Button_Call_Criminal : MonoBehaviour
 
                     agent = manager.police[agent_pos_array].gameObject.GetComponent<Agent_Variables>();
                     agent.request_for_interrogation = true;
+                    agent.waiting = true;
                     agent.supervisor = true;
                     if (count < 2)
                         agent.room = true;

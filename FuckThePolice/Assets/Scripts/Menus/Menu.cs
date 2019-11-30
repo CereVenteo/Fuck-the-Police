@@ -17,10 +17,12 @@ public class Menu : MonoBehaviour
 
     private void Update()
     {
-        if (menu.activeSelf && 
-            (this.GetComponent<Agent_Variables>().request_for_interrogation || manager.civilians_waiting == 0))
+        if (menu.activeSelf)
         {
-            menu.SetActive(false);
+            if (menu.name == "Police_Menu" && (this.GetComponent<Agent_Variables>().request_for_interrogation || manager.civilians_waiting == 0))
+                menu.SetActive(false);
+            else if (menu.name == "Criminal_Menu" && this.GetComponent<Criminal_Variables>().interrogation_time)
+                menu.SetActive(false);
         }
     }
 

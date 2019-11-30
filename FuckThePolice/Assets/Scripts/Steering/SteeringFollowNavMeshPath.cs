@@ -17,7 +17,6 @@ public class SteeringFollowNavMeshPath : SteeringAbstract
     public int current_point = 1;
     bool once = false;
     public bool created_path = false;
-
     // Use this for initialization
     void Start()
     {
@@ -27,7 +26,6 @@ public class SteeringFollowNavMeshPath : SteeringAbstract
         align = GetComponent<SteeringAlign>();
         Vector3 x = Vector3.zero;
         path = new NavMeshPath();
-        //NavMesh.CalculatePath(transform.position,move.target.transform.position, (1 << NavMesh.GetAreaFromName("Walkable")), path);
 
     }
 
@@ -69,17 +67,6 @@ public class SteeringFollowNavMeshPath : SteeringAbstract
         current_point = 1;
         if(path != null)
         path.ClearCorners();
-        //if(!created_path)
         NavMesh.CalculatePath(transform.position, pos, (1 << NavMesh.GetAreaFromName("Walkable")), path);
     }
-    //void OnDrawGizmosSelected()
-    //{
-    //    for (int i = 0; i < path.corners.Length - 1; i++)
-    //    {
-    //        // Display the explosion radius when selected
-    //        Gizmos.color = Color.green;
-    //        Gizmos.DrawWireSphere(path.corners[i], 5);
-    //        // Useful if you draw a sphere were on the closest point to the path
-    //    }
-    //}
 }

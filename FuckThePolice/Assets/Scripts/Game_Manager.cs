@@ -12,18 +12,25 @@ public class Game_Manager : MonoBehaviour
     public int civilians_waiting = 0;
     public List<GameObject> civil_agents_pos;
     public List<GameObject> civilians;
-    public List<GameObject> agents;
+    public List<GameObject> agents_pos;
+    public List<GameObject> police;
+    public List<GameObject> desktops;
     public List<GameObject> cells;
     public List<GameObject> criminals;
     public List<bool> free_cells;
-    public List<GameObject> police;
+    public List<GameObject> cars;
+    public GameObject car_police;
+
     public GameObject interrogation_2;
+
+    int id_criminals = 0;
     //int active_civilians = 0;
     // Start is called before the first frame update
     void Start()
     {
         //StartCoroutine(Enable_Civilian());
         secretary_free = true;
+        Check_Cells();
     }
 
     // Update is called once per frame
@@ -98,8 +105,36 @@ public class Game_Manager : MonoBehaviour
             }
         }
     }
-    
-    public void NightCivilian()
+
+    public void AddCriminal(int car)
+    {
+        if(cars[car].activeSelf)
+        {
+            for (int i = 0; i < criminals.Count; i++)
+            {
+                if (!criminals[i].activeSelf)
+                {
+                    criminals[i].SetActive(true);
+                    criminals[i].GetComponent<Criminal_Variables>().id = ++id_criminals;
+                    criminals[i].transform.position = new Vector3(cars[car].transform.position.x + 2, cars[car].transform.position.y, cars[car].transform.position.z);
+                    car_police.SetActive(true);
+                    car_police.GetComponent<Car_Agent>().SetTarget(criminals[i]);
+                    break;
+                }
+            }
+        }
+    }
+
+    public void AddPolice()
+    {
+        for (int i = 0; i < police.Count; i++)
+        {
+            if(desktops[i].activeSelf)
+                police[i].SetActive(true);
+        }
+    }
+
+    public void Night()
     {
         for (int i = 0; i < civilians.Count; i++)
         {
@@ -109,6 +144,11 @@ public class Game_Manager : MonoBehaviour
                 civilians_waiting = 0;
             }
         }
+        //for (int i = 0; i < police.Count && i%2 == 0; i++)
+        //{
+        //    if (desktops[i].activeSelf)
+        //        police[i].SetActive(false);
+        //}
     }
 
     //public IEnumerator Enable_Civilian()

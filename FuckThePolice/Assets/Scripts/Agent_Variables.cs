@@ -15,6 +15,7 @@ public class Agent_Variables : MonoBehaviour
     public GameObject interrogator_position_2;
     public GameObject interrogator_supervisor_2;
     public Vector3 criminal_target;
+    public int criminal_id = -1;
     public bool request_for_interrogation;
     public bool room = true;
     public bool interrogator = true;
@@ -27,28 +28,18 @@ public class Agent_Variables : MonoBehaviour
     public bool go_back = true;
     int civil;
     int civil_id = -1;
+    
     // Start is called before the first frame update
     void Start()
     {
         nav = this.GetComponent<SteeringFollowNavMeshPath>();
         Game_Manager = GameObject.Find("Game_Manager").GetComponent<Game_Manager>();
         work_position = work_target.transform.position;
-        //temporal
-        //criminal_cell = criminal_target.transform.position;
     }
 
     // Update is called once per frame
     void Update()
     {
-        //if (Input.GetKeyDown(KeyCode.C))
-        //{
-        //    request_civilian = true;
-        //    //talking = true;
-        //}
-        //if (Input.GetKeyDown(KeyCode.G))
-        //{
-        //    request_for_interrogation = true;
-        //}
         if (nav.path.corners.Length > 1)
         if (nav.current_point == nav.path.corners.Length - 1)
         {
@@ -73,10 +64,6 @@ public class Agent_Variables : MonoBehaviour
             civil_waiting = Game_Manager.civilians[civil_id].GetComponent<Civilian_Variables>().waiting;
             civile_talk = true;
         }
-        //if (request_for_interrogation)
-        //{
-
-        //}
     }
 
     public void Call_Civil()
@@ -107,24 +94,12 @@ public class Agent_Variables : MonoBehaviour
         request_for_interrogation = false;
         GameObject.Find("Game_Manager").GetComponent<Canvas>().SetPoints(200);
     }
-
-    //public void Interrogation()
-    //{
-    //    nav.CreatePath(criminal_cell);
-    //}
-    public void criminal_pos()
-    {
-        for (int i = 0; i < Game_Manager.criminals.Count; i++)
-        {
-            if(Game_Manager.criminals[i].GetComponent<Criminal_Variables>().id != -1)
-            criminal_target = Game_Manager.criminals[i].GetComponent<Criminal_Variables>().target_cell;
-        }
-    }
+    
     public void active_criminal()
     {
         for (int i = 0; i < Game_Manager.criminals.Count; i++)
         {
-            if (Game_Manager.criminals[i].GetComponent<Criminal_Variables>().id != -1)
+            if (Game_Manager.criminals[i].GetComponent<Criminal_Variables>().id == criminal_id)
                 Game_Manager.criminals[i].GetComponent<Criminal_Variables>().interrogation_time = true;
         }
     }

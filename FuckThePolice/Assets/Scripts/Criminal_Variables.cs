@@ -14,6 +14,7 @@ public class Criminal_Variables : MonoBehaviour
     public GameObject follower_target;
     public GameObject interrogation_target;
     public GameObject interrogation_target_2;
+    public bool following = true;
     public bool room = true;
     public bool police_waiting;
     public bool interrogation_time;
@@ -24,23 +25,21 @@ public class Criminal_Variables : MonoBehaviour
     {
         nav = this.GetComponent<SteeringFollowNavMeshPath>();
         Game_Manager = GameObject.Find("Game_Manager").GetComponent<Game_Manager>();
-        Game_Manager.Check_Cells();
         Check_Cells();
     }
 
     // Update is called once per frame
     void Update()
     {
-        //if (Input.GetKeyDown(KeyCode.G))
-        //{
-        //    interrogation_time = true;
-        //}
+        if (cell == null)
+            Check_Cells();
+
         if (nav.path.corners.Length > 1)
             if (nav.current_point == nav.path.corners.Length - 1)
             {
                 Vector3 diff = nav.path.corners[nav.path.corners.Length - 1] - transform.position;
 
-                if (diff.magnitude < 2)
+                if (diff.magnitude < 1)
                     waiting = true;
                 else
                     waiting = false;
@@ -54,9 +53,11 @@ public class Criminal_Variables : MonoBehaviour
             {
                 if (Game_Manager.free_cells[i] == true)
                 {
-                    id = i;
                     target_cell = target_cells[i].transform.position;
                     cell = Game_Manager.cells[i];
+                    Game_Manager.free_cells[i] = false;
+                    following = true;
+                    break;
                 }
             }
         }
@@ -64,6 +65,7 @@ public class Criminal_Variables : MonoBehaviour
     public void Off_Follower()
     {
         follower_target.SetActive(false);
+        following = false;
     }
     public void On_Follower()
     {
@@ -79,6 +81,13 @@ public class Criminal_Variables : MonoBehaviour
     public void teleport_out_cell()
     {
         this.transform.position = target_cell;
+        for (int i = 0; i < target_cells.Count; i++)
+        {
+            if (cell == Game_Manager.cells[i])
+            {
+                Game_Manager.free_cells[i] = true;
+            }
+        }
     }
 
     public IEnumerator CriminalInterrogtion()
@@ -97,6 +106,8 @@ public class Criminal_Variables : MonoBehaviour
     public void criminal_off()
     {
         Off_Follower();
+        cell = null;
+        waiting = false;
         this.gameObject.SetActive(false);
     }
 }
