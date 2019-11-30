@@ -151,6 +151,99 @@ Transform:
   m_Father: {fileID: 1603853686}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5896215
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5896216}
+  - component: {fileID: 5896219}
+  - component: {fileID: 5896218}
+  - component: {fileID: 5896217}
+  m_Layer: 0
+  m_Name: Cube
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &5896216
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5896215}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_Children: []
+  m_Father: {fileID: 314553209}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &5896217
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5896215}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &5896218
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5896215}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &5896219
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5896215}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &6969373
 GameObject:
   m_ObjectHideFlags: 0
@@ -340,7 +433,7 @@ MonoBehaviour:
   mask:
     serializedVersion: 2
     m_Bits: 256
-  search_radius: 1
+  search_radius: 2
   falloff:
     serializedVersion: 2
     m_Curve:
@@ -6120,6 +6213,37 @@ Transform:
   m_Father: {fileID: 869278723}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &314553208
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 314553209}
+  m_Layer: 0
+  m_Name: Car_Target_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &314553209
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 314553208}
+  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: -0.7071068}
+  m_LocalPosition: {x: -1.1, y: -0.15313959, z: -0.6}
+  m_LocalScale: {x: 2.7999995, y: 2.8, z: 2.7999995}
+  m_Children:
+  - {fileID: 5896216}
+  m_Father: {fileID: 571032245807569459}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!1 &318826533
 GameObject:
   m_ObjectHideFlags: 0
@@ -8828,7 +8952,7 @@ GameObject:
   - component: {fileID: 508017627}
   - component: {fileID: 508017626}
   m_Layer: 8
-  m_Name: SimplePeople_Police_Withe_3
+  m_Name: Police_Withe_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8863,7 +8987,7 @@ Transform:
   - {fileID: 1570893887}
   - {fileID: 231222828}
   m_Father: {fileID: 973527996}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 180.275, z: 0}
 --- !u!114 &508017626
 MonoBehaviour:
@@ -9459,7 +9583,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1736067244}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &554162041
 PrefabInstance:
@@ -14082,7 +14206,7 @@ Camera:
   m_GameObject: {fileID: 820747288}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
+  m_ClearFlags: 2
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
@@ -17865,14 +17989,13 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1859825935}
   - {fileID: 8637100246777600327}
   - {fileID: 2139503858}
   - {fileID: 508017625}
   - {fileID: 1453341371}
   - {fileID: 1558088306}
   m_Father: {fileID: 1736067244}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &975251352 stripped
 GameObject:
@@ -19634,7 +19757,7 @@ Transform:
   - {fileID: 960559990}
   - {fileID: 569525025}
   m_Father: {fileID: 1736067244}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1087356567
 GameObject:
@@ -23465,6 +23588,38 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.42667496, y: 0, z: -0.00033855438}
     m_Extent: {x: 0.35200107, y: 0.41996443, z: 0.4554423}
   m_DirtyAABB: 0
+--- !u!1 &1338601396
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1338601397}
+  m_Layer: 0
+  m_Name: Cars
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1338601397
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338601396}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 571032245807569459}
+  - {fileID: 1859825935}
+  m_Father: {fileID: 1736067244}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1339438086
 GameObject:
   m_ObjectHideFlags: 0
@@ -25940,7 +26095,7 @@ GameObject:
   - component: {fileID: 1453341373}
   - component: {fileID: 1453341372}
   m_Layer: 8
-  m_Name: SimplePeople_Police_Withe_4
+  m_Name: Police_Withe_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25975,7 +26130,7 @@ Transform:
   - {fileID: 36104690}
   - {fileID: 31686375}
   m_Father: {fileID: 973527996}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 180.275, z: 0}
 --- !u!114 &1453341372
 MonoBehaviour:
@@ -28723,7 +28878,7 @@ GameObject:
   - component: {fileID: 1558088308}
   - component: {fileID: 1558088307}
   m_Layer: 8
-  m_Name: SimplePeople_Police_Withe_5
+  m_Name: Police_Withe_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28758,7 +28913,7 @@ Transform:
   - {fileID: 143238963}
   - {fileID: 496662880}
   m_Father: {fileID: 973527996}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 180.275, z: 0}
 --- !u!114 &1558088307
 MonoBehaviour:
@@ -32525,11 +32680,11 @@ Transform:
   m_LocalPosition: {x: 5.8, y: 8.271841, z: 7.212626}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 571032245807569459}
   - {fileID: 973527996}
   - {fileID: 1085162341}
   - {fileID: 2117756535}
   - {fileID: 547176369}
+  - {fileID: 1338601397}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -33680,7 +33835,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1859825935}
   m_Layer: 0
-  m_Name: Police_Car_Car
+  m_Name: Police_Agent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -33693,13 +33848,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1859825934}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.2, y: 0, z: -74.4}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.02, y: 0, z: 0.22}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2143508801}
-  m_Father: {fileID: 973527996}
-  m_RootOrder: 0
+  m_Father: {fileID: 1338601397}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1860400310 stripped
 GameObject:
@@ -37388,12 +37543,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2117756534}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -3.52, y: 0, z: 70.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 717651573530325770}
   m_Father: {fileID: 1736067244}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2130270250
 GameObject:
@@ -37849,7 +38004,7 @@ GameObject:
   - component: {fileID: 2139503844}
   - component: {fileID: 2139503843}
   m_Layer: 8
-  m_Name: SimplePeople_Police_Withe_2
+  m_Name: Police_Withe_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -38187,7 +38342,7 @@ Transform:
   - {fileID: 1657737173}
   - {fileID: 1616572232}
   m_Father: {fileID: 973527996}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 180.275, z: 0}
 --- !u!1 &2141118145
 GameObject:
@@ -39328,7 +39483,7 @@ GameObject:
   - component: {fileID: 571032245807138334}
   - component: {fileID: 571032245807138328}
   m_Layer: 8
-  m_Name: Police_Car
+  m_Name: Police_Car_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -39535,14 +39690,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 571032245807138323}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
   m_LocalPosition: {x: -9.185508, y: -1.2118411, z: 3.4873738}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1266298931}
   - {fileID: 1253882198}
   - {fileID: 4964296836061461454}
-  m_Father: {fileID: 1736067244}
+  - {fileID: 314553209}
+  m_Father: {fileID: 1338601397}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1001 &588816754645523716
@@ -44998,7 +45154,7 @@ GameObject:
   - component: {fileID: 8637100246777300335}
   - component: {fileID: 8637100246777300341}
   m_Layer: 8
-  m_Name: SimplePeople_Police_Withe_1
+  m_Name: Police_Withe_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45317,7 +45473,7 @@ Transform:
   - {fileID: 7153859501169320493}
   - {fileID: 1952021364}
   m_Father: {fileID: 973527996}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180.275, z: 0}
 --- !u!4 &8766979955871373647
 Transform:

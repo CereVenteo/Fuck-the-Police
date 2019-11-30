@@ -108,6 +108,7 @@ public class Civilian_Variables : MonoBehaviour
     public void End_Round()
     {
         nav.path = new NavMeshPath();
+        waiting = false;
         this.gameObject.SetActive(false);
     }
    
