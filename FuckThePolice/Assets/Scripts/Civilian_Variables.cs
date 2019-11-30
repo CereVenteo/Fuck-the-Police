@@ -34,24 +34,28 @@ public class Civilian_Variables : MonoBehaviour
     {
         secretary_free = Game_Manager.secretary_free;
         if(nav.path.corners.Length >1)
-        if (nav.current_point == nav.path.corners.Length - 1)
         {
-                Vector3 diff = nav.path.corners[nav.path.corners.Length - 1] - transform.position;
-
-                if (diff.magnitude < 2)
-                    waiting = true;
-                else
-                    waiting = false;
+            Vector3 diff = Vector3.zero;
+            if (nav.current_point == nav.path.corners.Length - 1)
+            {
+                diff = nav.path.corners[nav.path.corners.Length - 1] - transform.position;
+            }
+            if (diff.magnitude < 2)
+                waiting = true;
+            else
+                waiting = false;
         }
-        if(!go_back)
+
+        if (!go_back)
         {
-            Vector3 diff = nav.path.corners[nav.path.corners.Length -1] - transform.position;
+            Vector3 diff = nav.path.corners[nav.path.corners.Length - 1] - transform.position;
 
             if (diff.magnitude < 2)
             {
                 go_back = true;
             }
         }
+
     }
 
     public void Wait()
@@ -99,7 +103,7 @@ public class Civilian_Variables : MonoBehaviour
 
     public void End_Round()
     {
-       this.gameObject.SetActive(false);
+        this.gameObject.SetActive(false);
     }
    
 }
