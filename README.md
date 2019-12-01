@@ -6,16 +6,10 @@ Supervising all our officers, detectives and field agents will maintain control 
 
 ### Rooms:
 - Reception
-- Waiting Room
+- Descktops
+- Waiting Area
 - Office Space
-- Toilet
 - Interrogation Room
-	
-### Structures:
-- Trash can
-- Desktop
-- Toilet
-- Bench to sit
 	
 ### Characters:
 - Policeman
@@ -23,14 +17,37 @@ Supervising all our officers, detectives and field agents will maintain control 
 - Secretary
 - Criminal
 	
-## The Assigment 1 Contain
-During the demonstration, we will have a secretary who will go to her position as secretary to manage the civilians' shifts. Four policemen who go to their respective desks, and a suspect in the interrogation room, circling waiting to be interrogated. We will also have civilians who will come to consult the agents. When the cycle changes, the secretary will take a break to go to the bathroom because she is older and has incontinence, the police, one of them will go to the interrogation room to interrogate the suspect, while the rest will go to the next room to look the interrogation.
+### The Assigment 2 Contain
+
+In this demo we will have the possibility to acquire with points: police cars, cages for criminals and desks for police.
+
+At the beginning of the game, we will see how the agents go to work at their desks.
+The civilians will come to request help and the comrades will bring us criminals for interrogation.
+
+To process the civilians we will have to wait until they take a turn at the secretary and then click on an agent to call some civilian in turn to help him.
+When civilians are waiting with their assigned turn they will wander nervously around the waiting area.
+
+To carry out an interrogation we will need to have 2 free agents in addition to the interrogation rooms, then we will click on a criminal that we have locked up and if the conditions are met we will proceed with the interrogation.
+
+When the day ends we can see how civilians and the secretary leave the police station but the agents and criminals continue in it to carry out interrogations.
+
+For each civilian processed and each interrogation complete we will receive the points that we can use to buy accessories for the police station, with the final objective of achieving the 5 stars and declare ourselves as the best police station in the county.
+
+### Controls
+
+- W, A, S and D: move the camera
+- Move mouse towards the sides of the screen: move the camera
+- Click: 
+	- On agent makes a menu appear if conditions are met
+	- On criminal makes a menu appear if conditions are met
+	- On menu activates an action
 	
-## The Team
+### The Team
 
 - Alejandro París GitHub account: [Alejandro París](https://github.com/AlejandroParis)
 - Cere Venteo GitHub account: [Cere Venteo](https://github.com/CereVenteo)
-- Github Repository: [Respository](https://github.com/CereVenteo/Fuck-the-Police)
+- Repository: [Fuck the Police](https://github.com/CereVenteo/Fuck-the-Police)
+- Wiki: [Wiki](https://github.com/CereVenteo/Fuck-the-Police/wiki)
 
 
 ## License

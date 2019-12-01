@@ -157,10 +157,8 @@ public class Game_Manager : MonoBehaviour
             if (civilians[i].activeSelf)
             {
                 civilians[i].GetComponent<Civilian_Variables>().Go_Away();
-                
             }
         }
-        civilians_waiting = 0;
         secretary.GetComponent<Secretay>().Go_Away();
 
         //for (int i = 0; i < police.Count && i%2 == 0; i++)

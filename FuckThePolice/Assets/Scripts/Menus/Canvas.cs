@@ -64,6 +64,7 @@ public class Canvas : MonoBehaviour
                     this.gameObject.GetComponent<Game_Manager>().AddCriminal(0);
                     this.gameObject.GetComponent<Game_Manager>().AddPolice();
                     this.gameObject.GetComponent<Game_Manager>().AddSecretary();
+                    this.gameObject.GetComponent<Game_Manager>().civilians_waiting = 0;
                     time_to_add_criminal = 12;
                     break;
                 case 12:
