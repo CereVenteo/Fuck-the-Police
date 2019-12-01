@@ -67,12 +67,39 @@ For each civilian processed and each interrogation complete we will receive the 
 	- On menu activates an action
 
 ### Behaviour Trees
+
+#### Agent Behaviour Tree
 <img src="agent_tree.png" width="800"><br>
 > Download [Agent Behaviour Tree](https://github.com/CereVenteo/Fuck-the-Police/docs/Agent_Behaviour_Tree.pdf)
+
+The agent starts by going to his desk.
+
+When there are civilians waiting to be served if you press the call button, a civilian arrives at his desk and starts to solve his problem.
+
+If there is a criminal in the cell and you press the criminal's call button, then two free agents leave your desk to interrogate the criminal, one goes to pick up the criminal from his cell and takes him to the interrogation room to interrogate him, the other goes to the supervisory room to take notes on the interrogation. If interrogation room 1 is occupied, they will go to room 2.
+
+#### Civilian Behaviour Tree
 <img src="civilian_tree.png" width="800"><br>
 > Download [Civilian Behaviour Tree](https://github.com/CereVenteo/Fuck-the-Police/docs/Civilian_Behaviour_Tree.pdf)
+
+
+The civilians enter the police station and wait until the secretary is free, when she is free, talk to her to give her a waiting time.
+
+Wait in the waiting area until an agent calls you.
+
+When they call him, he goes to talk to the agent and tells him about his problem. The agent solves it and the civilian goes home.
+
+#### Criminal Behaviour Tree
 <img src="criminal_tree.png" width="800"><br>
 > Download [Criminal Behaviour Tree](https://github.com/CereVenteo/Fuck-the-Police/docs/Criminal_Behaviour_Tree.pdf)
+
+When a criminal is arrested, an agent accompanies him to a cell that is empty and go inside cell.
+
+If you press the call button of a criminal, an agent will take him out of his cell to take him to the interrogation room that is empty.
+
+After being questioned, randomly, he is released or taken to a jail to be locked up permanently.
+
+When he goes out of the camera, he disappears.
 
 ## License
 
