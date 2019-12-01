@@ -93,6 +93,7 @@ public class Agent_Variables : MonoBehaviour
     {
         yield return new WaitForSeconds(30);
         request_for_interrogation = false;
+        room = true;
         GameObject.Find("Game_Manager").GetComponent<Canvas>().SetPoints(200);
     }
     

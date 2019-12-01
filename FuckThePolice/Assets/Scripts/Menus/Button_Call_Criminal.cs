@@ -5,6 +5,7 @@ using UnityEngine;
 public class Button_Call_Criminal : MonoBehaviour
 {
     public GameObject menu;
+    bool full = true;
 
     private void OnMouseUpAsButton()
     {
@@ -26,10 +27,16 @@ public class Button_Call_Criminal : MonoBehaviour
 
         if (count < 4)
         {
+            full = true;
             for (int i = 0; i < manager.police.Count; i++)
             {
                 Agent_Variables agent = manager.police[i].gameObject.GetComponent<Agent_Variables>();
-
+                if (agent.room == false)
+                full = agent.room;
+            }
+            for (int i = 0; i < manager.police.Count; i++)
+            {
+                Agent_Variables agent = manager.police[i].gameObject.GetComponent<Agent_Variables>();
                 if (agent.waiting == true && agent.talking == false && agent_pos_array == -1 && agent.request_for_interrogation == false)
                     agent_pos_array = i;
                 else if (agent.waiting == true && agent.talking == false && agent.request_for_interrogation == false)
@@ -45,8 +52,15 @@ public class Button_Call_Criminal : MonoBehaviour
                     }
                     else
                     {
-                        this.GetComponentInParent<Criminal_Variables>().room = false;
-                        agent.room = false;
+                        if (full != false)
+                        {
+                            this.GetComponentInParent<Criminal_Variables>().room = false;
+                            agent.room = false;
+                        }
+                        else
+                        {
+                            agent.room = true;
+                        }
                     }
 
                     agent = manager.police[agent_pos_array].gameObject.GetComponent<Agent_Variables>();
@@ -56,7 +70,16 @@ public class Button_Call_Criminal : MonoBehaviour
                     if (count < 2)
                         agent.room = true;
                     else
-                        agent.room = false;
+                    {
+                        if (full != false)
+                        {
+                            agent.room = false;
+                        }
+                        else
+                        {
+                            agent.room = true;
+                        }
+                    }
                     break;
                 }
             }
