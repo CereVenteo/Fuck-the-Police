@@ -18,9 +18,8 @@ Fuck The Police is a management game developed by [Alejandro París](https://git
 
 ### Description
 In this game we will be in charge of running a police station.
-Supervising all our officers, detectives and field agents will maintain control over all the crime in our city.
 
-## Features
+Supervising all our officers, detectives and field agents will maintain control over all the crime in our city.
 
 ### Rooms:
 - Reception
@@ -36,13 +35,45 @@ Supervising all our officers, detectives and field agents will maintain control 
 - Criminals
 - Cars
 
+### The Assigment 2 Contain
+
+In this demo we will have the possibility to acquire with points: police cars, cages for criminals and desks for police.
+
+At the beginning of the game, we will see how the agents go to work at their desks.
+The civilians will come to request help and the comrades will bring us criminals for interrogation.
+
+To process the civilians we will have to wait until they take a turn at the secretary and then click on an agent to call some civilian in turn to help him.
+When civilians are waiting with their assigned turn they will wander nervously around the waiting area.
+
+To carry out an interrogation we will need to have 2 free agents in addition to the interrogation rooms, then we will click on a criminal that we have locked up and if the conditions are met we will proceed with the interrogation.
+
+When the day ends we can see how civilians and the secretary leave the police station but the agents and criminals continue in it to carry out interrogations.
+
+For each civilian processed and each interrogation complete we will receive the points that we can use to buy accessories for the police station, with the final objective of achieving the 5 stars and declare ourselves as the best police station in the county.
+
+### Innovation
+
+- It is possible that at some point in a random way a civilian sneaks in to get his turn in the secretary.
+- All the characters in their behavior interact with each other.
+- Camera with multiple controls
+
+### Controls
+
+- W, A, S and D: move the camera
+- Move mouse towards the sides of the screen: move the camera
+- Click: 
+	- On agent makes a menu appear if conditions are met
+	- On criminal makes a menu appear if conditions are met
+	- On menu activates an action
+
 ### Behaviour Trees
 <img src="agent_tree.png" width="800"><br>
-> Download the latest [Agent Behaviour Tree](https://github.com/CereVenteo/Fuck-the-Police/docs/Agent_Behaviour_Tree.pdf)
+> Download [Agent Behaviour Tree](https://github.com/CereVenteo/Fuck-the-Police/docs/Agent_Behaviour_Tree.pdf)
 <img src="civilian_tree.png" width="800"><br>
-> Download the latest [Civilian Behaviour Tree](https://github.com/CereVenteo/Fuck-the-Police/docs/Civilian_Behaviour_Tree.pdf)
+> Download [Civilian Behaviour Tree](https://github.com/CereVenteo/Fuck-the-Police/docs/Civilian_Behaviour_Tree.pdf)
 <img src="criminal_tree.png" width="800"><br>
-> Download the latest [Criminal Behaviour Tree](https://github.com/CereVenteo/Fuck-the-Police/docs/Criminal_Behaviour_Tree.pdf)
+> Download [Criminal Behaviour Tree](https://github.com/CereVenteo/Fuck-the-Police/docs/Criminal_Behaviour_Tree.pdf)
+
 ## License
 
 ```
