@@ -1742,7 +1742,7 @@ GameObject:
   m_Component:
   - component: {fileID: 76727359}
   m_Layer: 0
-  m_Name: Criminal_Target_01 (1)
+  m_Name: cell_target_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14239,7 +14239,7 @@ GameObject:
   m_Component:
   - component: {fileID: 610638145}
   m_Layer: 0
-  m_Name: Criminal_Target_01 (2)
+  m_Name: cell_target_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20765,7 +20765,7 @@ GameObject:
   m_Component:
   - component: {fileID: 835262950}
   m_Layer: 0
-  m_Name: Cell_Target (2)
+  m_Name: Cell_Target_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20779,7 +20779,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 835262949}
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: -0.7071068}
-  m_LocalPosition: {x: 10.022857, y: -3.576215, z: 0.98}
+  m_LocalPosition: {x: 10.022857, y: -3.576215, z: 1.55}
   m_LocalScale: {x: 2.2266138, y: 2.6195588, z: 2.783262}
   m_Children:
   - {fileID: 1152567371}
@@ -21387,7 +21387,7 @@ GameObject:
   m_Component:
   - component: {fileID: 865352175}
   m_Layer: 0
-  m_Name: Cell_Target (1)
+  m_Name: Cell_Target_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21401,7 +21401,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 865352174}
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: -0.7071068}
-  m_LocalPosition: {x: 10.022857, y: -3.576215, z: 1.05}
+  m_LocalPosition: {x: 10.022857, y: -3.576215, z: 1.46}
   m_LocalScale: {x: 2.2266138, y: 2.6195588, z: 2.7832623}
   m_Children:
   - {fileID: 185184423}
@@ -25658,7 +25658,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1049400832}
   m_Layer: 0
-  m_Name: Cell_Target (3)
+  m_Name: Cell_Target_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25672,7 +25672,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1049400831}
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: -0.7071068}
-  m_LocalPosition: {x: 10.022857, y: -3.576215, z: 0.39}
+  m_LocalPosition: {x: 10.022857, y: -3.576215, z: 1.64}
   m_LocalScale: {x: 2.2266138, y: 2.6195588, z: 2.7832618}
   m_Children:
   - {fileID: 1693065599}
@@ -38379,7 +38379,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1553973675}
   m_Layer: 0
-  m_Name: Criminal_Target_01 (3)
+  m_Name: cell_target_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -46136,7 +46136,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1927520388}
   m_Layer: 0
-  m_Name: Cell_Target
+  m_Name: Cell_Target_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -50148,7 +50148,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2116015444}
   m_Layer: 0
-  m_Name: Criminal_Target_01
+  m_Name: cell_target_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
