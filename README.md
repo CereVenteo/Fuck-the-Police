@@ -33,6 +33,13 @@ When the day ends we can see how civilians and the secretary leave the police st
 
 For each civilian processed and each interrogation complete we will receive the points that we can use to buy accessories for the police station, with the final objective of achieving the 5 stars and declare ourselves as the best police station in the county.
 
+
+### Innovation
+
+- It is possible that at some point in a random way a civilian sneaks in to get his turn in the secretary.
+- All the characters in their behavior interact with each other.
+- Camera with multiple controls
+
 ### Controls
 
 - W, A, S and D: move the camera
