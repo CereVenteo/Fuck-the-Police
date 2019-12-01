@@ -69,7 +69,7 @@ For each civilian processed and each interrogation complete we will receive the 
 ### Behaviour Trees
 
 #### Agent Behaviour Tree
-> Download [Agent Behaviour Tree](https://github.com/CereVenteo/Fuck-the-Police/docs/Agent_Behaviour_Tree.pdf)
+- Download [Agent Behaviour Tree](https://github.com/CereVenteo/Fuck-the-Police/docs/Agent_Behaviour_Tree.pdf)
 <img src="agent_tree.png" width="800"><br>
 
 The agent starts by going to his desk.
@@ -79,7 +79,7 @@ When there are civilians waiting to be served if you press the call button, a ci
 If there is a criminal in the cell and you press the criminal's call button, then two free agents leave your desk to interrogate the criminal, one goes to pick up the criminal from his cell and takes him to the interrogation room to interrogate him, the other goes to the supervisory room to take notes on the interrogation. If interrogation room 1 is occupied, they will go to room 2.
 
 #### Civilian Behaviour Tree
-> Download [Civilian Behaviour Tree](https://github.com/CereVenteo/Fuck-the-Police/docs/Civilian_Behaviour_Tree.pdf)
+- Download [Civilian Behaviour Tree](https://github.com/CereVenteo/Fuck-the-Police/docs/Civilian_Behaviour_Tree.pdf)
 <img src="civilian_tree.png" width="800"><br>
 
 The civilians enter the police station and wait until the secretary is free, when she is free, talk to her to give her a waiting time.
@@ -89,7 +89,7 @@ Wait in the waiting area until an agent calls you.
 When they call him, he goes to talk to the agent and tells him about his problem. The agent solves it and the civilian goes home.
 
 #### Criminal Behaviour Tree
-> Download [Criminal Behaviour Tree](https://github.com/CereVenteo/Fuck-the-Police/docs/Criminal_Behaviour_Tree.pdf)
+- Download [Criminal Behaviour Tree](https://github.com/CereVenteo/Fuck-the-Police/docs/Criminal_Behaviour_Tree.pdf)
 <img src="criminal_tree.png" width="800"><br>
 
 When a criminal is arrested, an agent accompanies him to a cell that is empty and go inside cell.
