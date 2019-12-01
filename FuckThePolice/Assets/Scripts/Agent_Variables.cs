@@ -40,6 +40,7 @@ public class Agent_Variables : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //room = Game_Manager.interrogatory_room;
         if (nav.path.corners.Length > 1)
         if (nav.current_point == nav.path.corners.Length - 1)
         {
@@ -103,4 +104,9 @@ public class Agent_Variables : MonoBehaviour
                 Game_Manager.criminals[i].GetComponent<Criminal_Variables>().interrogation_time = true;
         }
     }
+
+    //public void SetRoom(bool room)
+    //{
+    //    this.room = room;
+    //}
 }

@@ -118,6 +118,7 @@ public class Move : MonoBehaviour {
         //}
             //Debug.Log(current_velocity.magnitude);
             anim.SetFloat("Speed_f", current_velocity.magnitude);
+            current_velocity.y = 0;
             transform.position += current_velocity * Time.deltaTime;
 
         for (int i = 0; i <= SteeringConf.num_priorities; ++i)

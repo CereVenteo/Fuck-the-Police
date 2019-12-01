@@ -30,18 +30,24 @@ public class Button_Call_Criminal : MonoBehaviour
             {
                 Agent_Variables agent = manager.police[i].gameObject.GetComponent<Agent_Variables>();
 
-                if (agent.waiting == true && agent.talking == false && agent_pos_array == -1)
+                if (agent.waiting == true && agent.talking == false && agent_pos_array == -1 && agent.request_for_interrogation == false)
                     agent_pos_array = i;
-                else if (agent.waiting == true && agent.talking == false)
+                else if (agent.waiting == true && agent.talking == false && agent.request_for_interrogation == false)
                 {
                     agent.request_for_interrogation = true;
                     agent.criminal_target = this.GetComponentInParent<Criminal_Variables>().target_cell;
                     agent.criminal_id = this.GetComponentInParent<Criminal_Variables>().id;
                     agent.interrogator = true;
                     if (count < 2)
+                    {
+                        this.GetComponentInParent<Criminal_Variables>().room = true;
                         agent.room = true;
+                    }
                     else
+                    {
+                        this.GetComponentInParent<Criminal_Variables>().room = false;
                         agent.room = false;
+                    }
 
                     agent = manager.police[agent_pos_array].gameObject.GetComponent<Agent_Variables>();
                     agent.request_for_interrogation = true;

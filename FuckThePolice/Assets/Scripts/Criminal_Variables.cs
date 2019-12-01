@@ -26,11 +26,14 @@ public class Criminal_Variables : MonoBehaviour
         nav = this.GetComponent<SteeringFollowNavMeshPath>();
         Game_Manager = GameObject.Find("Game_Manager").GetComponent<Game_Manager>();
         Check_Cells();
+       
     }
 
     // Update is called once per frame
     void Update()
     {
+        transform.position.Set(transform.position.x, -1.4f, transform.position.z);
+        //room = Game_Manager.interrogatory_room;
         if (cell == null)
             Check_Cells();
 
@@ -92,7 +95,9 @@ public class Criminal_Variables : MonoBehaviour
 
     public IEnumerator CriminalInterrogtion()
     {
+        //Game_Manager.interrogatory_room = false;
         yield return new WaitForSeconds(30);
+        //Game_Manager.interrogatory_room = true;
         interrogation_time = false;
     }
     public IEnumerator Wait_time(int time)

@@ -20,6 +20,7 @@ public class Game_Manager : MonoBehaviour
     public List<bool> free_cells;
     public List<GameObject> cars;
     public GameObject car_police;
+    //public bool interrogatory_room = true;
 
     public GameObject interrogation_2;
 

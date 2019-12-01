@@ -33,6 +33,7 @@ public class Civilian_Variables : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        transform.position.Set(transform.position.x, -1.4f, transform.position.z);
         secretary_free = Game_Manager.secretary_free;
         if(nav.path.corners.Length >1)
         {
@@ -111,5 +112,5 @@ public class Civilian_Variables : MonoBehaviour
         waiting = false;
         this.gameObject.SetActive(false);
     }
-   
+
 }
