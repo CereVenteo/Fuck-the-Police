@@ -109,18 +109,27 @@ public class Game_Manager : MonoBehaviour
 
     public void AddCriminal(int car)
     {
+        bool createCriminal = false;
+        for (int i = 0; i < free_cells.Count; i++)
+        {
+            if (free_cells[i] == true)
+                createCriminal = true;
+        }
         if(cars[car].activeSelf)
         {
             for (int i = 0; i < criminals.Count; i++)
             {
                 if (!criminals[i].activeSelf)
                 {
-                    criminals[i].SetActive(true);
-                    criminals[i].GetComponent<Criminal_Variables>().id = ++id_criminals;
-                    criminals[i].transform.position = new Vector3(cars[car].transform.position.x + 2, cars[car].transform.position.y, cars[car].transform.position.z);
-                    car_police.SetActive(true);
-                    car_police.GetComponent<Car_Agent>().SetTarget(criminals[i]);
-                    break;
+                    if (createCriminal)
+                    {
+                        criminals[i].SetActive(true);
+                        criminals[i].GetComponent<Criminal_Variables>().id = ++id_criminals;
+                        criminals[i].transform.position = new Vector3(cars[car].transform.position.x + 2, cars[car].transform.position.y, cars[car].transform.position.z);
+                        car_police.SetActive(true);
+                        car_police.GetComponent<Car_Agent>().SetTarget(criminals[i]);
+                        break;
+                    }
                 }
             }
         }

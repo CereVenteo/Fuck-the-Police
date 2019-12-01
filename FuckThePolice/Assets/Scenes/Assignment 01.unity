@@ -1565,6 +1565,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8fd3fcd983da284b8d185455385b0c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Game_Manager: {fileID: 0}
   menu: {fileID: 1192830900}
   object_buy: {fileID: 396487284}
   police: {fileID: 0}
@@ -9750,6 +9751,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8fd3fcd983da284b8d185455385b0c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Game_Manager: {fileID: 0}
   menu: {fileID: 2116320752}
   object_buy: {fileID: 599073932}
   police: {fileID: 1558088305}
@@ -12899,6 +12901,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8fd3fcd983da284b8d185455385b0c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Game_Manager: {fileID: 0}
   menu: {fileID: 1460285943}
   object_buy: {fileID: 39113105}
   police: {fileID: 508017624}
@@ -15937,6 +15940,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8fd3fcd983da284b8d185455385b0c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Game_Manager: {fileID: 0}
   menu: {fileID: 585657139}
   object_buy: {fileID: 1651312077}
   police: {fileID: 1453341370}
@@ -18753,6 +18757,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8fd3fcd983da284b8d185455385b0c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Game_Manager: {fileID: 0}
   menu: {fileID: 406352786}
   object_buy: {fileID: 1806645415}
   police: {fileID: 0}
@@ -32104,6 +32109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8fd3fcd983da284b8d185455385b0c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Game_Manager: {fileID: 0}
   menu: {fileID: 1673486640}
   object_buy: {fileID: 52167048}
   police: {fileID: 0}
@@ -32699,6 +32705,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8fd3fcd983da284b8d185455385b0c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Game_Manager: {fileID: 0}
   menu: {fileID: 1332179593}
   object_buy: {fileID: 1687318296}
   police: {fileID: 0}
@@ -41829,6 +41836,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8fd3fcd983da284b8d185455385b0c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Game_Manager: {fileID: 0}
   menu: {fileID: 391966637}
   object_buy: {fileID: 356070825}
   police: {fileID: 0}
@@ -43781,6 +43789,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8fd3fcd983da284b8d185455385b0c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Game_Manager: {fileID: 0}
   menu: {fileID: 1736022665}
   object_buy: {fileID: 1561652962}
   police: {fileID: 0}
@@ -45319,6 +45328,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8fd3fcd983da284b8d185455385b0c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Game_Manager: {fileID: 0}
   menu: {fileID: 2044112982}
   object_buy: {fileID: 864269245}
   police: {fileID: 0}
@@ -49811,7 +49821,7 @@ PrefabInstance:
     - target: {fileID: 60254053940546466, guid: 67c734a14f354e842b20534b835ddfe0,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8851921762782149736, guid: 67c734a14f354e842b20534b835ddfe0,
         type: 3}
@@ -53460,7 +53470,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 190214, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 478962, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
       propertyPath: m_LocalPosition.x

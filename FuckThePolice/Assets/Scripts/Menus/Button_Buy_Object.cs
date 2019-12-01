@@ -4,12 +4,16 @@ using UnityEngine;
 
 public class Button_Buy_Object : MonoBehaviour
 {
+    public Game_Manager Game_Manager;
     public GameObject menu;
     public GameObject object_buy;
     public GameObject police;
     public GameObject box;
     Canvas canvas;
-
+    void Start()
+    {
+        Game_Manager = GameObject.Find("Game_Manager").GetComponent<Game_Manager>();
+    }
     private void OnMouseUpAsButton()
     {
         canvas = GameObject.Find("Game_Manager").GetComponent<Canvas>();
@@ -24,6 +28,10 @@ public class Button_Buy_Object : MonoBehaviour
     {
         canvas.SetStars(canvas.GetStars() - 1);
         object_buy.SetActive(true);
+        if(object_buy.name == "Cell_4")
+        {
+            Game_Manager.free_cells[3] = true;
+        }
         box.SetActive(false);
         if(police)
             police.SetActive(true);
