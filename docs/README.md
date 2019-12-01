@@ -5,6 +5,7 @@ Fuck The Police is a management game developed by [Alejandro París](https://git
 
 
 > Download the latest release [HERE](https://github.com/CereVenteo/Fuck-the-Police/releases)
+
 > Github Repository: [Respository](https://github.com/CereVenteo/Fuck-the-Police)
 
 ## The Team
@@ -13,7 +14,7 @@ Fuck The Police is a management game developed by [Alejandro París](https://git
 - [Cere Venteo](https://github.com/CereVenteo) - Design and Code
 
 ## The Game
-<img src="game.png" width="50"><br>
+<img src="game.png" width="800"><br>
 
 ### Description
 In this game we will be in charge of running a police station.
@@ -36,11 +37,11 @@ Supervising all our officers, detectives and field agents will maintain control 
 - Cars
 
 ### Behaviour Trees
-<img src="agent_tree.png" width="50"><br>
+<img src="agent_tree.png" width="800"><br>
 > Download the latest [Agent Behaviour Tree](https://github.com/CereVenteo/Fuck-the-Police/docs/Agent_Behaviour_Tree.pdf)
-<img src="civilian_tree.png" width="50"><br>
+<img src="civilian_tree.png" width="800"><br>
 > Download the latest [Civilian Behaviour Tree](https://github.com/CereVenteo/Fuck-the-Police/docs/Civilian_Behaviour_Tree.pdf)
-<img src="criminal_tree.png" width="50"><br>
+<img src="criminal_tree.png" width="800"><br>
 > Download the latest [Criminal Behaviour Tree](https://github.com/CereVenteo/Fuck-the-Police/docs/Criminal_Behaviour_Tree.pdf)
 ## License
 
