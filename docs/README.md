@@ -1,6 +1,6 @@
 # Fuck The Police
 
-Fuck The Police is a management game developed by [Alejandro París](https://github.com/AlejandroParis) and [Cere Venteo](https://github.com/CereVenteo) for the AI subject under the supervision of the lecturer <b>Marc Garrigó</b>. 
+Fuck The Police is a management game developed by [Alejandro París](https://github.com/AlejandroParis) and [Cere Venteo](https://github.com/CereVenteo) for the AI subject under the supervision of the lecturer [Marc Garrigó](https://github.com/markitus18). 
 
 
 
