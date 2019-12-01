@@ -63,6 +63,7 @@ public class Canvas : MonoBehaviour
                 case 6:
                     this.gameObject.GetComponent<Game_Manager>().AddCriminal(0);
                     this.gameObject.GetComponent<Game_Manager>().AddPolice();
+                    this.gameObject.GetComponent<Game_Manager>().AddSecretary();
                     time_to_add_criminal = 12;
                     break;
                 case 12:

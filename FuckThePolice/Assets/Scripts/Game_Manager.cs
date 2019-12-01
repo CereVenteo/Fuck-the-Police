@@ -17,6 +17,7 @@ public class Game_Manager : MonoBehaviour
     public List<GameObject> desktops;
     public List<GameObject> cells;
     public List<GameObject> criminals;
+    public GameObject secretary;
     public List<bool> free_cells;
     public List<GameObject> cars;
     public GameObject car_police;
@@ -144,6 +145,11 @@ public class Game_Manager : MonoBehaviour
         }
     }
 
+    public void AddSecretary()
+    {
+        secretary.GetComponent<Secretay>().Go_Start();
+    }
+
     public void Night()
     {
         for (int i = 0; i < civilians.Count; i++)
@@ -151,9 +157,12 @@ public class Game_Manager : MonoBehaviour
             if (civilians[i].activeSelf)
             {
                 civilians[i].GetComponent<Civilian_Variables>().Go_Away();
-                civilians_waiting = 0;
+                
             }
         }
+        civilians_waiting = 0;
+        secretary.GetComponent<Secretay>().Go_Away();
+
         //for (int i = 0; i < police.Count && i%2 == 0; i++)
         //{
         //    if (desktops[i].activeSelf)
