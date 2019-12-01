@@ -1,40 +1,46 @@
-# Fuck the Police
+# Fuck The Police
+
+Fuck The Police is a management game developed by [Alejandro París](https://github.com/AlejandroParis) and [Cere Venteo](https://github.com/CereVenteo) for the AI subject under the supervision of the lecturer <b>Marc Garrigó</b>. 
 
 In this game we will be in charge of running a police station.
-
 Supervising all our officers, detectives and field agents will maintain control over all the crime in our city.
+
+<img src="game.png" width="50"><br>
+
+> Download the latest release [HERE](https://github.com/CereVenteo/Fuck-the-Police/releases)
+> Github Repository: [Respository](https://github.com/CereVenteo/Fuck-the-Police)
+
+## The Team
+
+- [Alejandro París](https://github.com/AlejandroParis) - Design and Code
+- [Cere Venteo](https://github.com/CereVenteo) - Design and Code
+
+## Features
 
 ### Rooms:
 - Reception
 - Waiting Room
 - Office Space
-- Toilet
+- Cells
 - Interrogation Room
-	
-### Structures:
-- Trash can
-- Desktop
-- Toilet
-- Bench to sit
 	
 ### Characters:
 - Policeman
 - Citizens
 - Secretary
-- Criminal
-	
-## The Assigment 1 Contain
-During the demonstration, we will have a secretary who will go to her position as secretary to manage the civilians' shifts. Four policemen who go to their respective desks, and a suspect in the interrogation room, circling waiting to be interrogated. We will also have civilians who will come to consult the agents. When the cycle changes, the secretary will take a break to go to the bathroom because she is older and has incontinence, the police, one of them will go to the interrogation room to interrogate the suspect, while the rest will go to the next room to look the interrogation.
-	
-## The Team
+- Criminals
+- Cars
 
-- Alejandro París GitHub account: [Alejandro París](https://github.com/AlejandroParis)
-- Cere Venteo GitHub account: [Cere Venteo](https://github.com/CereVenteo)
-- Github Repository: [Respository](https://github.com/CereVenteo/Fuck-the-Police)
-
-
+### Behaviour Trees
+<img src="tree1.png" width="50"><br>
+> Download the latest [Agent Behaviour Tree](https://github.com/CereVenteo/Fuck-the-Police/docs/Agent_Behaviour_Tree.pdf)
+<img src="tree2.png" width="50"><br>
+> Download the latest [Civilian Behaviour Tree](https://github.com/CereVenteo/Fuck-the-Police/docs/Civilian_Behaviour_Tree.pdf)
+<img src="tree3.png" width="50"><br>
+> Download the latest [Criminal Behaviour Tree](https://github.com/CereVenteo/Fuck-the-Police/docs/Criminal_Behaviour_Tree.pdf)
 ## License
 
+```
 MIT License
 
 Copyright (c) 2019 Alejandro París and Cere Venteo
@@ -56,5 +62,5 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
+```
 
