@@ -2,10 +2,7 @@
 
 Fuck The Police is a management game developed by [Alejandro París](https://github.com/AlejandroParis) and [Cere Venteo](https://github.com/CereVenteo) for the AI subject under the supervision of the lecturer <b>Marc Garrigó</b>. 
 
-In this game we will be in charge of running a police station.
-Supervising all our officers, detectives and field agents will maintain control over all the crime in our city.
 
-<img src="game.png" width="50"><br>
 
 > Download the latest release [HERE](https://github.com/CereVenteo/Fuck-the-Police/releases)
 > Github Repository: [Respository](https://github.com/CereVenteo/Fuck-the-Police)
@@ -14,6 +11,13 @@ Supervising all our officers, detectives and field agents will maintain control 
 
 - [Alejandro París](https://github.com/AlejandroParis) - Design and Code
 - [Cere Venteo](https://github.com/CereVenteo) - Design and Code
+
+## The Game
+<img src="game.png" width="50"><br>
+
+### Description
+In this game we will be in charge of running a police station.
+Supervising all our officers, detectives and field agents will maintain control over all the crime in our city.
 
 ## Features
 
