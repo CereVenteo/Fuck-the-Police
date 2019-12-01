@@ -4,9 +4,9 @@ Fuck The Police is a management game developed by [Alejandro París](https://git
 
 
 
-> Download the latest release [HERE](https://github.com/CereVenteo/Fuck-the-Police/releases)
+- Download the latest release [HERE](https://github.com/CereVenteo/Fuck-the-Police/releases)
 
-> Github Repository: [Respository](https://github.com/CereVenteo/Fuck-the-Police)
+- Github Repository: [Respository](https://github.com/CereVenteo/Fuck-the-Police)
 
 ## The Team
 
@@ -70,7 +70,7 @@ For each civilian processed and each interrogation complete we will receive the 
 
 #### Agent Behaviour Tree
 <img src="agent_tree.png" width="800"><br>
-> Download [Agent Behaviour Tree](https://github.com/CereVenteo/Fuck-the-Police/docs/Agent_Behaviour_Tree.pdf)
+- Download [Agent Behaviour Tree](https://github.com/CereVenteo/Fuck-the-Police/docs/Agent_Behaviour_Tree.pdf)
 
 The agent starts by going to his desk.
 
@@ -80,7 +80,7 @@ If there is a criminal in the cell and you press the criminal's call button, the
 
 #### Civilian Behaviour Tree
 <img src="civilian_tree.png" width="800"><br>
-> Download [Civilian Behaviour Tree](https://github.com/CereVenteo/Fuck-the-Police/docs/Civilian_Behaviour_Tree.pdf)
+- Download [Civilian Behaviour Tree](https://github.com/CereVenteo/Fuck-the-Police/docs/Civilian_Behaviour_Tree.pdf)
 
 
 The civilians enter the police station and wait until the secretary is free, when she is free, talk to her to give her a waiting time.
@@ -91,7 +91,7 @@ When they call him, he goes to talk to the agent and tells him about his problem
 
 #### Criminal Behaviour Tree
 <img src="criminal_tree.png" width="800"><br>
-> Download [Criminal Behaviour Tree](https://github.com/CereVenteo/Fuck-the-Police/docs/Criminal_Behaviour_Tree.pdf)
+- Download [Criminal Behaviour Tree](https://github.com/CereVenteo/Fuck-the-Police/docs/Criminal_Behaviour_Tree.pdf)
 
 When a criminal is arrested, an agent accompanies him to a cell that is empty and go inside cell.
 
