@@ -32,11 +32,11 @@ Supervising all our officers, detectives and field agents will maintain control 
 - Cars
 
 ### Behaviour Trees
-<img src="tree1.png" width="50"><br>
+<img src="agent_tree.png" width="50"><br>
 > Download the latest [Agent Behaviour Tree](https://github.com/CereVenteo/Fuck-the-Police/docs/Agent_Behaviour_Tree.pdf)
-<img src="tree2.png" width="50"><br>
+<img src="civilian_tree.png" width="50"><br>
 > Download the latest [Civilian Behaviour Tree](https://github.com/CereVenteo/Fuck-the-Police/docs/Civilian_Behaviour_Tree.pdf)
-<img src="tree3.png" width="50"><br>
+<img src="criminal_tree.png" width="50"><br>
 > Download the latest [Criminal Behaviour Tree](https://github.com/CereVenteo/Fuck-the-Police/docs/Criminal_Behaviour_Tree.pdf)
 ## License
 
