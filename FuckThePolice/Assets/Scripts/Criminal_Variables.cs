@@ -20,13 +20,15 @@ public class Criminal_Variables : MonoBehaviour
     public bool interrogation_time;
     public bool waiting;
     public GameObject go_away;
+    AudioSource audio_sim;
+
     // Start is called before the first frame update
     void Start()
     {
         nav = this.GetComponent<SteeringFollowNavMeshPath>();
         Game_Manager = GameObject.Find("Game_Manager").GetComponent<Game_Manager>();
         Check_Cells();
-       
+        audio_sim = this.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -78,6 +80,7 @@ public class Criminal_Variables : MonoBehaviour
     {
         this.transform.position = cell.transform.position;
         GetComponent<Move>().current_velocity = Vector3.zero;
+        GetComponent<Move>().rotation = 0.0f;
         nav.path = new NavMeshPath();
     }
 
@@ -96,8 +99,10 @@ public class Criminal_Variables : MonoBehaviour
     public IEnumerator CriminalInterrogtion()
     {
         //Game_Manager.interrogatory_room = false;
+        audio_sim.Play();
         yield return new WaitForSeconds(30);
         //Game_Manager.interrogatory_room = true;
+        audio_sim.Stop();
         interrogation_time = false;
     }
     public IEnumerator Wait_time(int time)

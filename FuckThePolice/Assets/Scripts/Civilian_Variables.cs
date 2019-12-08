@@ -21,6 +21,8 @@ public class Civilian_Variables : MonoBehaviour
     public GameObject target;
     public GameObject target2;
     public bool go_back = true;
+    AudioSource audio_sim;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +30,7 @@ public class Civilian_Variables : MonoBehaviour
         Game_Manager = GameObject.Find("Game_Manager").GetComponent<Game_Manager>();
         wait_position = target.transform.position;
         secretary_position = target2.transform.position;
+        audio_sim = this.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -85,18 +88,22 @@ public class Civilian_Variables : MonoBehaviour
     public IEnumerator Talk()
     {
         Game_Manager.secretary_free = false;
+        audio_sim.Play();
         yield return new WaitForSeconds(10);
         identity = ++Game_Manager.civilian_identity;
         Game_Manager.civilians_waiting++;
         Game_Manager.secretary_free = true;
+        audio_sim.Stop();
     }
 
     public IEnumerator AgentTalk()
     {
         agent_call = false;
+        audio_sim.Play();
         yield return new WaitForSeconds(15);
         agent_talk = false;
-        GameObject.Find("Game_Manager").GetComponent<Canvas>().CivilianHelped();
+        Game_Manager.GetComponent<Canvas>().CivilianHelped();
+        audio_sim.Stop();
     }
 
     public void Go_Away()

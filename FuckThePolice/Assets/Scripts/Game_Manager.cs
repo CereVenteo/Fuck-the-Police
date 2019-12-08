@@ -155,7 +155,7 @@ public class Game_Manager : MonoBehaviour
     {
         AddCriminal(0);
         AddSecretary();
-        //AddPolice();
+        AddPolice();
         civilians_waiting = 0;
         for (int i = 0; i < lights.Count; i++)
         {

@@ -28,7 +28,7 @@ public class Car_Agent : MonoBehaviour
     public void SetTarget(GameObject _target)
     {
         target = _target;
-        transform.position = target.transform.position;
+        transform.position = new Vector3(target.transform.position.x - 2, target.transform.position.y, target.transform.position.z + 2);
     }
     public void Go_Away()
     {

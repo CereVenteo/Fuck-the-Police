@@ -13,6 +13,7 @@ public class CameraControl : MonoBehaviour
         float moveAmount = 10f;
         float edgeSize = 30f;
         uint limit = 20;
+        
         cameraFollowPosition = transform.position;
 
         if ((Input.mousePosition.x > Screen.width - edgeSize || Input.GetKey(KeyCode.D)) && cameraFollowPosition.z > -limit)
@@ -32,14 +33,14 @@ public class CameraControl : MonoBehaviour
             cameraFollowPosition.x -= moveAmount * Time.deltaTime;
         }
 
-        if (cameraFollowPosition.y >= limit && cameraFollowPosition.y <= limit * 2 && cameraFollowPosition.x >= -limit && cameraFollowPosition.x <= limit)
+        if (cameraFollowPosition.y >= limit-5 && cameraFollowPosition.y <= limit * 2 && cameraFollowPosition.x >= -limit && cameraFollowPosition.x <= limit)
         {
             cameraFollowPosition.y -= Input.mouseScrollDelta.y;
             cameraFollowPosition.x += Input.mouseScrollDelta.y;
         }
             
-        if (cameraFollowPosition.y < limit)
-            cameraFollowPosition.y = limit;
+        if (cameraFollowPosition.y < limit-5)
+            cameraFollowPosition.y = limit-5;
         else if (cameraFollowPosition.y > limit * 2)
             cameraFollowPosition.y = limit * 2;
         if (cameraFollowPosition.x < -limit)
