@@ -7,7 +7,6 @@ public class Button_Buy_Object : MonoBehaviour
     public Game_Manager Game_Manager;
     public GameObject menu;
     public GameObject object_buy;
-    public GameObject police;
     public GameObject box;
     Canvas canvas;
     void Start()
@@ -33,7 +32,5 @@ public class Button_Buy_Object : MonoBehaviour
             Game_Manager.free_cells[3] = true;
         }
         box.SetActive(false);
-        if(police)
-            police.SetActive(true);
     }
 }

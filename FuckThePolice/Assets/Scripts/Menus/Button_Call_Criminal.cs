@@ -32,7 +32,7 @@ public class Button_Call_Criminal : MonoBehaviour
             {
                 Agent_Variables agent = manager.police[i].gameObject.GetComponent<Agent_Variables>();
                 if (agent.room == false)
-                full = agent.room;
+                    full = agent.room;
             }
             for (int i = 0; i < manager.police.Count; i++)
             {

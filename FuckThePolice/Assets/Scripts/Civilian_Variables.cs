@@ -110,6 +110,8 @@ public class Civilian_Variables : MonoBehaviour
     {
         nav.path = new NavMeshPath();
         waiting = false;
+        agent_talk = false;
+        agent_call = false;
         this.gameObject.SetActive(false);
     }
 

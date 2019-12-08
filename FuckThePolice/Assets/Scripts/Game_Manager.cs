@@ -21,6 +21,7 @@ public class Game_Manager : MonoBehaviour
     public List<bool> free_cells;
     public List<GameObject> cars;
     public GameObject car_police;
+    public List<GameObject> lights;
     //public bool interrogatory_room = true;
 
     public GameObject interrogation_2;
@@ -150,6 +151,21 @@ public class Game_Manager : MonoBehaviour
         secretary.GetComponent<Secretay>().Go_Start();
     }
 
+    public void Day()
+    {
+        AddCriminal(0);
+        AddSecretary();
+        //AddPolice();
+        civilians_waiting = 0;
+        for (int i = 0; i < lights.Count; i++)
+        {
+            if (i == 0)
+                lights[i].GetComponent<Light>().intensity = 1;
+            else
+                lights[i].GetComponent<Light>().enabled = false;
+        }
+    }
+
     public void Night()
     {
         for (int i = 0; i < civilians.Count; i++)
@@ -159,13 +175,24 @@ public class Game_Manager : MonoBehaviour
                 civilians[i].GetComponent<Civilian_Variables>().Go_Away();
             }
         }
+        
         secretary.GetComponent<Secretay>().Go_Away();
 
-        //for (int i = 0; i < police.Count && i%2 == 0; i++)
+        //for (int i = 0; i < police.Count; i++)
         //{
-        //    if (desktops[i].activeSelf)
-        //        police[i].SetActive(false);
+        //    if (police[i].activeSelf && police[i].GetComponent<Agent_Variables>().request_for_interrogation == false)
+        //    {
+        //        police[i].GetComponent<Agent_Variables>().Go_Away();
+        //    }
         //}
+        
+        for (int i = 0; i < lights.Count; i++)
+        {
+            if (i == 0)
+                lights[i].GetComponent<Light>().intensity = 0.4f;
+            else
+                lights[i].GetComponent<Light>().enabled = true;
+        }
     }
 
     //public IEnumerator Enable_Civilian()

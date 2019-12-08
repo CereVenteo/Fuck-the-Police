@@ -28,7 +28,8 @@ public class Agent_Variables : MonoBehaviour
     public bool go_back = true;
     int civil;
     int civil_id = -1;
-    
+    public GameObject go_away;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -104,6 +105,11 @@ public class Agent_Variables : MonoBehaviour
             if (Game_Manager.criminals[i].GetComponent<Criminal_Variables>().id == criminal_id)
                 Game_Manager.criminals[i].GetComponent<Criminal_Variables>().interrogation_time = true;
         }
+    }
+
+    public void Go_Away()
+    {
+        nav.CreatePath(go_away.transform.position);
     }
 
     //public void SetRoom(bool room)

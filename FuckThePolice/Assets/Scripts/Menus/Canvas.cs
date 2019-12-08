@@ -36,7 +36,7 @@ public class Canvas : MonoBehaviour
         day_valor = 1;
         InvokeRepeating("IncrementTime", 0.0f, 0.15f);
         star_points = 1000;
-        points_valor = 4000;
+        points_valor = 0;
         stars = 0;
         time_to_add_civilian = 6;
         civilians_helped = 0;
@@ -61,10 +61,7 @@ public class Canvas : MonoBehaviour
             switch (time_to_add_criminal)
             {
                 case 6:
-                    this.gameObject.GetComponent<Game_Manager>().AddCriminal(0);
-                    this.gameObject.GetComponent<Game_Manager>().AddPolice();
-                    this.gameObject.GetComponent<Game_Manager>().AddSecretary();
-                    this.gameObject.GetComponent<Game_Manager>().civilians_waiting = 0;
+                    this.gameObject.GetComponent<Game_Manager>().Day();
                     time_to_add_criminal = 12;
                     break;
                 case 12:

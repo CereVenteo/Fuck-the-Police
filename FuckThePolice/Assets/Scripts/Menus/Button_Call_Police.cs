@@ -11,7 +11,6 @@ public class Button_Call_Police : MonoBehaviour
     {
         CallNextCitizen();
         menu.SetActive(false);
-        
     }
 
     void CallNextCitizen()
