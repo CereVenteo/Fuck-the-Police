@@ -33,7 +33,7 @@ public class SteeringObstacleAvoidance : SteeringAbstract
         else
         {
 
-            float angle = Mathf.Atan2(move.GetPriorityVelocity().x, move.GetPriorityVelocity().z);
+            float angle = Mathf.Atan2(move.current_velocity.x, move.current_velocity.z);
             Quaternion q = Quaternion.AngleAxis(Mathf.Rad2Deg * angle, Vector3.up);
 
             foreach (my_ray ray in rays)

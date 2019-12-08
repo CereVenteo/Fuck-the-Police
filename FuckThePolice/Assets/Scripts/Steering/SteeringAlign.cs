@@ -20,8 +20,8 @@ public class SteeringAlign : SteeringAbstract
     // Update is called once per frame
     void Update()
     {
-        if (move.target != null)
-            Steer(move.target.transform.position);
+        //if (move.target != null)
+        //    Steer(move.target.transform.position);
     }
     public bool Steer(Vector3 target)
     {
@@ -61,7 +61,7 @@ public class SteeringAlign : SteeringAbstract
 
         if (diff_absolute < min_angle)
         {
-            move.SetRotationVelocity(0.0f);
+            move.rotation = 0;
             return true;
         }
 
@@ -76,7 +76,7 @@ public class SteeringAlign : SteeringAbstract
         if (delta_angle < 0)
             angular_acceleration = -angular_acceleration;
 
-        move.AccelerateRotation(Mathf.Clamp(angular_acceleration, -move.max_rot_acceleration, move.max_rot_acceleration), priority);
+        move.AccelerateRotation(/*Mathf.Clamp(*/angular_acceleration/*, -move.max_rot_acceleration, move.max_rot_acceleration)*/, priority);
 
         return false;
 

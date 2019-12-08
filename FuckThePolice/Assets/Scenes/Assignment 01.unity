@@ -473,18 +473,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a968724c3b6f64198b9b015470e4f6f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 1903220269}
+  anim: {fileID: 0}
+  target: {fileID: 2022076894}
   aim: {fileID: 148679783}
   arrow: {fileID: 0}
   max_mov_speed: 4
   max_mov_acceleration: 1
-  max_rot_speed: 300
-  max_rot_acceleration: 100
-  anim: {fileID: 0}
+  max_rot_speed: 10
+  max_rot_acceleration: 0.1
   current_velocity: {x: 0, y: 0, z: 0}
-  current_rotation_speed: 0
-  priorities_velocity: []
-  priorities_rotation: []
+  rotation: 0
 --- !u!114 &9418379
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -558,7 +556,7 @@ MonoBehaviour:
   priority: 1
   min_angle: 5
   slow_angle: 10
-  time_to_accel: 2
+  time_to_accel: 1
 --- !u!114 &9418382
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2894,18 +2892,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a968724c3b6f64198b9b015470e4f6f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 1903220269}
-  aim: {fileID: 1543379086}
+  anim: {fileID: 0}
+  target: {fileID: 2022076894}
+  aim: {fileID: 148679783}
   arrow: {fileID: 0}
   max_mov_speed: 4
   max_mov_acceleration: 1
-  max_rot_speed: 300
-  max_rot_acceleration: 100
-  anim: {fileID: 0}
+  max_rot_speed: 10
+  max_rot_acceleration: 1
   current_velocity: {x: 0, y: 0, z: 0}
-  current_rotation_speed: 0
-  priorities_velocity: []
-  priorities_rotation: []
+  rotation: 0
 --- !u!114 &103003976
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5970,18 +5966,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a968724c3b6f64198b9b015470e4f6f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 1903220269}
-  aim: {fileID: 1429087443}
+  anim: {fileID: 0}
+  target: {fileID: 2022076894}
+  aim: {fileID: 148679783}
   arrow: {fileID: 0}
   max_mov_speed: 4
   max_mov_acceleration: 1
-  max_rot_speed: 300
-  max_rot_acceleration: 100
-  anim: {fileID: 0}
+  max_rot_speed: 10
+  max_rot_acceleration: 1
   current_velocity: {x: 0, y: 0, z: 0}
-  current_rotation_speed: 0
-  priorities_velocity: []
-  priorities_rotation: []
+  rotation: 0
 --- !u!114 &224448158
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7039,18 +7033,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a968724c3b6f64198b9b015470e4f6f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 1903220269}
-  aim: {fileID: 1197616817}
+  anim: {fileID: 0}
+  target: {fileID: 2022076894}
+  aim: {fileID: 148679783}
   arrow: {fileID: 0}
   max_mov_speed: 4
   max_mov_acceleration: 1
-  max_rot_speed: 300
-  max_rot_acceleration: 100
-  anim: {fileID: 0}
+  max_rot_speed: 10
+  max_rot_acceleration: 1
   current_velocity: {x: 0, y: 0, z: 0}
-  current_rotation_speed: 0
-  priorities_velocity: []
-  priorities_rotation: []
+  rotation: 0
 --- !u!114 &280021357
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9097,18 +9089,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a968724c3b6f64198b9b015470e4f6f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 1903220269}
-  aim: {fileID: 1062914534}
+  anim: {fileID: 0}
+  target: {fileID: 2022076894}
+  aim: {fileID: 148679783}
   arrow: {fileID: 0}
   max_mov_speed: 4
   max_mov_acceleration: 1
-  max_rot_speed: 300
-  max_rot_acceleration: 100
-  anim: {fileID: 0}
+  max_rot_speed: 10
+  max_rot_acceleration: 1
   current_velocity: {x: 0, y: 0, z: 0}
-  current_rotation_speed: 0
-  priorities_velocity: []
-  priorities_rotation: []
+  rotation: 0
 --- !u!114 &356718061
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12254,7 +12244,7 @@ MonoBehaviour:
   priority: 3
   min_angle: 5
   slow_angle: 10
-  time_to_accel: 2
+  time_to_accel: 0.5
 --- !u!114 &508017635
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12309,18 +12299,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a968724c3b6f64198b9b015470e4f6f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 0}
   target: {fileID: 2022076894}
   aim: {fileID: 148679783}
   arrow: {fileID: 0}
   max_mov_speed: 4
   max_mov_acceleration: 1
-  max_rot_speed: 300
-  max_rot_acceleration: 100
-  anim: {fileID: 0}
+  max_rot_speed: 10
+  max_rot_acceleration: 1
   current_velocity: {x: 0, y: 0, z: 0}
-  current_rotation_speed: 0
-  priorities_velocity: []
-  priorities_rotation: []
+  rotation: 0
 --- !u!114 &508017637
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12665,18 +12653,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a968724c3b6f64198b9b015470e4f6f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 1903220269}
-  aim: {fileID: 1387830414}
+  anim: {fileID: 0}
+  target: {fileID: 2022076894}
+  aim: {fileID: 148679783}
   arrow: {fileID: 0}
   max_mov_speed: 4
   max_mov_acceleration: 1
-  max_rot_speed: 300
-  max_rot_acceleration: 100
-  anim: {fileID: 0}
+  max_rot_speed: 10
+  max_rot_acceleration: 1
   current_velocity: {x: 0, y: 0, z: 0}
-  current_rotation_speed: 0
-  priorities_velocity: []
-  priorities_rotation: []
+  rotation: 0
 --- !u!114 &508918532
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13550,18 +13536,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a968724c3b6f64198b9b015470e4f6f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 1903220269}
-  aim: {fileID: 2049741848}
+  anim: {fileID: 0}
+  target: {fileID: 2022076894}
+  aim: {fileID: 148679783}
   arrow: {fileID: 0}
   max_mov_speed: 4
   max_mov_acceleration: 1
-  max_rot_speed: 300
-  max_rot_acceleration: 100
-  anim: {fileID: 0}
+  max_rot_speed: 10
+  max_rot_acceleration: 1
   current_velocity: {x: 0, y: 0, z: 0}
-  current_rotation_speed: 0
-  priorities_velocity: []
-  priorities_rotation: []
+  rotation: 0
 --- !u!114 &569525030
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20252,18 +20236,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a968724c3b6f64198b9b015470e4f6f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 1903220269}
-  aim: {fileID: 2127267191}
+  anim: {fileID: 0}
+  target: {fileID: 2022076894}
+  aim: {fileID: 148679783}
   arrow: {fileID: 0}
   max_mov_speed: 4
   max_mov_acceleration: 1
-  max_rot_speed: 300
-  max_rot_acceleration: 100
-  anim: {fileID: 0}
+  max_rot_speed: 10
+  max_rot_acceleration: 1
   current_velocity: {x: 0, y: 0, z: 0}
-  current_rotation_speed: 0
-  priorities_velocity: []
-  priorities_rotation: []
+  rotation: 0
 --- !u!114 &829214031
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22575,18 +22557,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a968724c3b6f64198b9b015470e4f6f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 1903220269}
-  aim: {fileID: 435791402}
+  anim: {fileID: 0}
+  target: {fileID: 2022076894}
+  aim: {fileID: 148679783}
   arrow: {fileID: 0}
   max_mov_speed: 4
   max_mov_acceleration: 1
-  max_rot_speed: 300
-  max_rot_acceleration: 100
-  anim: {fileID: 0}
+  max_rot_speed: 10
+  max_rot_acceleration: 1
   current_velocity: {x: 0, y: 0, z: 0}
-  current_rotation_speed: 0
-  priorities_velocity: []
-  priorities_rotation: []
+  rotation: 0
 --- !u!114 &898015378
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25057,18 +25037,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a968724c3b6f64198b9b015470e4f6f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 1903220269}
-  aim: {fileID: 1364888038}
+  anim: {fileID: 0}
+  target: {fileID: 2022076894}
+  aim: {fileID: 148679783}
   arrow: {fileID: 0}
   max_mov_speed: 4
   max_mov_acceleration: 1
-  max_rot_speed: 300
-  max_rot_acceleration: 100
-  anim: {fileID: 0}
+  max_rot_speed: 10
+  max_rot_acceleration: 1
   current_velocity: {x: 0, y: 0, z: 0}
-  current_rotation_speed: 0
-  priorities_velocity: []
-  priorities_rotation: []
+  rotation: 0
 --- !u!114 &960559995
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25489,18 +25467,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a968724c3b6f64198b9b015470e4f6f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 1903220269}
-  aim: {fileID: 1613772748}
+  anim: {fileID: 0}
+  target: {fileID: 2022076894}
+  aim: {fileID: 148679783}
   arrow: {fileID: 0}
   max_mov_speed: 4
   max_mov_acceleration: 1
-  max_rot_speed: 300
-  max_rot_acceleration: 100
-  anim: {fileID: 0}
+  max_rot_speed: 10
+  max_rot_acceleration: 1
   current_velocity: {x: 0, y: 0, z: 0}
-  current_rotation_speed: 0
-  priorities_velocity: []
-  priorities_rotation: []
+  rotation: 0
 --- !u!114 &975251358
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26990,18 +26966,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a968724c3b6f64198b9b015470e4f6f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 1903220269}
-  aim: {fileID: 1627999869}
+  anim: {fileID: 0}
+  target: {fileID: 2022076894}
+  aim: {fileID: 148679783}
   arrow: {fileID: 0}
   max_mov_speed: 4
   max_mov_acceleration: 1
-  max_rot_speed: 300
-  max_rot_acceleration: 100
-  anim: {fileID: 0}
+  max_rot_speed: 10
+  max_rot_acceleration: 1
   current_velocity: {x: 0, y: 0, z: 0}
-  current_rotation_speed: 0
-  priorities_velocity: []
-  priorities_rotation: []
+  rotation: 0
 --- !u!114 &1065688736
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30487,18 +30461,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a968724c3b6f64198b9b015470e4f6f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 1903220269}
-  aim: {fileID: 1201388593}
+  anim: {fileID: 0}
+  target: {fileID: 2022076894}
+  aim: {fileID: 148679783}
   arrow: {fileID: 0}
   max_mov_speed: 4
   max_mov_acceleration: 1
-  max_rot_speed: 300
-  max_rot_acceleration: 100
-  anim: {fileID: 0}
+  max_rot_speed: 10
+  max_rot_acceleration: 1
   current_velocity: {x: 0, y: 0, z: 0}
-  current_rotation_speed: 0
-  priorities_velocity: []
-  priorities_rotation: []
+  rotation: 0
 --- !u!114 &1204840428
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34542,18 +34514,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a968724c3b6f64198b9b015470e4f6f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 1903220269}
-  aim: {fileID: 952485397}
+  anim: {fileID: 0}
+  target: {fileID: 2022076894}
+  aim: {fileID: 148679783}
   arrow: {fileID: 0}
   max_mov_speed: 4
   max_mov_acceleration: 1
-  max_rot_speed: 300
-  max_rot_acceleration: 100
-  anim: {fileID: 0}
+  max_rot_speed: 10
+  max_rot_acceleration: 1
   current_velocity: {x: 0, y: 0, z: 0}
-  current_rotation_speed: 0
-  priorities_velocity: []
-  priorities_rotation: []
+  rotation: 0
 --- !u!114 &1392611622
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36468,7 +36438,7 @@ MonoBehaviour:
   priority: 3
   min_angle: 5
   slow_angle: 10
-  time_to_accel: 2
+  time_to_accel: 0.5
 --- !u!114 &1453341381
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36523,18 +36493,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a968724c3b6f64198b9b015470e4f6f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 0}
   target: {fileID: 2022076894}
   aim: {fileID: 148679783}
   arrow: {fileID: 0}
   max_mov_speed: 4
   max_mov_acceleration: 1
-  max_rot_speed: 300
-  max_rot_acceleration: 100
-  anim: {fileID: 0}
+  max_rot_speed: 10
+  max_rot_acceleration: 1
   current_velocity: {x: 0, y: 0, z: 0}
-  current_rotation_speed: 0
-  priorities_velocity: []
-  priorities_rotation: []
+  rotation: 0
 --- !u!114 &1453341383
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39595,7 +39563,7 @@ MonoBehaviour:
   priority: 3
   min_angle: 5
   slow_angle: 10
-  time_to_accel: 2
+  time_to_accel: 0.5
 --- !u!114 &1558088316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39650,18 +39618,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a968724c3b6f64198b9b015470e4f6f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 0}
   target: {fileID: 2022076894}
   aim: {fileID: 148679783}
   arrow: {fileID: 0}
   max_mov_speed: 4
   max_mov_acceleration: 1
-  max_rot_speed: 300
-  max_rot_acceleration: 100
-  anim: {fileID: 0}
+  max_rot_speed: 10
+  max_rot_acceleration: 1
   current_velocity: {x: 0, y: 0, z: 0}
-  current_rotation_speed: 0
-  priorities_velocity: []
-  priorities_rotation: []
+  rotation: 0
 --- !u!114 &1558088318
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43445,18 +43411,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a968724c3b6f64198b9b015470e4f6f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 1903220269}
-  aim: {fileID: 721474410}
+  anim: {fileID: 0}
+  target: {fileID: 2022076894}
+  aim: {fileID: 148679783}
   arrow: {fileID: 0}
   max_mov_speed: 4
   max_mov_acceleration: 1
-  max_rot_speed: 300
-  max_rot_acceleration: 100
-  anim: {fileID: 0}
+  max_rot_speed: 10
+  max_rot_acceleration: 1
   current_velocity: {x: 0, y: 0, z: 0}
-  current_rotation_speed: 0
-  priorities_velocity: []
-  priorities_rotation: []
+  rotation: 0
 --- !u!114 &1690119074
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49049,18 +49013,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a968724c3b6f64198b9b015470e4f6f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 1903220269}
-  aim: {fileID: 911229784}
+  anim: {fileID: 0}
+  target: {fileID: 2022076894}
+  aim: {fileID: 148679783}
   arrow: {fileID: 0}
   max_mov_speed: 4
   max_mov_acceleration: 1
-  max_rot_speed: 300
-  max_rot_acceleration: 100
-  anim: {fileID: 0}
+  max_rot_speed: 10
+  max_rot_acceleration: 1
   current_velocity: {x: 0, y: 0, z: 0}
-  current_rotation_speed: 0
-  priorities_velocity: []
-  priorities_rotation: []
+  rotation: 0
 --- !u!114 &2062313015
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51725,7 +51687,7 @@ MonoBehaviour:
   priority: 3
   min_angle: 5
   slow_angle: 10
-  time_to_accel: 2
+  time_to_accel: 0.5
 --- !u!114 &2139503852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51780,18 +51742,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a968724c3b6f64198b9b015470e4f6f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 0}
   target: {fileID: 2022076894}
   aim: {fileID: 148679783}
   arrow: {fileID: 0}
   max_mov_speed: 4
   max_mov_acceleration: 1
-  max_rot_speed: 300
-  max_rot_acceleration: 100
-  anim: {fileID: 0}
+  max_rot_speed: 10
+  max_rot_acceleration: 1
   current_velocity: {x: 0, y: 0, z: 0}
-  current_rotation_speed: 0
-  priorities_velocity: []
-  priorities_rotation: []
+  rotation: 0
 --- !u!114 &2139503854
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52185,10 +52145,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1a2539257a3a4efeb46289d1eb08300, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 1
+  priority: 3
   min_angle: 5
   slow_angle: 10
-  time_to_accel: 2
+  time_to_accel: 0.1
 --- !u!114 &2143508808
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52243,18 +52203,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a968724c3b6f64198b9b015470e4f6f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 0}
   target: {fileID: 2022076894}
   aim: {fileID: 148679783}
   arrow: {fileID: 0}
   max_mov_speed: 4
   max_mov_acceleration: 1
-  max_rot_speed: 300
-  max_rot_acceleration: 100
-  anim: {fileID: 0}
+  max_rot_speed: 10
+  max_rot_acceleration: 1
   current_velocity: {x: 0, y: 0, z: 0}
-  current_rotation_speed: 0
-  priorities_velocity: []
-  priorities_rotation: []
+  rotation: 0
 --- !u!114 &2143508810
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53154,6 +53112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a968724c3b6f64198b9b015470e4f6f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 0}
   target: {fileID: 0}
   aim: {fileID: 148679783}
   arrow: {fileID: 0}
@@ -53161,11 +53120,8 @@ MonoBehaviour:
   max_mov_acceleration: 1
   max_rot_speed: 300
   max_rot_acceleration: 100
-  anim: {fileID: 0}
   current_velocity: {x: 0, y: 0, z: 0}
-  current_rotation_speed: 0
-  priorities_velocity: []
-  priorities_rotation: []
+  rotation: 0
 --- !u!114 &571032245807138330
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53629,18 +53585,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a968724c3b6f64198b9b015470e4f6f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 1903220269}
-  aim: {fileID: 1269593833}
+  anim: {fileID: 0}
+  target: {fileID: 2022076894}
+  aim: {fileID: 148679783}
   arrow: {fileID: 0}
   max_mov_speed: 4
   max_mov_acceleration: 1
-  max_rot_speed: 300
-  max_rot_acceleration: 100
-  anim: {fileID: 0}
+  max_rot_speed: 10
+  max_rot_acceleration: 1
   current_velocity: {x: 0, y: 0, z: 0}
-  current_rotation_speed: 0
-  priorities_velocity: []
-  priorities_rotation: []
+  rotation: 0
 --- !u!114 &717651573530029874
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58702,7 +58656,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b13ae3cbc54e44631ae987b5486c59f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 2
+  priority: 3
   min_distance: 1
   slow_distance: 3
   time_to_target: 0.1
@@ -58718,10 +58672,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1a2539257a3a4efeb46289d1eb08300, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 3
+  priority: 4
   min_angle: 5
   slow_angle: 10
-  time_to_accel: 2
+  time_to_accel: 0.5
 --- !u!114 &8637100246777300331
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58792,18 +58746,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a968724c3b6f64198b9b015470e4f6f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 0}
   target: {fileID: 2022076894}
   aim: {fileID: 148679783}
   arrow: {fileID: 0}
   max_mov_speed: 4
   max_mov_acceleration: 1
-  max_rot_speed: 300
-  max_rot_acceleration: 100
-  anim: {fileID: 0}
+  max_rot_speed: 10
+  max_rot_acceleration: 1
   current_velocity: {x: 0, y: 0, z: 0}
-  current_rotation_speed: 0
-  priorities_velocity: []
-  priorities_rotation: []
+  rotation: 0
 --- !u!114 &8637100246777300334
 MonoBehaviour:
   m_ObjectHideFlags: 0
