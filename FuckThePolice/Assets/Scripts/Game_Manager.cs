@@ -20,27 +20,22 @@ public class Game_Manager : MonoBehaviour
     public GameObject secretary;
     public List<bool> free_cells;
     public List<GameObject> cars;
+    public GameObject car_target;
     public GameObject car_police;
     public List<GameObject> lights;
     //public bool interrogatory_room = true;
 
     public GameObject interrogation_2;
 
+
     int id_criminals = 0;
-    //int active_civilians = 0;
     // Start is called before the first frame update
     void Start()
     {
-        //StartCoroutine(Enable_Civilian());
         secretary_free = true;
         Check_Cells();
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
     public int Request_identity()
     {
         for (int i = 0; i < civilians.Count; i++)
@@ -125,6 +120,9 @@ public class Game_Manager : MonoBehaviour
                 {
                     if (createCriminal)
                     {
+                        cars[car].transform.position = car_target.transform.position;
+                        cars[car].transform.rotation = car_target.transform.rotation;
+                        cars[car].GetComponent<Move>().current_velocity = Vector3.zero;
                         criminals[i].SetActive(true);
                         criminals[i].GetComponent<Criminal_Variables>().id = ++id_criminals;
                         criminals[i].transform.position = new Vector3(cars[car].transform.position.x + 2, cars[car].transform.position.y, cars[car].transform.position.z);
@@ -157,6 +155,7 @@ public class Game_Manager : MonoBehaviour
         AddSecretary();
         AddPolice();
         civilians_waiting = 0;
+        civilian_identity = 0;
         for (int i = 0; i < lights.Count; i++)
         {
             if (i == 0)
@@ -194,17 +193,6 @@ public class Game_Manager : MonoBehaviour
                 lights[i].GetComponent<Light>().enabled = true;
         }
     }
-
-    //public IEnumerator Enable_Civilian()
-    //{
-    //    if (civilians[active_civilians].GetComponent<Civilian_Variables>().active_civilian != true)
-    //    {
-    //        civilians[active_civilians].GetComponent<Civilian_Variables>().active_civilian = true;
-    //    }
-    //    active_civilians++;
-    //    Debug.Log(active_civilians);
-    //    yield return new WaitForSeconds(15);
-    //    StartCoroutine(Enable_Civilian());
-    //}
+    
 }
     

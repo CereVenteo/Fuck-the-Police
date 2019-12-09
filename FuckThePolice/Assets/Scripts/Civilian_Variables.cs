@@ -111,6 +111,8 @@ public class Civilian_Variables : MonoBehaviour
         nav.CreatePath(go_away.transform.position);
         identity = 0;
         go_back = false;
+        agent_talk = false;
+        agent_call = false;
     }
 
     public void End_Round()
@@ -119,6 +121,7 @@ public class Civilian_Variables : MonoBehaviour
         waiting = false;
         agent_talk = false;
         agent_call = false;
+        identity = 0;
         this.gameObject.SetActive(false);
     }
 

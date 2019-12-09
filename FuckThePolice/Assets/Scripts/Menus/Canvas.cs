@@ -103,7 +103,7 @@ public class Canvas : MonoBehaviour
     {
         civilians_helped++;
         civilians.text = civilians_helped.ToString() ;
-        SetPoints(50);
+        SetPoints(150);
     }
 
     public void SetPoints(int _points)
@@ -143,7 +143,7 @@ public class Canvas : MonoBehaviour
     void Points()
     {
 
-        if (star_points - points_valor < 0)
+        if (star_points - points_valor <= 0)
         {
             SetStars(stars + 1);
             star_points += star_points / 2;
