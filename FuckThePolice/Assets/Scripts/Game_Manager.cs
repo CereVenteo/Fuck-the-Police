@@ -122,7 +122,7 @@ public class Game_Manager : MonoBehaviour
                     {
                         cars[car].transform.position = car_target.transform.position;
                         cars[car].transform.rotation = car_target.transform.rotation;
-                        cars[car].GetComponent<Move>().current_velocity = Vector3.zero;
+                        cars[car].GetComponent<SteeringFollowPath>().RestartPath();
                         criminals[i].SetActive(true);
                         criminals[i].GetComponent<Criminal_Variables>().id = ++id_criminals;
                         criminals[i].transform.position = new Vector3(cars[car].transform.position.x + 2, cars[car].transform.position.y, cars[car].transform.position.z);

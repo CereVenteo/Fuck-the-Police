@@ -47,6 +47,13 @@ public class SteeringFollowPath : SteeringAbstract
 
     }
 
+    public void RestartPath()
+    {
+        float distance;
+        closest_point = path.CalcPositionByClosestPoint(transform.position, out distance);
+        current_ratio = distance / path.Curve.Points.Length;
+    }
+
     void OnDrawGizmosSelected()
     {
 

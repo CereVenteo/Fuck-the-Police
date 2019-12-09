@@ -78,7 +78,7 @@ public class Canvas : MonoBehaviour
                     time_to_add_criminal = 23;
                     break;
                 case 23:
-                    this.gameObject.GetComponent<Game_Manager>().AddCriminal(1);
+                    this.gameObject.GetComponent<Game_Manager>().AddCriminal(3);
                     time_to_add_criminal = 6;
                     break;
                 default:
