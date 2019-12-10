@@ -81,7 +81,7 @@ public class Agent_Variables : MonoBehaviour
     public IEnumerator AgentTalk()
     {
         talking = true;
-        yield return new WaitForSeconds(15);
+        yield return new WaitForSeconds(20);
         
         request_civilian = false;
         civile_talk = false;
@@ -95,7 +95,6 @@ public class Agent_Variables : MonoBehaviour
         yield return new WaitForSeconds(30);
         request_for_interrogation = false;
         room = true;
-        GameObject.Find("Game_Manager").GetComponent<Canvas>().SetPoints(300);
     }
     
     public void active_criminal()

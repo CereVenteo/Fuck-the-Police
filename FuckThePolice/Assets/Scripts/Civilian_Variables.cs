@@ -100,7 +100,7 @@ public class Civilian_Variables : MonoBehaviour
     {
         agent_call = false;
         audio_sim.Play();
-        yield return new WaitForSeconds(15);
+        yield return new WaitForSeconds(20);
         agent_talk = false;
         Game_Manager.GetComponent<Canvas>().CivilianHelped();
         audio_sim.Stop();
