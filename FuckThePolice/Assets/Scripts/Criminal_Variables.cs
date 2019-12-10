@@ -103,8 +103,8 @@ public class Criminal_Variables : MonoBehaviour
         yield return new WaitForSeconds(30);
         //Game_Manager.interrogatory_room = true;
         GameObject.Find("Game_Manager").GetComponent<Canvas>().SetPoints(400);
-        audio_sim.Stop();
         interrogation_time = false;
+        audio_sim.Stop();
     }
     public IEnumerator Wait_time(int time)
     {

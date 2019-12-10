@@ -33,6 +33,7 @@ public class Canvas : MonoBehaviour
     public GameObject win_condition;
     public Text win_text;
     public Text score;
+    bool ended;
 
     // Start is called before the first frame update
     void Start()
@@ -40,7 +41,7 @@ public class Canvas : MonoBehaviour
         time_valor = 45;
         hour = 05;
         day_valor = 1;
-        InvokeRepeating("IncrementTime", 0.0f, 0.15f);
+        InvokeRepeating("IncrementTime", 0.0f, 0.2f);
         star_points = 1000;
         points_valor = 0;
         stars = 0;
@@ -49,86 +50,90 @@ public class Canvas : MonoBehaviour
         civilians_helped = 0;
         time_to_add_criminal = 6;
         civilian_win_condition = 30;
+        ended = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        Points();
-        if(hour < 20 && hour >= 6)
+        if(!ended)
         {
-            if (time_to_add_civilian == hour && time_to_add_civilian_min == time_valor)
+            Points();
+            if (hour < 20 && hour >= 6)
             {
-                switch(day_valor)
+                if (time_to_add_civilian == hour && time_to_add_civilian_min == time_valor)
                 {
-                    case 2:
-                        if (time_to_add_civilian_min == 30)
-                            this.gameObject.GetComponent<Game_Manager>().AddCivilian();
+                    switch (day_valor)
+                    {
+                        case 2:
+                            if (time_to_add_civilian_min == 30)
+                                this.gameObject.GetComponent<Game_Manager>().AddCivilian();
+                            break;
+                        case 3:
+                            if (time_to_add_civilian_min == 20 || time_to_add_civilian_min == 40)
+                                this.gameObject.GetComponent<Game_Manager>().AddCivilian();
+                            break;
+                        case 4:
+                            if (time_to_add_civilian_min == 15 || time_to_add_civilian_min == 30 || time_to_add_civilian_min == 45)
+                                this.gameObject.GetComponent<Game_Manager>().AddCivilian();
+                            break;
+                        case 5:
+                            if (time_to_add_civilian_min == 10 || time_to_add_civilian_min == 20 || time_to_add_civilian_min == 30 || time_to_add_civilian_min == 40)
+                                this.gameObject.GetComponent<Game_Manager>().AddCivilian();
+                            break;
+                        default:
+                            break;
+                    }
+
+                    if (time_to_add_civilian_min == time_valor)
+                        time_to_add_civilian_min = time_valor + 1;
+
+                    if (time_to_add_civilian_min == 59)
+                    {
+                        this.gameObject.GetComponent<Game_Manager>().AddCivilian();
+                        time_to_add_civilian = hour + 1;
+                        time_to_add_civilian_min = 0;
+                    }
+
+                }
+            }
+
+            if (hour == time_to_add_criminal)
+            {
+                switch (time_to_add_criminal)
+                {
+                    case 6:
+                        this.gameObject.GetComponent<Game_Manager>().Day();
+                        time_to_add_criminal = 12;
                         break;
-                    case 3:
-                        if (time_to_add_civilian_min == 20 || time_to_add_civilian_min == 40)
-                            this.gameObject.GetComponent<Game_Manager>().AddCivilian();
+                    case 12:
+                        this.gameObject.GetComponent<Game_Manager>().AddCriminal(1);
+                        time_to_add_criminal = 18;
                         break;
-                    case 4:
-                        if (time_to_add_civilian_min == 15 || time_to_add_civilian_min == 30 || time_to_add_civilian_min == 45)
-                            this.gameObject.GetComponent<Game_Manager>().AddCivilian();
+                    case 18:
+                        this.gameObject.GetComponent<Game_Manager>().AddCriminal(2);
+                        time_to_add_criminal = 20;
                         break;
-                    case 5:
-                        if (time_to_add_civilian_min == 10 || time_to_add_civilian_min == 20 || time_to_add_civilian_min == 30 || time_to_add_civilian_min == 40)
-                            this.gameObject.GetComponent<Game_Manager>().AddCivilian();
+                    case 20:
+                        this.gameObject.GetComponent<Game_Manager>().Night();
+                        time_to_add_civilian = 6;
+                        time_to_add_criminal = 23;
+                        break;
+                    case 23:
+                        this.gameObject.GetComponent<Game_Manager>().AddCriminal(3);
+                        time_to_add_criminal = 6;
                         break;
                     default:
                         break;
                 }
-
-                if (time_to_add_civilian_min == time_valor)
-                    time_to_add_civilian_min = time_valor + 1;
-
-                if (time_to_add_civilian_min == 59)
-                {
-                    this.gameObject.GetComponent<Game_Manager>().AddCivilian();
-                    time_to_add_civilian = hour + 1;
-                    time_to_add_civilian_min = 0;
-                }
-                
             }
-        }
 
-        if(hour == time_to_add_criminal)
-        {
-            switch (time_to_add_criminal)
+            if ((day_valor == 6 && hour == 00) || stars >= 5 || Input.GetKey(KeyCode.L))
             {
-                case 6:
-                    this.gameObject.GetComponent<Game_Manager>().Day();
-                    time_to_add_criminal = 12;
-                    break;
-                case 12:
-                    this.gameObject.GetComponent<Game_Manager>().AddCriminal(1);
-                    time_to_add_criminal = 18;
-                    break;
-                case 18:
-                    this.gameObject.GetComponent<Game_Manager>().AddCriminal(2);
-                    time_to_add_criminal = 20;
-                    break;
-                case 20:
-                    this.gameObject.GetComponent<Game_Manager>().Night();
-                    time_to_add_civilian = 6;
-                    time_to_add_criminal = 23;
-                    break;
-                case 23:
-                    this.gameObject.GetComponent<Game_Manager>().AddCriminal(3);
-                    time_to_add_criminal = 6;
-                    break;
-                default:
-                    break;
+                EndGame();
+                ended = true;
             }
         }
-
-        if((day_valor == 6 && hour == 00) || stars >= 5 || Input.GetKey(KeyCode.L))
-        {
-            EndGame();
-        }
-        
     }
 
     public int GetStars()
