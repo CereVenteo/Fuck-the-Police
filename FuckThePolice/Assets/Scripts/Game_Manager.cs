@@ -94,14 +94,18 @@ public class Game_Manager : MonoBehaviour
     {
         if(civilians_waiting < 1)
         {
-            for (int i = 0; i < civilians.Count; i++)
+            for (int j = 0; j < this.GetComponent<Canvas>().day_valor; j++)
             {
-                if (!civilians[i].activeSelf)
+                for (int i = 0; i < civilians.Count; i++)
                 {
-                    civilians[i].SetActive(true);
-                    break;
+                    if (!civilians[i].activeSelf)
+                    {
+                        civilians[i].SetActive(true);
+                        break;
+                    }
                 }
             }
+            
         }
     }
 

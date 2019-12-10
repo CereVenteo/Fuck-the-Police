@@ -9,7 +9,7 @@ public class Canvas : MonoBehaviour
     public Text day;
     uint time_valor;
     uint hour;
-    uint day_valor;
+    public uint day_valor;
 
     public Text points;
     public Text next_star;
@@ -104,6 +104,11 @@ public class Canvas : MonoBehaviour
         civilians_helped++;
         civilians.text = civilians_helped.ToString() ;
         SetPoints(100);
+    }
+
+    public int GetPoints()
+    {
+        return points_valor;
     }
 
     public void SetPoints(int _points)
