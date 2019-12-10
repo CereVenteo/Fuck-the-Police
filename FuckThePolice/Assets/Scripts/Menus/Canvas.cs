@@ -25,6 +25,7 @@ public class Canvas : MonoBehaviour
 
     public Text civilians;
     uint time_to_add_civilian;
+    uint time_to_add_civilian_min;
     uint time_to_add_criminal;
     uint civilians_helped;
     uint civilian_win_condition;
@@ -35,11 +36,12 @@ public class Canvas : MonoBehaviour
         time_valor = 45;
         hour = 05;
         day_valor = 1;
-        InvokeRepeating("IncrementTime", 0.0f, 0.2f);
+        InvokeRepeating("IncrementTime", 0.0f, 0.15f);
         star_points = 1000;
         points_valor = 0;
         stars = 0;
         time_to_add_civilian = 6;
+        time_to_add_civilian_min = 10;
         civilians_helped = 0;
         time_to_add_criminal = 6;
         civilian_win_condition = 30;
@@ -49,12 +51,42 @@ public class Canvas : MonoBehaviour
     void Update()
     {
         Points();
-        if(hour < 22 && hour >= 6)
+        if(hour < 20 && hour >= 6)
         {
-            if (time_to_add_civilian + 1 == hour)
+            if (time_to_add_civilian == hour && time_to_add_civilian_min == time_valor)
             {
-                this.gameObject.GetComponent<Game_Manager>().AddCivilian();
-                time_to_add_civilian = hour;
+                switch(day_valor)
+                {
+                    case 2:
+                        if (time_to_add_civilian_min == 30)
+                            this.gameObject.GetComponent<Game_Manager>().AddCivilian();
+                        break;
+                    case 3:
+                        if (time_to_add_civilian_min == 20 || time_to_add_civilian_min == 40)
+                            this.gameObject.GetComponent<Game_Manager>().AddCivilian();
+                        break;
+                    case 4:
+                        if (time_to_add_civilian_min == 15 || time_to_add_civilian_min == 30 || time_to_add_civilian_min == 45)
+                            this.gameObject.GetComponent<Game_Manager>().AddCivilian();
+                        break;
+                    case 5:
+                        if (time_to_add_civilian_min == 10 || time_to_add_civilian_min == 20 || time_to_add_civilian_min == 30 || time_to_add_civilian_min == 40)
+                            this.gameObject.GetComponent<Game_Manager>().AddCivilian();
+                        break;
+                    default:
+                        break;
+                }
+
+                if (time_to_add_civilian_min == time_valor)
+                    time_to_add_civilian_min = time_valor + 1;
+
+                if (time_to_add_civilian_min == 59)
+                {
+                    this.gameObject.GetComponent<Game_Manager>().AddCivilian();
+                    time_to_add_civilian = hour + 1;
+                    time_to_add_civilian_min = 0;
+                }
+                
             }
         }
 
@@ -109,8 +141,8 @@ public class Canvas : MonoBehaviour
     public void CivilianHelped()
     {
         civilians_helped++;
-        civilians.text = civilians_helped.ToString() ;
-        SetPoints(150);
+        civilians.text = civilians_helped.ToString();
+        SetPoints(80);
     }
 
     public int GetPoints()
@@ -161,17 +193,8 @@ public class Canvas : MonoBehaviour
         }
         else if (points_valor < star_points - 1000)
         {
-            
-            if (points_valor > 1000)
-            {
-                SetStars(stars - 1);
-                star_points -= star_points - 1000;
-            }
-            else
-            {
-                SetStars(0);
-                star_points = 1000;
-            }
+            SetStars(stars - 1);
+            star_points -= 1000;
         }
             
         next_star.text = (star_points - points_valor).ToString() + "€";
