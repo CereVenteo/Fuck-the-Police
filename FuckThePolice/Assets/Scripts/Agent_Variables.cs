@@ -69,6 +69,11 @@ public class Agent_Variables : MonoBehaviour
         if(Game_Manager.night_state)
         {
             civil_waiting = true;
+            request_civilian = false;
+            civile_talk = false;
+            civil = 0;
+            civil_id = -1;
+            talking = false;
         }
     }
 
