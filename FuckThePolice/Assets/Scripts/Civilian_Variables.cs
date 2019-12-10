@@ -90,7 +90,7 @@ public class Civilian_Variables : MonoBehaviour
         Game_Manager.secretary_free = false;
         audio_sim.Play();
 
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(3);
 
         if (!Game_Manager.night_state)
         {

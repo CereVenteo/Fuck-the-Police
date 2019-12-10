@@ -19,9 +19,10 @@ public class Button_Buy_Object : MonoBehaviour
         Game_Manager = GameObject.Find("Game_Manager").GetComponent<Game_Manager>();
         cost_desktop = 400;
         cost_car = 600;
-        cost_cell = 800;
+        cost_cell = 700;
         cost_interrogation_room = 1000;
     }
+
     private void OnMouseUpAsButton()
     {
         canvas = GameObject.Find("Game_Manager").GetComponent<Canvas>();
