@@ -157,7 +157,7 @@ public class Canvas : MonoBehaviour
         if (star_points - points_valor <= 0)
         {
             SetStars(stars + 1);
-            star_points += star_points + (star_points / 2);
+            star_points += star_points / 2;
         }
         else if (points_valor < (star_points / 5) * 2)
         {
@@ -165,7 +165,7 @@ public class Canvas : MonoBehaviour
             if (points_valor > 1000)
             {
                 SetStars(stars - 1);
-                star_points -= (star_points / 5) * 3;
+                star_points -= star_points / 3;
             }
             else
             {
