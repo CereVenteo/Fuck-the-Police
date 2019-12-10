@@ -86,7 +86,7 @@ public class Criminal_Variables : MonoBehaviour
 
     public void teleport_out_cell()
     {
-        this.transform.position = target_cell;
+        this.transform.position = new Vector3(target_cell.x, target_cell.y, target_cell.z - 3);
         for (int i = 0; i < target_cells.Count; i++)
         {
             if (cell == Game_Manager.cells[i])

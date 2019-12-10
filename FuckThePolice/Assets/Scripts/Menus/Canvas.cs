@@ -36,7 +36,7 @@ public class Canvas : MonoBehaviour
         day_valor = 1;
         InvokeRepeating("IncrementTime", 0.0f, 0.15f);
         star_points = 1000;
-        points_valor = 800;
+        points_valor = 0;
         stars = 0;
         time_to_add_civilian = 6;
         civilians_helped = 0;

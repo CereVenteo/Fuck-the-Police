@@ -81,6 +81,7 @@ public class Agent_Variables : MonoBehaviour
     public IEnumerator AgentTalk()
     {
         talking = true;
+        
         yield return new WaitForSeconds(20);
         
         request_civilian = false;
@@ -110,9 +111,5 @@ public class Agent_Variables : MonoBehaviour
     {
         nav.CreatePath(go_away.transform.position);
     }
-
-    //public void SetRoom(bool room)
-    //{
-    //    this.room = room;
-    //}
+    
 }

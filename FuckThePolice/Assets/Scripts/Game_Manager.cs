@@ -158,6 +158,7 @@ public class Game_Manager : MonoBehaviour
         civilians_waiting = 0;
         civilian_identity = 0;
         night_state = false;
+        secretary_free = true;
         for (int i = 0; i < lights.Count; i++)
         {
             if (i == 0)
@@ -170,7 +171,7 @@ public class Game_Manager : MonoBehaviour
     public void Night()
     {
         night_state = true;
-
+        secretary_free = false;
         for (int i = 0; i < civilians.Count; i++)
         {
             if (civilians[i].activeSelf)

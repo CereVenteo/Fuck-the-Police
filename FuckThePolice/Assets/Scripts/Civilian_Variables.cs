@@ -89,10 +89,16 @@ public class Civilian_Variables : MonoBehaviour
     {
         Game_Manager.secretary_free = false;
         audio_sim.Play();
+
         yield return new WaitForSeconds(10);
-        identity = ++Game_Manager.civilian_identity;
-        Game_Manager.civilians_waiting++;
-        Game_Manager.secretary_free = true;
+
+        if (!Game_Manager.night_state)
+        {
+            identity = ++Game_Manager.civilian_identity;
+            Game_Manager.civilians_waiting++;
+            Game_Manager.secretary_free = true;
+        }
+            
         audio_sim.Stop();
     }
 
@@ -100,10 +106,15 @@ public class Civilian_Variables : MonoBehaviour
     {
         agent_call = false;
         audio_sim.Play();
+        
         yield return new WaitForSeconds(20);
+
         agent_talk = false;
-        Game_Manager.GetComponent<Canvas>().CivilianHelped();
         audio_sim.Stop();
+
+        if (!Game_Manager.night_state)
+            Game_Manager.GetComponent<Canvas>().CivilianHelped();
+        
     }
 
     public void Go_Away()
@@ -113,6 +124,7 @@ public class Civilian_Variables : MonoBehaviour
         go_back = false;
         agent_talk = false;
         agent_call = false;
+        waiting = false;
         audio_sim.Stop();
     }
 
