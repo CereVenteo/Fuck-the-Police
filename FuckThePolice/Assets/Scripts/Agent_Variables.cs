@@ -66,6 +66,10 @@ public class Agent_Variables : MonoBehaviour
             civil_waiting = Game_Manager.civilians[civil_id].GetComponent<Civilian_Variables>().waiting;
             civile_talk = true;
         }
+        if(Game_Manager.night_state)
+        {
+            civil_waiting = true;
+        }
     }
 
     public void Call_Civil()
@@ -81,8 +85,8 @@ public class Agent_Variables : MonoBehaviour
     public IEnumerator AgentTalk()
     {
         talking = true;
-        
-        yield return new WaitForSeconds(20);
+        if(!Game_Manager.night_state)
+            yield return new WaitForSeconds(20);
         
         request_civilian = false;
         civile_talk = false;

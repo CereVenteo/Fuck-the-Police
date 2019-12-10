@@ -27,7 +27,7 @@ public class Canvas : MonoBehaviour
     uint time_to_add_civilian;
     uint time_to_add_criminal;
     uint civilians_helped;
-    uint civilian_win_condition = 30;
+    uint civilian_win_condition;
 
     // Start is called before the first frame update
     void Start()
@@ -42,6 +42,7 @@ public class Canvas : MonoBehaviour
         time_to_add_civilian = 6;
         civilians_helped = 0;
         time_to_add_criminal = 6;
+        civilian_win_condition = 30;
     }
 
     // Update is called once per frame
@@ -153,28 +154,25 @@ public class Canvas : MonoBehaviour
 
     void Points()
     {
-
         if (star_points - points_valor <= 0)
         {
             SetStars(stars + 1);
-            star_points += star_points / 2;
+            star_points += 1000;
         }
-        else if (points_valor < (star_points / 5) * 2)
+        else if (points_valor < star_points - 1000)
         {
             
             if (points_valor > 1000)
             {
                 SetStars(stars - 1);
-                star_points -= star_points / 3;
+                star_points -= star_points - 1000;
             }
             else
             {
                 SetStars(0);
                 star_points = 1000;
             }
-                
         }
-            
             
         next_star.text = (star_points - points_valor).ToString() + "€";
         points.text = points_valor.ToString() + "€";
