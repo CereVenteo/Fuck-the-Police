@@ -16,7 +16,10 @@ public class StartMenu : MonoBehaviour
     {
         
     }
-
+    public void LoadMenu()
+    {
+        SceneManager.LoadScene("start_menu");
+    }
     public void LoadGame()
     {
         SceneManager.LoadScene("Assignment 01");

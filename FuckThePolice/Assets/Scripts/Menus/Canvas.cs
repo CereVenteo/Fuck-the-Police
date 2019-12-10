@@ -7,9 +7,9 @@ public class Canvas : MonoBehaviour
 {
     public Text time;
     public Text day;
-    uint time_valor;
-    uint hour;
-    public uint day_valor;
+    int time_valor;
+    int hour;
+    public int day_valor;
 
     public Text points;
     public Text next_star;
@@ -21,14 +21,18 @@ public class Canvas : MonoBehaviour
     public Image star3;
     public Image star4;
     public Image star5;
-    uint stars;
+    int stars;
 
     public Text civilians;
-    uint time_to_add_civilian;
-    uint time_to_add_civilian_min;
-    uint time_to_add_criminal;
-    uint civilians_helped;
-    uint civilian_win_condition;
+    int time_to_add_civilian;
+    int time_to_add_civilian_min;
+    int time_to_add_criminal;
+    int civilians_helped;
+    int civilian_win_condition;
+
+    public GameObject win_condition;
+    public Text win_text;
+    public Text score;
 
     // Start is called before the first frame update
     void Start()
@@ -120,19 +124,19 @@ public class Canvas : MonoBehaviour
             }
         }
 
-        if((day_valor == 6 && hour == 00) || (stars >= 5 && civilians_helped >= civilian_win_condition))
+        if((day_valor == 6 && hour == 00) || stars >= 5 || Input.GetKey(KeyCode.L))
         {
             EndGame();
         }
         
     }
 
-    public uint GetStars()
+    public int GetStars()
     {
         return stars;
     }
 
-    public void SetStars(uint _stars)
+    public void SetStars(int _stars)
     {
         stars = _stars;
         Stars();
@@ -235,13 +239,28 @@ public class Canvas : MonoBehaviour
 
     void EndGame()
     {
-        if(stars < 5 || civilians_helped < civilian_win_condition)
+        win_condition.SetActive(true);
+        if(stars < 5)
         {
-            //Lose
+            win_text.text = "YOU LOSE";
+            int score_value = (stars * 1000) + (civilians_helped * 200) + ((5 - day_valor) * 5000) + ((24 - hour) * 120) + ((60 - time_valor) * 2) + (points_valor * 10);
+            score.text = "Stars: " + stars.ToString() + " * 1000 \n" +
+                "Civilians Helped: " + civilians_helped.ToString() + " * 200 \n" +
+                "Restart Days: " + (5 - day_valor).ToString() + " * 5000 \n" +
+                "Restart Time: " + (24 - hour).ToString() + ":" + (60 -time_valor).ToString() + " * 2 * min \n" + 
+                "Money: " + points_valor.ToString() + "* 10 \n" + 
+                "Total Score: " + score_value.ToString();
         }
         else
         {
-            //Win
+            win_text.text = "YOU WIN";
+            int score_value = (stars * 1000) + (civilians_helped * 200) + ((5 - day_valor) * 5000) + ((24 - hour) * 120) + ((60 - time_valor) * 2) + (points_valor * 10);
+            score.text = "Stars: " + stars.ToString() + " * 1000 \n" +
+                "Civilians Helped: " + civilians_helped.ToString() + " * 200 \n" +
+                "Restart Days: " + (5 - day_valor).ToString() + " * 5000 \n" +
+                "Restart Time: " + (24 - hour).ToString() + ":" + (60 - time_valor).ToString() + " * 2 * min \n" +
+                "Money: " + points_valor.ToString() + "* 10 \n" +
+                "Total Score: " + score_value.ToString();
         }
     }
 }
