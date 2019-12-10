@@ -85,6 +85,11 @@ public class Canvas : MonoBehaviour
                     break;
             }
         }
+
+        if((day_valor == 6 && hour == 00) || (stars >= 5 && civilians_helped >= 50))
+        {
+            EndGame();
+        }
         
     }
 
@@ -203,6 +208,18 @@ public class Canvas : MonoBehaviour
                 break;
             default:
                 break;
+        }
+    }
+
+    void EndGame()
+    {
+        if(stars < 5 || civilians_helped < 50)
+        {
+            //Lose
+        }
+        else
+        {
+            //Win
         }
     }
 }
