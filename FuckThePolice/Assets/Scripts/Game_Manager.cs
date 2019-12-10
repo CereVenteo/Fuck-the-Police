@@ -27,8 +27,9 @@ public class Game_Manager : MonoBehaviour
 
     public GameObject interrogation_2;
 
-
+    public bool night_state = false;
     int id_criminals = 0;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -156,6 +157,7 @@ public class Game_Manager : MonoBehaviour
         AddPolice();
         civilians_waiting = 0;
         civilian_identity = 0;
+        night_state = false;
         for (int i = 0; i < lights.Count; i++)
         {
             if (i == 0)
@@ -167,6 +169,8 @@ public class Game_Manager : MonoBehaviour
 
     public void Night()
     {
+        night_state = true;
+
         for (int i = 0; i < civilians.Count; i++)
         {
             if (civilians[i].activeSelf)

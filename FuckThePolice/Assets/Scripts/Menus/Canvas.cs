@@ -36,7 +36,7 @@ public class Canvas : MonoBehaviour
         day_valor = 1;
         InvokeRepeating("IncrementTime", 0.0f, 0.15f);
         star_points = 1000;
-        points_valor = 0;
+        points_valor = 800;
         stars = 0;
         time_to_add_civilian = 6;
         civilians_helped = 0;
@@ -146,11 +146,27 @@ public class Canvas : MonoBehaviour
         if (star_points - points_valor <= 0)
         {
             SetStars(stars + 1);
-            star_points += star_points / 2;
+            star_points += star_points + (star_points / 2);
+        }
+        else if (points_valor < (star_points / 5) * 2)
+        {
+            
+            if (points_valor > 1000)
+            {
+                SetStars(stars - 1);
+                star_points -= (star_points / 5) * 3;
+            }
+            else
+            {
+                SetStars(0);
+                star_points = 1000;
+            }
+                
         }
             
-        next_star.text = (star_points - points_valor).ToString();
-        points.text = points_valor.ToString();
+            
+        next_star.text = (star_points - points_valor).ToString() + "€";
+        points.text = points_valor.ToString() + "€";
     }
 
     void Stars()

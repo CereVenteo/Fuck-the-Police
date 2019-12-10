@@ -25,7 +25,7 @@ public class Button_Buy_Object : MonoBehaviour
 
     void BuyObject()
     {
-        canvas.SetStars(canvas.GetStars() - 1);
+        canvas.SetPoints(-1000);
         object_buy.SetActive(true);
         if(object_buy.name == "Desktop_3" || object_buy.name == "Desktop_4" || object_buy.name == "Desktop_5")
         {

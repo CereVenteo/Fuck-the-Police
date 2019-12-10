@@ -19,7 +19,7 @@ public class Menu : MonoBehaviour
     {
         if (menu.activeSelf)
         {
-            if (menu.name == "Police_Menu" && (this.GetComponent<Agent_Variables>().request_for_interrogation || manager.civilians_waiting == 0))
+            if (menu.name == "Police_Menu" && (this.GetComponent<Agent_Variables>().request_for_interrogation || manager.civilians_waiting == 0 || manager.night_state))
                 menu.SetActive(false);
             else if (menu.name == "Criminal_Menu" && this.GetComponent<Criminal_Variables>().interrogation_time)
                 menu.SetActive(false);

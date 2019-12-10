@@ -113,14 +113,13 @@ public class Civilian_Variables : MonoBehaviour
         go_back = false;
         agent_talk = false;
         agent_call = false;
+        audio_sim.Stop();
     }
 
     public void End_Round()
     {
         nav.path = new NavMeshPath();
         waiting = false;
-        agent_talk = false;
-        agent_call = false;
         identity = 0;
         this.gameObject.SetActive(false);
     }
