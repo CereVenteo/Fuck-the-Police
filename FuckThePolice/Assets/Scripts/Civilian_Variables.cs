@@ -90,7 +90,7 @@ public class Civilian_Variables : MonoBehaviour
         Game_Manager.secretary_free = false;
         audio_sim.Play();
 
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(5);
 
         if (!Game_Manager.night_state)
         {
@@ -120,6 +120,7 @@ public class Civilian_Variables : MonoBehaviour
     public void Go_Away()
     {
         nav.CreatePath(go_away.transform.position);
+        this.GetComponent<Move>().max_mov_speed = 4;
         identity = 0;
         go_back = false;
         agent_talk = false;

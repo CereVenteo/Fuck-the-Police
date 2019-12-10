@@ -27,14 +27,15 @@ public class Canvas : MonoBehaviour
     uint time_to_add_civilian;
     uint time_to_add_criminal;
     uint civilians_helped;
+    uint civilian_win_condition = 30;
 
     // Start is called before the first frame update
     void Start()
     {
-        time_valor = 30;
+        time_valor = 45;
         hour = 05;
         day_valor = 1;
-        InvokeRepeating("IncrementTime", 0.0f, 0.15f);
+        InvokeRepeating("IncrementTime", 0.0f, 0.2f);
         star_points = 1000;
         points_valor = 0;
         stars = 0;
@@ -86,7 +87,7 @@ public class Canvas : MonoBehaviour
             }
         }
 
-        if((day_valor == 6 && hour == 00) || (stars >= 5 && civilians_helped >= 50))
+        if((day_valor == 6 && hour == 00) || (stars >= 5 && civilians_helped >= civilian_win_condition))
         {
             EndGame();
         }
@@ -108,7 +109,7 @@ public class Canvas : MonoBehaviour
     {
         civilians_helped++;
         civilians.text = civilians_helped.ToString() ;
-        SetPoints(100);
+        SetPoints(150);
     }
 
     public int GetPoints()
@@ -213,7 +214,7 @@ public class Canvas : MonoBehaviour
 
     void EndGame()
     {
-        if(stars < 5 || civilians_helped < 50)
+        if(stars < 5 || civilians_helped < civilian_win_condition)
         {
             //Lose
         }

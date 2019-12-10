@@ -102,7 +102,7 @@ public class Criminal_Variables : MonoBehaviour
         audio_sim.Play();
         yield return new WaitForSeconds(30);
         //Game_Manager.interrogatory_room = true;
-        GameObject.Find("Game_Manager").GetComponent<Canvas>().SetPoints(300);
+        GameObject.Find("Game_Manager").GetComponent<Canvas>().SetPoints(400);
         audio_sim.Stop();
         interrogation_time = false;
     }

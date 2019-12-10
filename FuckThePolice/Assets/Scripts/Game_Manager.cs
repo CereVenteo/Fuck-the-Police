@@ -92,9 +92,9 @@ public class Game_Manager : MonoBehaviour
 
     public void AddCivilian()
     {
-        if(civilians_waiting < 1)
+        if(civilians_waiting < this.GetComponent<Canvas>().day_valor)
         {
-            for (int j = 0; j < this.GetComponent<Canvas>().day_valor; j++)
+            for (int j = 0; j <= (this.GetComponent<Canvas>().day_valor / 2); j++)
             {
                 for (int i = 0; i < civilians.Count; i++)
                 {
@@ -105,7 +105,6 @@ public class Game_Manager : MonoBehaviour
                     }
                 }
             }
-            
         }
     }
 
