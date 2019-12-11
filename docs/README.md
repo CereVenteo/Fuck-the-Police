@@ -35,9 +35,9 @@ Supervising all our officers, detectives and field agents will maintain control 
 - Criminals
 - Cars
 
-### The Assigment 2 Contain
+### The Demo Contain
 
-In this demo we will have the possibility to acquire with points: police cars, cages for criminals and desks for police.
+In this demo we will have the possibility to acquire with money: police cars, cages for criminals and desks for police agents.
 
 At the beginning of the game, we will see how the agents go to work at their desks.
 The civilians will come to request help and the comrades will bring us criminals for interrogation.
@@ -51,21 +51,16 @@ When the day ends we can see how civilians and the secretary leave the police st
 
 For each civilian processed and each interrogation complete we will receive the points that we can use to buy accessories for the police station, with the final objective of achieving the 5 stars and declare ourselves as the best police station in the county.
 
-### Innovation
-
-- It is possible that at some point in a random way a civilian sneaks in to get his turn in the secretary.
-- All the characters in their behavior interact with each other.
-- Camera with multiple controls
 
 ### Controls
-
+```
 - W, A, S and D: move the camera
 - Move mouse towards the sides of the screen: move the camera
 - Click: 
 	- On agent makes a menu appear if conditions are met
 	- On criminal makes a menu appear if conditions are met
 	- On menu activates an action
-
+```
 ### Behaviour Trees
 
 #### Agent Behaviour Tree
