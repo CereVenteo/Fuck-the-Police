@@ -17,7 +17,9 @@ Supervising all our officers, detectives and field agents will maintain control 
 - Secretary
 - Criminal
 	
-### The Assigment 2 Contain
+### The Assigment 3 Contain
+
+In this delivery we have a start menu, a panel with the instructions of the game and a pleasant atmosphere thanks to the music and the effects of the stage.
 
 In this demo we will have the possibility to acquire with points: police cars, cages for criminals and desks for police.
 
@@ -36,9 +38,8 @@ For each civilian processed and each interrogation complete we will receive the 
 
 ### Innovation
 
-- It is possible that at some point in a random way a civilian sneaks in to get his turn in the secretary.
-- All the characters in their behavior interact with each other.
-- Camera with multiple controls
+- Surveys with playtest results that we have used to optimize the game
+- Web with info (video, photos,...) about the project.
 
 ### Controls
 
@@ -54,7 +55,8 @@ For each civilian processed and each interrogation complete we will receive the 
 - Alejandro París GitHub account: [Alejandro París](https://github.com/AlejandroParis)
 - Cere Venteo GitHub account: [Cere Venteo](https://github.com/CereVenteo)
 - Repository: [Fuck the Police](https://github.com/CereVenteo/Fuck-the-Police)
-- Wiki: [Wiki](https://github.com/CereVenteo/Fuck-the-Police/wiki)
+- Web: [Web](https://github.com/CereVenteo/Fuck-the-Police/wiki)
+- Survey [Survey] (https://forms.gle/38yFABcxoJodJZYq7)
 
 
 ## License
