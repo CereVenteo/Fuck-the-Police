@@ -33,6 +33,8 @@ public class Canvas : MonoBehaviour
     public Text win_text;
     public Text score;
     bool ended;
+    bool starting;
+    StartMenu startmenu;
 
     // Start is called before the first frame update
     void Start()
@@ -49,12 +51,19 @@ public class Canvas : MonoBehaviour
         civilians_helped = 0;
         time_to_add_criminal = 6;
         ended = false;
+        starting = true;
+        startmenu = new StartMenu();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(!ended)
+        if (starting)
+        {
+            GameObject.Find("Main Camera").GetComponent<StartMenu>().InstructionsOn();
+            starting = false;
+        }
+        if (!ended)
         {
             Points();
             if (hour < 20 && hour >= 6)
