@@ -56,7 +56,7 @@ public class SteeringArrive : SteeringAbstract
             {
                 acceleration = acceleration.normalized * move.max_mov_acceleration;
             }
-
+            acceleration.y = 0;
             move.AccelerateMovement(acceleration, priority);
         }
 		

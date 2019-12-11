@@ -3,25 +3,23 @@ using System.Collections;
 
 public class SteeringSeparation : SteeringAbstract
 {
-
-	public LayerMask mask;
-	public float search_radius = 5.0f;
-	public AnimationCurve falloff;
-    public Vector3 final;
-
+    public LayerMask mask;
+    public float search_radius = 5.0f;
+    public AnimationCurve falloff;
 
     Move move;
 
-	// Use this for initialization
-	void Start () {
-		move = GetComponent<Move>();
-	}
+    // Use this for initialization
+    void Start()
+    {
+        move = GetComponent<Move>();
+    }
 
-	// Update is called once per frame
-    void Update () 
+    // Update is called once per frame
+    void Update()
     {
         Collider[] colliders = Physics.OverlapSphere(transform.position, search_radius, mask);
-        final = Vector3.zero;
+        Vector3 final = Vector3.zero;
 
         foreach (Collider col in colliders)
         {
@@ -32,24 +30,73 @@ public class SteeringSeparation : SteeringAbstract
 
             Vector3 diff = transform.position - go.transform.position;
             float distance = diff.magnitude;
-            float acceleration = (1.0f - falloff.Evaluate(distance / search_radius)) * move.max_mov_acceleration;
+            float acceleration = (1-falloff.Evaluate(distance / search_radius)) * move.max_mov_acceleration/10;
 
             final += diff.normalized * acceleration;
         }
 
         float final_strength = final.magnitude;
-        if (final_strength > 0.01f)
+        if (final_strength > 0.0f)
         {
-            if (final_strength > move.max_mov_acceleration)
-                final = final.normalized * move.max_mov_acceleration;
+            if (final_strength > move.max_mov_acceleration / 10)
+                final = final.normalized * move.max_mov_acceleration/10;
+            final.y = 0;
             move.AccelerateMovement(final, priority);
         }
     }
 
-	void OnDrawGizmosSelected() 
-	{
-		// Display the explosion radius when selected
-		Gizmos.color = Color.yellow;
-		Gizmos.DrawWireSphere(transform.position, search_radius);
-	}
+    void OnDrawGizmosSelected()
+    {
+        // Display the explosion radius when selected
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, search_radius);
+    }
+    //public LayerMask mask;
+    //public float search_radius = 5.0f;
+    //public AnimationCurve falloff;
+    //   public Vector3 final;
+
+
+    //   Move move;
+
+    //// Use this for initialization
+    //void Start () {
+    //	move = GetComponent<Move>();
+    //}
+
+    //// Update is called once per frame
+    //   void Update () 
+    //   {
+    //       Collider[] colliders = Physics.OverlapSphere(transform.position, search_radius, mask);
+    //       final = Vector3.zero;
+
+    //       foreach (Collider col in colliders)
+    //       {
+    //           GameObject go = col.gameObject;
+
+    //           if (go == gameObject)
+    //               continue;
+
+    //           Vector3 diff = transform.position - go.transform.position;
+    //           float distance = diff.magnitude;
+    //           float acceleration = (1.0f - falloff.Evaluate(distance / search_radius)) * move.max_mov_acceleration;
+
+    //           final += diff.normalized * acceleration;
+    //       }
+
+    //       float final_strength = final.magnitude;
+    //       if (final_strength > 0.01f)
+    //       {
+    //           if (final_strength > move.max_mov_acceleration)
+    //               final = final.normalized * move.max_mov_acceleration;
+    //           move.AccelerateMovement(final, priority);
+    //       }
+    //   }
+
+    //void OnDrawGizmosSelected() 
+    //{
+    //	// Display the explosion radius when selected
+    //	Gizmos.color = Color.yellow;
+    //	Gizmos.DrawWireSphere(transform.position, search_radius);
+    //}
 }

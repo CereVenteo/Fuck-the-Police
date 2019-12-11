@@ -27,7 +27,7 @@ public class SteeringSeek : SteeringAbstract
             Vector3 diff = target - transform.position;
             diff.Normalize();
             diff *= move.max_mov_acceleration;
-
+            diff.y = 0;
             move.AccelerateMovement(diff, priority);
         }
         
