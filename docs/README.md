@@ -2,8 +2,6 @@
 
 Fuck The Police is a management game developed by [Alejandro París](https://github.com/AlejandroParis) and [Cere Venteo](https://github.com/CereVenteo) for the AI subject under the supervision of the lecturer [Marc Garrigó](https://github.com/markitus18). 
 
-
-
 - Download the latest release [HERE](https://github.com/CereVenteo/Fuck-the-Police/releases)
 
 - Github Repository: [Respository](https://github.com/CereVenteo/Fuck-the-Police)
@@ -99,6 +97,10 @@ If you press the call button of a criminal, an agent will take him out of his ce
 After being questioned, randomly, he is released or taken to a jail to be locked up permanently.
 
 When he goes out of the camera, he disappears.
+
+### Game Survey
+
+- Link [Survey](https://forms.gle/vNisRf3dWmUpJqRJ8)
 
 ## License
 
