@@ -51,6 +51,7 @@ When the day ends we can see how civilians and the secretary leave the police st
 
 For each civilian processed and each interrogation complete we will receive the points that we can use to buy accessories for the police station, with the final objective of achieving the 5 stars and declare ourselves as the best police station in the county.
 
+<img src="instructions.png" width="800"><br>
 
 ### Controls
 ```
