@@ -28,7 +28,6 @@ public class Canvas : MonoBehaviour
     int time_to_add_civilian_min;
     int time_to_add_criminal;
     int civilians_helped;
-    int civilian_win_condition;
 
     public GameObject win_condition;
     public Text win_text;
@@ -49,7 +48,6 @@ public class Canvas : MonoBehaviour
         time_to_add_civilian_min = 10;
         civilians_helped = 0;
         time_to_add_criminal = 6;
-        civilian_win_condition = 30;
         ended = false;
     }
 
