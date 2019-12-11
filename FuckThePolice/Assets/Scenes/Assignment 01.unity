@@ -495,7 +495,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fdb74c0d43ad45458532f1a1ff22e32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 1
+  priority: 2
   min_distance: 1
   current_point: 1
   created_path: 0
@@ -552,9 +552,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1a2539257a3a4efeb46289d1eb08300, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 1
-  min_angle: 5
-  slow_angle: 10
+  priority: 3
+  min_angle: 20
+  slow_angle: 5
   time_to_accel: 0.5
 --- !u!114 &9418382
 MonoBehaviour:
@@ -3248,9 +3248,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1a2539257a3a4efeb46289d1eb08300, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 1
-  min_angle: 5
-  slow_angle: 10
+  priority: 3
+  min_angle: 20
+  slow_angle: 5
   time_to_accel: 0.5
 --- !u!114 &103003973
 MonoBehaviour:
@@ -3264,7 +3264,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 782558cc3a6d845a990f61f72475c82d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 0
+  priority: 1
   mask:
     serializedVersion: 2
     m_Bits: 256
@@ -6696,9 +6696,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1a2539257a3a4efeb46289d1eb08300, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 1
-  min_angle: 5
-  slow_angle: 10
+  priority: 3
+  min_angle: 20
+  slow_angle: 5
   time_to_accel: 0.5
 --- !u!114 &224448155
 MonoBehaviour:
@@ -6712,7 +6712,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 782558cc3a6d845a990f61f72475c82d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 1
+  priority: 3
   mask:
     serializedVersion: 2
     m_Bits: 256
@@ -6753,7 +6753,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fdb74c0d43ad45458532f1a1ff22e32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 1
+  priority: 2
   min_distance: 1
   current_point: 1
   created_path: 0
@@ -8372,7 +8372,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fdb74c0d43ad45458532f1a1ff22e32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 1
+  priority: 2
   min_distance: 1
   current_point: 1
   created_path: 0
@@ -8429,9 +8429,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1a2539257a3a4efeb46289d1eb08300, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 1
-  min_angle: 5
-  slow_angle: 10
+  priority: 3
+  min_angle: 20
+  slow_angle: 5
   time_to_accel: 0.5
 --- !u!114 &280021360
 MonoBehaviour:
@@ -10693,9 +10693,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1a2539257a3a4efeb46289d1eb08300, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 1
-  min_angle: 5
-  slow_angle: 10
+  priority: 3
+  min_angle: 20
+  slow_angle: 5
   time_to_accel: 0.5
 --- !u!114 &356718058
 MonoBehaviour:
@@ -10709,7 +10709,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 782558cc3a6d845a990f61f72475c82d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 1
+  priority: 3
   mask:
     serializedVersion: 2
     m_Bits: 256
@@ -10750,7 +10750,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fdb74c0d43ad45458532f1a1ff22e32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 1
+  priority: 2
   min_distance: 1
   current_point: 1
   created_path: 0
@@ -14228,9 +14228,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1a2539257a3a4efeb46289d1eb08300, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 1
-  min_angle: 5
-  slow_angle: 10
+  priority: 3
+  min_angle: 20
+  slow_angle: 5
   time_to_accel: 0.5
 --- !u!114 &508017635
 MonoBehaviour:
@@ -14244,7 +14244,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 782558cc3a6d845a990f61f72475c82d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 0
+  priority: 1
   mask:
     serializedVersion: 2
     m_Bits: 256
@@ -14566,9 +14566,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1a2539257a3a4efeb46289d1eb08300, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 1
-  min_angle: 5
-  slow_angle: 10
+  priority: 3
+  min_angle: 20
+  slow_angle: 5
   time_to_accel: 0.5
 --- !u!114 &508918529
 MonoBehaviour:
@@ -14582,7 +14582,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 782558cc3a6d845a990f61f72475c82d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 0
+  priority: 1
   mask:
     serializedVersion: 2
     m_Bits: 256
@@ -15957,7 +15957,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fdb74c0d43ad45458532f1a1ff22e32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 1
+  priority: 2
   min_distance: 1
   current_point: 1
   created_path: 0
@@ -16014,9 +16014,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1a2539257a3a4efeb46289d1eb08300, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 1
-  min_angle: 5
-  slow_angle: 10
+  priority: 3
+  min_angle: 20
+  slow_angle: 5
   time_to_accel: 0.5
 --- !u!114 &569525033
 MonoBehaviour:
@@ -23501,9 +23501,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1a2539257a3a4efeb46289d1eb08300, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 1
-  min_angle: 5
-  slow_angle: 10
+  priority: 3
+  min_angle: 20
+  slow_angle: 5
   time_to_accel: 0.5
 --- !u!114 &829214028
 MonoBehaviour:
@@ -23517,7 +23517,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 782558cc3a6d845a990f61f72475c82d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 0
+  priority: 1
   mask:
     serializedVersion: 2
     m_Bits: 256
@@ -26212,9 +26212,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1a2539257a3a4efeb46289d1eb08300, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 1
-  min_angle: 5
-  slow_angle: 10
+  priority: 3
+  min_angle: 20
+  slow_angle: 5
   time_to_accel: 0.5
 --- !u!114 &898015375
 MonoBehaviour:
@@ -26228,7 +26228,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 782558cc3a6d845a990f61f72475c82d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 0
+  priority: 1
   mask:
     serializedVersion: 2
     m_Bits: 256
@@ -29140,7 +29140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fdb74c0d43ad45458532f1a1ff22e32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 1
+  priority: 2
   min_distance: 1
   current_point: 1
   created_path: 0
@@ -29197,9 +29197,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1a2539257a3a4efeb46289d1eb08300, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 1
-  min_angle: 5
-  slow_angle: 10
+  priority: 3
+  min_angle: 20
+  slow_angle: 5
   time_to_accel: 0.5
 --- !u!114 &960559998
 MonoBehaviour:
@@ -29714,7 +29714,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fdb74c0d43ad45458532f1a1ff22e32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 1
+  priority: 2
   min_distance: 1
   current_point: 1
   created_path: 0
@@ -29771,9 +29771,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1a2539257a3a4efeb46289d1eb08300, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 1
-  min_angle: 5
-  slow_angle: 10
+  priority: 3
+  min_angle: 20
+  slow_angle: 5
   time_to_accel: 0.5
 --- !u!114 &975251361
 MonoBehaviour:
@@ -31693,9 +31693,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1a2539257a3a4efeb46289d1eb08300, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 1
-  min_angle: 5
-  slow_angle: 10
+  priority: 3
+  min_angle: 20
+  slow_angle: 5
   time_to_accel: 0.5
 --- !u!114 &1065688733
 MonoBehaviour:
@@ -31709,7 +31709,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 782558cc3a6d845a990f61f72475c82d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 1
+  priority: 3
   mask:
     serializedVersion: 2
     m_Bits: 256
@@ -31750,7 +31750,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fdb74c0d43ad45458532f1a1ff22e32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 1
+  priority: 2
   min_distance: 1
   current_point: 1
   created_path: 0
@@ -35572,9 +35572,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1a2539257a3a4efeb46289d1eb08300, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 1
-  min_angle: 5
-  slow_angle: 10
+  priority: 3
+  min_angle: 20
+  slow_angle: 5
   time_to_accel: 0.5
 --- !u!114 &1204840425
 MonoBehaviour:
@@ -35588,7 +35588,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 782558cc3a6d845a990f61f72475c82d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 0
+  priority: 1
   mask:
     serializedVersion: 2
     m_Bits: 256
@@ -40254,9 +40254,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1a2539257a3a4efeb46289d1eb08300, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 1
-  min_angle: 5
-  slow_angle: 10
+  priority: 3
+  min_angle: 20
+  slow_angle: 5
   time_to_accel: 0.5
 --- !u!114 &1392611619
 MonoBehaviour:
@@ -40270,7 +40270,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 782558cc3a6d845a990f61f72475c82d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 1
+  priority: 3
   mask:
     serializedVersion: 2
     m_Bits: 256
@@ -40311,7 +40311,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fdb74c0d43ad45458532f1a1ff22e32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 1
+  priority: 2
   min_distance: 1
   current_point: 1
   created_path: 0
@@ -42827,9 +42827,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1a2539257a3a4efeb46289d1eb08300, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 1
-  min_angle: 5
-  slow_angle: 10
+  priority: 3
+  min_angle: 20
+  slow_angle: 5
   time_to_accel: 0.5
 --- !u!114 &1453341381
 MonoBehaviour:
@@ -42843,7 +42843,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 782558cc3a6d845a990f61f72475c82d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 0
+  priority: 1
   mask:
     serializedVersion: 2
     m_Bits: 256
@@ -46023,9 +46023,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1a2539257a3a4efeb46289d1eb08300, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 1
-  min_angle: 5
-  slow_angle: 10
+  priority: 3
+  min_angle: 20
+  slow_angle: 5
   time_to_accel: 0.5
 --- !u!114 &1558088316
 MonoBehaviour:
@@ -46039,7 +46039,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 782558cc3a6d845a990f61f72475c82d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 0
+  priority: 1
   mask:
     serializedVersion: 2
     m_Bits: 256
@@ -50245,9 +50245,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1a2539257a3a4efeb46289d1eb08300, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 1
-  min_angle: 5
-  slow_angle: 10
+  priority: 3
+  min_angle: 20
+  slow_angle: 5
   time_to_accel: 0.5
 --- !u!114 &1690119071
 MonoBehaviour:
@@ -50261,7 +50261,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 782558cc3a6d845a990f61f72475c82d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 0
+  priority: 1
   mask:
     serializedVersion: 2
     m_Bits: 256
@@ -57195,9 +57195,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1a2539257a3a4efeb46289d1eb08300, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 1
-  min_angle: 5
-  slow_angle: 10
+  priority: 3
+  min_angle: 20
+  slow_angle: 5
   time_to_accel: 0.5
 --- !u!114 &2062313012
 MonoBehaviour:
@@ -57211,7 +57211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 782558cc3a6d845a990f61f72475c82d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 1
+  priority: 3
   mask:
     serializedVersion: 2
     m_Bits: 256
@@ -57252,7 +57252,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fdb74c0d43ad45458532f1a1ff22e32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 1
+  priority: 2
   min_distance: 1
   current_point: 1
   created_path: 0
@@ -60194,9 +60194,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1a2539257a3a4efeb46289d1eb08300, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 1
-  min_angle: 5
-  slow_angle: 10
+  priority: 3
+  min_angle: 20
+  slow_angle: 5
   time_to_accel: 0.5
 --- !u!114 &2139503852
 MonoBehaviour:
@@ -60210,7 +60210,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 782558cc3a6d845a990f61f72475c82d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 0
+  priority: 1
   mask:
     serializedVersion: 2
     m_Bits: 256
@@ -60654,9 +60654,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1a2539257a3a4efeb46289d1eb08300, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 1
-  min_angle: 5
-  slow_angle: 10
+  priority: 3
+  min_angle: 20
+  slow_angle: 5
   time_to_accel: 0.5
 --- !u!114 &2143508808
 MonoBehaviour:
@@ -60670,7 +60670,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 782558cc3a6d845a990f61f72475c82d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 0
+  priority: 1
   mask:
     serializedVersion: 2
     m_Bits: 256
@@ -62134,9 +62134,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1a2539257a3a4efeb46289d1eb08300, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 1
-  min_angle: 5
-  slow_angle: 10
+  priority: 3
+  min_angle: 20
+  slow_angle: 5
   time_to_accel: 0.5
 --- !u!114 &717651573530029871
 MonoBehaviour:
@@ -62150,7 +62150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 782558cc3a6d845a990f61f72475c82d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 0
+  priority: 1
   mask:
     serializedVersion: 2
     m_Bits: 256
@@ -67165,9 +67165,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1a2539257a3a4efeb46289d1eb08300, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 1
-  min_angle: 5
-  slow_angle: 10
+  priority: 3
+  min_angle: 20
+  slow_angle: 5
   time_to_accel: 0.5
 --- !u!114 &8637100246777300331
 MonoBehaviour:
@@ -67181,7 +67181,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 782558cc3a6d845a990f61f72475c82d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 0
+  priority: 1
   mask:
     serializedVersion: 2
     m_Bits: 256
