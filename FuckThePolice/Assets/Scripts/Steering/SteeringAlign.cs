@@ -55,7 +55,7 @@ public class SteeringAlign : SteeringAbstract
 
         //}
 
-        float delta_angle = Vector3.SignedAngle(transform.forward, target - transform.position, new Vector3(0.0f, 1.0f, 0.0f));
+        float delta_angle = Vector3.SignedAngle(transform.forward, new Vector3(target.x - transform.position.x, 0, target.z - transform.position.z), new Vector3(0.0f, 1.0f, 0.0f));
 
         float diff_absolute = Mathf.Abs(delta_angle);
 
