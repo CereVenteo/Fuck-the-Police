@@ -7,8 +7,9 @@ Fuck The Police is a management game developed by [Alejandro París](https://git
 - Github Repository: [Respository](https://github.com/CereVenteo/Fuck-the-Police)
 
 ## The Team
-
+<img src="https://github.com/AlmaCeax/ProjectI-AlmaCeax/blob/master/Wiki/0.Home/alejandro.jpg"><br>
 - [Alejandro París](https://github.com/AlejandroParis) - Design and Code
+<img src="https://github.com/AlmaCeax/ProjectI-AlmaCeax/blob/master/Wiki/0.Home/cere.jpg"><br>
 - [Cere Venteo](https://github.com/CereVenteo) - Design and Code
 
 ## The Game
