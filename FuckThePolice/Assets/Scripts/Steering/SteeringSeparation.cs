@@ -23,25 +23,28 @@ public class SteeringSeparation : SteeringAbstract
 
         foreach (Collider col in colliders)
         {
-            GameObject go = col.gameObject;
+            if (col.gameObject != this.gameObject)
+            {
+                GameObject go = col.gameObject;
 
-            if (go == gameObject)
-                continue;
+                if (go == gameObject)
+                    continue;
 
-            Vector3 diff = transform.position - go.transform.position;
-            float distance = diff.magnitude;
-            float acceleration = (1-falloff.Evaluate(distance / search_radius)) * move.max_mov_acceleration/10;
+                Vector3 diff = transform.position - go.transform.position;
+                float distance = diff.magnitude;
+                float acceleration = (1 - distance) * -move.max_mov_acceleration;
 
-            final += diff.normalized * acceleration;
-        }
+                final += diff.normalized * acceleration;
+            }
 
-        float final_strength = final.magnitude;
-        if (final_strength > 0.0f)
-        {
-            if (final_strength > move.max_mov_acceleration / 10)
-                final = final.normalized * move.max_mov_acceleration/10;
-            final.y = 0;
-            move.AccelerateMovement(final, priority);
+            float final_strength = final.magnitude;
+            if (final_strength > 0.0f)
+            {
+                if (final_strength > move.max_mov_acceleration)
+                    final = final.normalized * move.max_mov_acceleration;
+                final.y = 0;
+                move.AccelerateMovement(final, priority);
+            }
         }
     }
 
