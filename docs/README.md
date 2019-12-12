@@ -102,7 +102,7 @@ When he goes out of the camera, he disappears.
 
 ### Game Video
 
-<iframe width="427" height="240" src="https://youtu.be/DQ_xzqllJkY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<iframe width="427" height="240" src="https://www.youtube.com/embed/qh6WRPFoJ-c" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 ## License
 
