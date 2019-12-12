@@ -32,8 +32,9 @@ public class SteeringSeparation : SteeringAbstract
 
                 Vector3 diff = transform.position - go.transform.position;
                 float distance = diff.magnitude;
-                float acceleration = (1 - distance) * -move.max_mov_acceleration;
-
+                //float acceleration = (1.0f - falloff.Evaluate(distance / search_radius)) * move.max_mov_acceleration;
+                float acceleration = (1 - distance / search_radius) * -move.max_mov_acceleration;
+                if(acceleration < 0) { acceleration *= -move.max_mov_acceleration; }
                 final += diff.normalized * acceleration;
             }
 
@@ -45,6 +46,7 @@ public class SteeringSeparation : SteeringAbstract
                 final.y = 0;
                 move.AccelerateMovement(final, priority);
             }
+            
         }
     }
 
