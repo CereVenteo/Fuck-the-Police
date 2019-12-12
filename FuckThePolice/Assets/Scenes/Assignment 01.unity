@@ -401,18 +401,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80e3618e1707546a19fff3fb11d7c9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 1
+  priority: 0
   mask:
     serializedVersion: 2
     m_Bits: 512
   avoid_distance: 1
   rays:
-  - length: 1.5
+  - length: 1
     direction: {x: 1, y: 0, z: 1}
-  - length: 1.5
+  - length: 1
     direction: {x: 0, y: 0, z: 1}
-  - length: 1.5
+  - length: 1
     direction: {x: -1, y: 0, z: 1}
+  - length: 1
+    direction: {x: 0, y: 0, z: -1}
 --- !u!114 &9418376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1500,7 +1502,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 46743947}
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -1790.68, y: 1139.54, z: 316.65}
+  m_LocalPosition: {x: -1790.68, y: 1139.54, z: 317.12}
   m_LocalScale: {x: 2.7999995, y: 2.8000002, z: 2.7999995}
   m_Children:
   - {fileID: 1665171110}
@@ -3378,18 +3380,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80e3618e1707546a19fff3fb11d7c9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 1
+  priority: 0
   mask:
     serializedVersion: 2
     m_Bits: 512
   avoid_distance: 1
   rays:
-  - length: 1.5
+  - length: 1
     direction: {x: 1, y: 0, z: 1}
-  - length: 1.5
+  - length: 1
     direction: {x: 0, y: 0, z: 1}
-  - length: 1.5
+  - length: 1
     direction: {x: -1, y: 0, z: 1}
+  - length: 1
+    direction: {x: 0, y: 0, z: -1}
 --- !u!65 &103003978
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6915,18 +6919,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80e3618e1707546a19fff3fb11d7c9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 1
+  priority: 0
   mask:
     serializedVersion: 2
     m_Bits: 512
   avoid_distance: 1
   rays:
-  - length: 1.5
+  - length: 1
     direction: {x: 1, y: 0, z: 1}
-  - length: 1.5
+  - length: 1
     direction: {x: 0, y: 0, z: 1}
-  - length: 1.5
+  - length: 1
     direction: {x: -1, y: 0, z: 1}
+  - length: 1
+    direction: {x: 0, y: 0, z: -1}
 --- !u!114 &224448161
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8373,18 +8379,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80e3618e1707546a19fff3fb11d7c9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 1
+  priority: 0
   mask:
     serializedVersion: 2
     m_Bits: 512
   avoid_distance: 1
   rays:
-  - length: 1.5
+  - length: 1
     direction: {x: 1, y: 0, z: 1}
-  - length: 1.5
+  - length: 1
     direction: {x: 0, y: 0, z: 1}
-  - length: 1.5
+  - length: 1
     direction: {x: -1, y: 0, z: 1}
+  - length: 1
+    direction: {x: 0, y: 0, z: -1}
 --- !u!114 &280021354
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10444,7 +10452,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 343185900}
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -1776.42, y: 1139.54, z: 309.26}
+  m_LocalPosition: {x: -1776.42, y: 1139.54, z: 308.94}
   m_LocalScale: {x: 2.7999992, y: 2.8000002, z: 2.7999992}
   m_Children:
   - {fileID: 171339953}
@@ -10931,18 +10939,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80e3618e1707546a19fff3fb11d7c9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 1
+  priority: 0
   mask:
     serializedVersion: 2
     m_Bits: 512
   avoid_distance: 1
   rays:
-  - length: 1.5
+  - length: 1
     direction: {x: 1, y: 0, z: 1}
-  - length: 1.5
+  - length: 1
     direction: {x: 0, y: 0, z: 1}
-  - length: 1.5
+  - length: 1
     direction: {x: -1, y: 0, z: 1}
+  - length: 1
+    direction: {x: 0, y: 0, z: -1}
 --- !u!114 &356718064
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14418,18 +14428,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80e3618e1707546a19fff3fb11d7c9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 1
+  priority: 0
   mask:
     serializedVersion: 2
     m_Bits: 512
   avoid_distance: 1
   rays:
-  - length: 1.5
+  - length: 1
     direction: {x: 1, y: 0, z: 1}
-  - length: 1.5
+  - length: 1
     direction: {x: 0, y: 0, z: 1}
-  - length: 1.5
+  - length: 1
     direction: {x: -1, y: 0, z: 1}
+  - length: 1
+    direction: {x: 0, y: 0, z: -1}
 --- !u!65 &508017639
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14772,18 +14784,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80e3618e1707546a19fff3fb11d7c9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 1
+  priority: 0
   mask:
     serializedVersion: 2
     m_Bits: 512
   avoid_distance: 1
   rays:
-  - length: 1.5
+  - length: 1
     direction: {x: 1, y: 0, z: 1}
-  - length: 1.5
+  - length: 1
     direction: {x: 0, y: 0, z: 1}
-  - length: 1.5
+  - length: 1
     direction: {x: -1, y: 0, z: 1}
+  - length: 1
+    direction: {x: 0, y: 0, z: -1}
 --- !u!65 &508918534
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15958,18 +15972,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80e3618e1707546a19fff3fb11d7c9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 1
+  priority: 0
   mask:
     serializedVersion: 2
     m_Bits: 512
   avoid_distance: 1
   rays:
-  - length: 1.5
+  - length: 1
     direction: {x: 1, y: 0, z: 1}
-  - length: 1.5
+  - length: 1
     direction: {x: 0, y: 0, z: 1}
-  - length: 1.5
+  - length: 1
     direction: {x: -1, y: 0, z: 1}
+  - length: 1
+    direction: {x: 0, y: 0, z: -1}
 --- !u!114 &569525027
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23777,18 +23793,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80e3618e1707546a19fff3fb11d7c9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 1
+  priority: 0
   mask:
     serializedVersion: 2
     m_Bits: 512
   avoid_distance: 1
   rays:
-  - length: 1.5
+  - length: 1
     direction: {x: 1, y: 0, z: 1}
-  - length: 1.5
+  - length: 1
     direction: {x: 0, y: 0, z: 1}
-  - length: 1.5
+  - length: 1
     direction: {x: -1, y: 0, z: 1}
+  - length: 1
+    direction: {x: 0, y: 0, z: -1}
 --- !u!65 &829214033
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25551,7 +25569,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 861735799}
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -1782.99, y: 1140, z: 321.26}
+  m_LocalPosition: {x: -1782.99, y: 1140, z: 321.73}
   m_LocalScale: {x: 2.7999997, y: 2.8, z: 2.7999997}
   m_Children:
   - {fileID: 318826534}
@@ -26488,18 +26506,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80e3618e1707546a19fff3fb11d7c9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 1
+  priority: 0
   mask:
     serializedVersion: 2
     m_Bits: 512
   avoid_distance: 1
   rays:
-  - length: 1.5
+  - length: 1
     direction: {x: 1, y: 0, z: 1}
-  - length: 1.5
+  - length: 1
     direction: {x: 0, y: 0, z: 1}
-  - length: 1.5
+  - length: 1
     direction: {x: -1, y: 0, z: 1}
+  - length: 1
+    direction: {x: 0, y: 0, z: -1}
 --- !u!65 &898015380
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29211,18 +29231,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80e3618e1707546a19fff3fb11d7c9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 1
+  priority: 0
   mask:
     serializedVersion: 2
     m_Bits: 512
   avoid_distance: 1
   rays:
-  - length: 1.5
+  - length: 1
     direction: {x: 1, y: 0, z: 1}
-  - length: 1.5
+  - length: 1
     direction: {x: 0, y: 0, z: 1}
-  - length: 1.5
+  - length: 1
     direction: {x: -1, y: 0, z: 1}
+  - length: 1
+    direction: {x: 0, y: 0, z: -1}
 --- !u!114 &960559992
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29785,18 +29807,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80e3618e1707546a19fff3fb11d7c9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 1
+  priority: 0
   mask:
     serializedVersion: 2
     m_Bits: 512
   avoid_distance: 1
   rays:
-  - length: 1.5
+  - length: 1
     direction: {x: 1, y: 0, z: 1}
-  - length: 1.5
+  - length: 1
     direction: {x: 0, y: 0, z: 1}
-  - length: 1.5
+  - length: 1
     direction: {x: -1, y: 0, z: 1}
+  - length: 1
+    direction: {x: 0, y: 0, z: -1}
 --- !u!114 &975251355
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30444,7 +30468,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 996074609}
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -1789.45, y: 1140, z: 321.77}
+  m_LocalPosition: {x: -1789.45, y: 1140, z: 322.24}
   m_LocalScale: {x: 2.7999997, y: 2.8, z: 2.7999997}
   m_Children:
   - {fileID: 1291437000}
@@ -32020,18 +32044,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80e3618e1707546a19fff3fb11d7c9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 1
+  priority: 0
   mask:
     serializedVersion: 2
     m_Bits: 512
   avoid_distance: 1
   rays:
-  - length: 1.5
+  - length: 1
     direction: {x: 1, y: 0, z: 1}
-  - length: 1.5
+  - length: 1
     direction: {x: 0, y: 0, z: 1}
-  - length: 1.5
+  - length: 1
     direction: {x: -1, y: 0, z: 1}
+  - length: 1
+    direction: {x: 0, y: 0, z: -1}
 --- !u!114 &1065688739
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32214,7 +32240,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1068446172}
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -1789.04, y: 1139.54, z: 309.6}
+  m_LocalPosition: {x: -1789.04, y: 1139.54, z: 309.28}
   m_LocalScale: {x: 2.7999995, y: 2.8000002, z: 2.7999995}
   m_Children:
   - {fileID: 1574499733}
@@ -35886,18 +35912,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80e3618e1707546a19fff3fb11d7c9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 1
+  priority: 0
   mask:
     serializedVersion: 2
     m_Bits: 512
   avoid_distance: 1
   rays:
-  - length: 1.5
+  - length: 1
     direction: {x: 1, y: 0, z: 1}
-  - length: 1.5
+  - length: 1
     direction: {x: 0, y: 0, z: 1}
-  - length: 1.5
+  - length: 1
     direction: {x: -1, y: 0, z: 1}
+  - length: 1
+    direction: {x: 0, y: 0, z: -1}
 --- !u!65 &1204840430
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -37042,7 +37070,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1254364138}
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -1784.11, y: 1139.54, z: 316.73}
+  m_LocalPosition: {x: -1784.11, y: 1139.54, z: 317.2}
   m_LocalScale: {x: 2.7999995, y: 2.8000002, z: 2.7999995}
   m_Children:
   - {fileID: 1491248612}
@@ -40683,18 +40711,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80e3618e1707546a19fff3fb11d7c9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 1
+  priority: 0
   mask:
     serializedVersion: 2
     m_Bits: 512
   avoid_distance: 1
   rays:
-  - length: 1.5
+  - length: 1
     direction: {x: 1, y: 0, z: 1}
-  - length: 1.5
+  - length: 1
     direction: {x: 0, y: 0, z: 1}
-  - length: 1.5
+  - length: 1
     direction: {x: -1, y: 0, z: 1}
+  - length: 1
+    direction: {x: 0, y: 0, z: -1}
 --- !u!65 &1392611625
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -42450,7 +42480,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1442784509}
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -1784.4, y: 1139.54, z: 314.64}
+  m_LocalPosition: {x: -1784.4, y: 1139.54, z: 314.32}
   m_LocalScale: {x: 2.7999995, y: 2.8000002, z: 2.7999995}
   m_Children:
   - {fileID: 1464052729}
@@ -43208,18 +43238,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80e3618e1707546a19fff3fb11d7c9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 1
+  priority: 0
   mask:
     serializedVersion: 2
     m_Bits: 512
   avoid_distance: 1
   rays:
-  - length: 1.5
+  - length: 1
     direction: {x: 1, y: 0, z: 1}
-  - length: 1.5
+  - length: 1
     direction: {x: 0, y: 0, z: 1}
-  - length: 1.5
+  - length: 1
     direction: {x: -1, y: 0, z: 1}
+  - length: 1
+    direction: {x: 0, y: 0, z: -1}
 --- !u!65 &1453341385
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -46404,18 +46436,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80e3618e1707546a19fff3fb11d7c9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 1
+  priority: 0
   mask:
     serializedVersion: 2
     m_Bits: 512
   avoid_distance: 1
   rays:
-  - length: 1.5
+  - length: 1
     direction: {x: 1, y: 0, z: 1}
-  - length: 1.5
+  - length: 1
     direction: {x: 0, y: 0, z: 1}
-  - length: 1.5
+  - length: 1
     direction: {x: -1, y: 0, z: 1}
+  - length: 1
+    direction: {x: 0, y: 0, z: -1}
 --- !u!65 &1558088320
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -50642,18 +50676,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80e3618e1707546a19fff3fb11d7c9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 1
+  priority: 0
   mask:
     serializedVersion: 2
     m_Bits: 512
   avoid_distance: 1
   rays:
-  - length: 1.5
+  - length: 1
     direction: {x: 1, y: 0, z: 1}
-  - length: 1.5
+  - length: 1
     direction: {x: 0, y: 0, z: 1}
-  - length: 1.5
+  - length: 1
     direction: {x: -1, y: 0, z: 1}
+  - length: 1
+    direction: {x: 0, y: 0, z: -1}
 --- !u!65 &1690119076
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -53538,7 +53574,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1828390993}
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -1790.81, y: 1139.54, z: 314.51}
+  m_LocalPosition: {x: -1790.81, y: 1139.54, z: 314.19}
   m_LocalScale: {x: 2.7999995, y: 2.8000002, z: 2.7999995}
   m_Children:
   - {fileID: 246918834}
@@ -55889,7 +55925,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1990718277}
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -1777.95, y: 1139.54, z: 314.68}
+  m_LocalPosition: {x: -1777.95, y: 1139.54, z: 314.36}
   m_LocalScale: {x: 2.7999995, y: 2.8000002, z: 2.7999995}
   m_Children:
   - {fileID: 798457223}
@@ -56389,7 +56425,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2022076894}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1782.52, y: 1139.503, z: 309.65}
+  m_LocalPosition: {x: -1782.52, y: 1139.503, z: 309.33}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 416945874}
@@ -57751,18 +57787,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80e3618e1707546a19fff3fb11d7c9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 1
+  priority: 0
   mask:
     serializedVersion: 2
     m_Bits: 512
   avoid_distance: 1
   rays:
-  - length: 1.5
+  - length: 1
     direction: {x: 1, y: 0, z: 1}
-  - length: 1.5
+  - length: 1
     direction: {x: 0, y: 0, z: 1}
-  - length: 1.5
+  - length: 1
     direction: {x: -1, y: 0, z: 1}
+  - length: 1
+    direction: {x: 0, y: 0, z: -1}
 --- !u!114 &2062313018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60734,18 +60772,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80e3618e1707546a19fff3fb11d7c9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 1
+  priority: 0
   mask:
     serializedVersion: 2
     m_Bits: 512
   avoid_distance: 1
   rays:
-  - length: 1.5
+  - length: 1
     direction: {x: 1, y: 0, z: 1}
-  - length: 1.5
+  - length: 1
     direction: {x: 0, y: 0, z: 1}
-  - length: 1.5
+  - length: 1
     direction: {x: -1, y: 0, z: 1}
+  - length: 1
+    direction: {x: 0, y: 0, z: -1}
 --- !u!65 &2139503856
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -60786,7 +60826,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2139503842}
   m_LocalRotation: {x: -0, y: 0.99999714, z: -0, w: -0.0024000981}
-  m_LocalPosition: {x: -1.3, y: -1.331841, z: -50.8}
+  m_LocalPosition: {x: -2.1, y: -1.331841, z: -45.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 544246462}
@@ -61194,18 +61234,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80e3618e1707546a19fff3fb11d7c9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 1
+  priority: 0
   mask:
     serializedVersion: 2
     m_Bits: 512
   avoid_distance: 1
   rays:
-  - length: 1.5
+  - length: 1
     direction: {x: 1, y: 0, z: 1}
-  - length: 1.5
+  - length: 1
     direction: {x: 0, y: 0, z: 1}
-  - length: 1.5
+  - length: 1
     direction: {x: -1, y: 0, z: 1}
+  - length: 1
+    direction: {x: 0, y: 0, z: -1}
 --- !u!65 &2143508812
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -61357,7 +61399,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 478962, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -14.462584
+      value: -13.992582
       objectReference: {fileID: 0}
     - target: {fileID: 478962, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
       propertyPath: m_LocalRotation.x
@@ -62397,7 +62439,7 @@ PrefabInstance:
     - target: {fileID: 313445150219331209, guid: a5d9e4fb94aa09a4891c34b212581fc1,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -45.711815
+      value: -45.241814
       objectReference: {fileID: 0}
     - target: {fileID: 313445150219331209, guid: a5d9e4fb94aa09a4891c34b212581fc1,
         type: 3}
@@ -62712,18 +62754,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80e3618e1707546a19fff3fb11d7c9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 1
+  priority: 0
   mask:
     serializedVersion: 2
     m_Bits: 512
   avoid_distance: 1
   rays:
-  - length: 1.5
+  - length: 1
     direction: {x: 1, y: 0, z: 1}
-  - length: 1.5
+  - length: 1
     direction: {x: 0, y: 0, z: 1}
-  - length: 1.5
+  - length: 1
     direction: {x: -1, y: 0, z: 1}
+  - length: 1
+    direction: {x: 0, y: 0, z: -1}
 --- !u!65 &717651573530029876
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -64182,7 +64226,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 478962, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -25.759998
+      value: -26.079998
       objectReference: {fileID: 0}
     - target: {fileID: 478962, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
       propertyPath: m_LocalRotation.x
@@ -64390,7 +64434,7 @@ PrefabInstance:
     - target: {fileID: 313445150219331209, guid: a5d9e4fb94aa09a4891c34b212581fc1,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 5.369999
+      value: 5.049999
       objectReference: {fileID: 0}
     - target: {fileID: 313445150219331209, guid: a5d9e4fb94aa09a4891c34b212581fc1,
         type: 3}
@@ -64642,7 +64686,7 @@ PrefabInstance:
     - target: {fileID: 313445150219331209, guid: a5d9e4fb94aa09a4891c34b212581fc1,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -45.711815
+      value: -45.241814
       objectReference: {fileID: 0}
     - target: {fileID: 313445150219331209, guid: a5d9e4fb94aa09a4891c34b212581fc1,
         type: 3}
@@ -65076,7 +65120,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 478962, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -25.76
+      value: -26.08
       objectReference: {fileID: 0}
     - target: {fileID: 478962, guid: 19750885284d69344a35d6aac8aa99d1, type: 3}
       propertyPath: m_LocalRotation.x
@@ -65401,7 +65445,7 @@ PrefabInstance:
     - target: {fileID: 313445150219331209, guid: a5d9e4fb94aa09a4891c34b212581fc1,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 5.37
+      value: 5.05
       objectReference: {fileID: 0}
     - target: {fileID: 313445150219331209, guid: a5d9e4fb94aa09a4891c34b212581fc1,
         type: 3}
@@ -66445,7 +66489,7 @@ PrefabInstance:
     - target: {fileID: 313445150219331209, guid: a5d9e4fb94aa09a4891c34b212581fc1,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 5.37
+      value: 5.05
       objectReference: {fileID: 0}
     - target: {fileID: 313445150219331209, guid: a5d9e4fb94aa09a4891c34b212581fc1,
         type: 3}
@@ -67844,18 +67888,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80e3618e1707546a19fff3fb11d7c9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 1
+  priority: 0
   mask:
     serializedVersion: 2
     m_Bits: 512
   avoid_distance: 1
   rays:
-  - length: 1.5
+  - length: 1
     direction: {x: 1, y: 0, z: 1}
-  - length: 1.5
+  - length: 1
     direction: {x: 0, y: 0, z: 1}
-  - length: 1.5
+  - length: 1
     direction: {x: -1, y: 0, z: 1}
+  - length: 1
+    direction: {x: 0, y: 0, z: -1}
 --- !u!65 &8637100246777300337
 BoxCollider:
   m_ObjectHideFlags: 0
