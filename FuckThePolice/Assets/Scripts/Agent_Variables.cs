@@ -52,15 +52,7 @@ public class Agent_Variables : MonoBehaviour
             else
                 waiting = false;
         }
-        if (!go_back)
-        {
-            //Vector3 diff = nav.path.corners[nav.path.corners.Length - 1] - transform.position;
-
-            //if (diff.magnitude < 2)
-            //{
-            //    go_back = true;
-            //}
-        }
+        
         if(civil != 0 && civil_id != -1)
         {
             civil_waiting = Game_Manager.civilians[civil_id].GetComponent<Civilian_Variables>().waiting;
@@ -114,11 +106,6 @@ public class Agent_Variables : MonoBehaviour
             if (Game_Manager.criminals[i].GetComponent<Criminal_Variables>().id == criminal_id)
                 Game_Manager.criminals[i].GetComponent<Criminal_Variables>().interrogation_time = true;
         }
-    }
-
-    public void Go_Away()
-    {
-        nav.CreatePath(go_away.transform.position);
     }
     
 }
